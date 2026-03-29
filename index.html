@@ -3,38 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kislota Digest — News Pulse</title>
-  <meta name="description" content="Kislota Digest: compact news pulse with semantic signal colors and clean readability." />
+  <title>Kislota Digest v2 — Signal Covers</title>
+  <meta name="description" content="Kislota Digest v2: bold editorial signal board with controlled multi-accent hierarchy." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="bg-noise" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="wrapper row">
-      <div class="brand">kislota<span class="dot">.</span>digest</div>
+      <div class="brand">kislota<span class="dot">.</span>digest <span class="version">v2</span></div>
       <nav class="top-nav" aria-label="Primary">
         <a class="nav-link" href="#top">Top</a>
         <a class="nav-link" href="#categories">Categories</a>
-        <a class="nav-link" href="#digest-notes">Digest Notes</a>
+        <a class="nav-link" href="#news-grid">Covers</a>
+        <a class="nav-link" href="#digest-notes">Trends</a>
       </nav>
     </div>
   </header>
 
   <main class="wrapper">
     <section class="hero" id="top">
-      <p class="eyebrow">Daily news digest</p>
-      <h1>Signal-first briefing: one calm base, one active narrative pole, clear micro-alerts.</h1>
-      <p>
-        Kislota Digest keeps the screen readable while preserving energy: psychic cyan as the primary screen accent,
-        threat/alien/acid used as semantic state labels only, and amber hotspot reserved for tiny urgency moments.
+      <div class="hero-glow hero-glow-main" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-hot" aria-hidden="true"></div>
+
+      <div class="hero-topline">
+        <p class="eyebrow">Dandadan-like news digest · Edition 117</p>
+        <span class="hero-badge">Live pulse</span>
+      </div>
+
+      <h1>
+        The day in <span class="hero-accent">psychic teal</span>:
+        <br />loud signals, sharp edits, zero visual fog.
+      </h1>
+
+      <p class="hero-lead">
+        Editorial hierarchy first. Teal is the lead pole, alien blue guides info, threat red marks urgent,
+        acid lime appears only for anomaly spikes, amber tags hotspot friction, and violet/magenta flashes
+        stay premium + local.
       </p>
+
+      <div class="hero-hotline">
+        <article class="hotline-item">
+          <p class="meta">Hotline / 05:47 UTC</p>
+          <h3>Regulatory rooms switched to “proof-first rollout” language overnight.</h3>
+        </article>
+        <article class="hotline-item is-urgent">
+          <p class="meta">Urgent / 06:03 UTC</p>
+          <h3>Exploit chatter surged in mobile infra forums after patch disclosure.</h3>
+        </article>
+      </div>
+
       <div class="cta-row">
-        <a class="btn btn-primary" href="#news-grid">Open today’s cards</a>
-        <a class="btn btn-ghost" href="#digest-notes">See trend notes</a>
+        <a class="btn btn-primary" href="#news-grid">Open cover cards</a>
+        <a class="btn btn-ghost" href="#digest-notes">Read trend notes</a>
       </div>
     </section>
 
     <section class="categories" id="categories" aria-label="Categories filters">
-      <button class="chip active" data-category="All">All</button>
+      <button class="chip active" data-category="All">All lanes</button>
       <button class="chip" data-category="Tech">Tech</button>
       <button class="chip" data-category="Policy">Policy</button>
       <button class="chip" data-category="Science">Science</button>
@@ -46,15 +73,16 @@
     <div class="layout">
       <section>
         <article class="panel featured">
-          <p class="meta">Featured briefing · Updated 05:45 UTC</p>
-          <h2>Global platforms shift from “growth at any cost” to “risk + reliability” as baseline KPI.</h2>
+          <p class="meta">Featured briefing · Updated 06:05 UTC</p>
+          <h2>Publishers now package headlines as collectible “signal covers” with confidence score overlays.</h2>
           <p>
-            Cross-sector briefings show the same move: fewer oversized launches, more controlled iteration,
-            tighter incident reporting, and stricter model governance. The appetite is still high, but noise tolerance is lower.
+            Teams are combining hard telemetry with editorial framing to reduce feed fatigue.
+            The winning format: fewer blocks, stronger hierarchy, clearer urgency lanes, and visible reliability tags.
           </p>
           <div class="labels">
             <span class="label psychic">psychic</span>
-            <span class="label threat">threat</span>
+            <span class="label alien">alien</span>
+            <span class="label premium">premium</span>
             <span class="label hotspot">hotspot</span>
           </div>
         </article>
@@ -63,55 +91,67 @@
       </section>
 
       <aside class="panel sidebar" aria-label="Sidebar controls">
-        <small>Filters / labels</small>
-        <h3>Quick signal cut</h3>
+        <small>Quick signal cuts</small>
+        <h3>Filter by intensity</h3>
 
         <div class="filter-list">
           <button class="filter-toggle" data-filter="threat">
             <span>Threat watch</span>
-            <span class="label threat">red</span>
+            <span class="label threat">urgent</span>
           </button>
           <button class="filter-toggle" data-filter="alien">
-            <span>Tech anomaly</span>
-            <span class="label alien">blue</span>
+            <span>Alien info</span>
+            <span class="label alien">info</span>
           </button>
           <button class="filter-toggle" data-filter="acid">
-            <span>Trend spike</span>
-            <span class="label acid">green</span>
+            <span>Acid anomaly</span>
+            <span class="label acid">weird</span>
+          </button>
+          <button class="filter-toggle" data-filter="hotspot">
+            <span>Amber hotspot</span>
+            <span class="label hotspot">heat</span>
+          </button>
+          <button class="filter-toggle" data-filter="premium">
+            <span>Editorial flash</span>
+            <span class="label premium">premium</span>
           </button>
           <button class="filter-toggle" data-filter="psychic">
-            <span>Mainline pulse</span>
-            <span class="label psychic">cyan</span>
+            <span>Main pulse</span>
+            <span class="label psychic">lead</span>
           </button>
         </div>
 
-        <a href="#top" class="btn btn-primary" style="width:100%;justify-content:center;">Subscribe digest</a>
+        <a href="#top" class="btn btn-primary btn-block">Subscribe digest</a>
 
         <div class="legend">
-          <small>Color usage rule</small>
+          <small>Color discipline</small>
           <ul>
-            <li>Dominant wash: dark base ladder</li>
-            <li>Narrative pole: psychic cyan (screen-level accent)</li>
-            <li>Micro-hotspots: threat/alien/acid/amber only as labels & states</li>
+            <li>Screen pole: psychic teal (dominant)</li>
+            <li>Blue/red/lime/orange: functional state accents</li>
+            <li>Violet/magenta: local premium flashes only</li>
           </ul>
         </div>
       </aside>
     </div>
 
     <section class="panel notes" id="digest-notes">
-      <h3>Digest Notes / Trends</h3>
+      <h3>Digest Notes / Trends Radar</h3>
       <div class="note-grid">
         <article class="note">
-          <p class="meta">Trend #1</p>
-          <p>Regulators increasingly require audit-ready logs as default, not post-incident extras.</p>
+          <p class="meta">Trend #1 · reliability theater is out</p>
+          <p>Ops teams now demand rollback drills in public release notes, not internal docs.</p>
         </article>
         <article class="note">
-          <p class="meta">Trend #2</p>
-          <p>Editorial teams are pairing AI summaries with human “confidence notes” for trust framing.</p>
+          <p class="meta">Trend #2 · editorial trust stack</p>
+          <p>More outlets show confidence meters + source diversity index directly on cards.</p>
         </article>
         <article class="note">
-          <p class="meta">Trend #3</p>
-          <p>Infrastructure updates now ship with clearer rollback playbooks and visible reliability metrics.</p>
+          <p class="meta">Trend #3 · anomaly as product lane</p>
+          <p>“Weird but real” micro-stories are becoming a dedicated category with dedicated moderation.</p>
+        </article>
+        <article class="note">
+          <p class="meta">Trend #4 · premium flashes</p>
+          <p>Violet/magenta accents are used sparingly to signal expert curation, not generic emphasis.</p>
         </article>
       </div>
     </section>
@@ -119,7 +159,7 @@
 
   <footer class="site-footer">
     <div class="wrapper">
-      <p>Kislota Digest — semantic color system based on Dandadan v4 handoff. <span class="hotspot">Micro-hotspot only where it matters.</span></p>
+      <p>Kislota Digest v2 — editorial signal board with controlled multi-accent hierarchy.</p>
     </div>
   </footer>
 

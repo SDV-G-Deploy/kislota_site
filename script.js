@@ -2,15 +2,20 @@ const grid = document.getElementById('news-grid');
 const chips = document.querySelectorAll('.chip[data-category]');
 const quickFilterButtons = document.querySelectorAll('.filter-toggle[data-filter]');
 
+let activeCategory = 'All';
+let activeSignal = null;
+
 function labelsMarkup(labels = []) {
   return labels
-    .map(label => `<span class="label ${label}">${label}</span>`)
+    .map((label) => `<span class="label ${label}">${label}</span>`)
     .join('');
 }
 
 function cardMarkup(item) {
+  const toneClass = item.tone ? `tone-${item.tone}` : '';
   return `
-    <article class="panel card" data-category="${item.category}" data-labels="${item.labels.join(' ')}">
+    <article class="panel card ${toneClass}" data-category="${item.category}" data-labels="${item.labels.join(' ')}">
+      <div class="card-cover-line"></div>
       <p class="meta">${item.category} · ${item.time}</p>
       <h3>${item.title}</h3>
       <p>${item.summary}</p>
@@ -19,30 +24,41 @@ function cardMarkup(item) {
   `;
 }
 
+function getFilteredItems() {
+  return window.newsItems.filter((item) => {
+    const byCategory = activeCategory === 'All' || item.category === activeCategory;
+    const bySignal = !activeSignal || item.labels.includes(activeSignal);
+    return byCategory && bySignal;
+  });
+}
+
 function render(items) {
-  grid.innerHTML = items.map(cardMarkup).join('');
+  const list = items.length ? items : window.newsItems;
+  grid.innerHTML = list.map(cardMarkup).join('');
 }
 
 function setActiveChip(category) {
-  chips.forEach(chip => chip.classList.toggle('active', chip.dataset.category === category));
+  activeCategory = category;
+  chips.forEach((chip) => chip.classList.toggle('active', chip.dataset.category === category));
 }
 
-chips.forEach(chip => {
+function setActiveSignal(signal) {
+  activeSignal = signal;
+  quickFilterButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.filter === signal));
+}
+
+chips.forEach((chip) => {
   chip.addEventListener('click', () => {
-    const category = chip.dataset.category;
-    setActiveChip(category);
-    const items = category === 'All'
-      ? window.newsItems
-      : window.newsItems.filter(item => item.category === category);
-    render(items);
+    setActiveChip(chip.dataset.category);
+    render(getFilteredItems());
   });
 });
 
-quickFilterButtons.forEach(btn => {
+quickFilterButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    const kind = btn.dataset.filter;
-    const filtered = window.newsItems.filter(item => item.labels.includes(kind));
-    render(filtered.length ? filtered : window.newsItems);
+    const signal = btn.dataset.filter;
+    setActiveSignal(activeSignal === signal ? null : signal);
+    render(getFilteredItems());
   });
 });
 

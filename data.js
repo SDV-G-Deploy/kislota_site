@@ -1,50 +1,74 @@
 window.newsItems = [
   {
     id: 1,
-    title: "AI regulation tracker: EU Parliament pushed final safety amendments",
+    title: "Emergency memo leaked: AI procurement now requires incident rehearsal proof",
     category: "Policy",
-    summary: "New wording clarifies liability for foundation models and introduces faster audit channels for critical deployments.",
-    time: "12m ago",
-    labels: ["threat", "hotspot"]
+    summary: "Three agencies moved from paper-compliance to simulation-tested compliance after two high-profile audit failures.",
+    time: "8m ago",
+    labels: ["threat", "hotspot", "psychic"],
+    tone: "urgent"
   },
   {
     id: 2,
-    title: "Climate signal: Atlantic heat anomaly map shows early-summer jump",
+    title: "Alien-blue dashboard goes public: ocean anomaly monitor spots triple heat filament",
     category: "Science",
-    summary: "Ocean monitoring teams report a stronger-than-expected surface spike across three key marine corridors.",
-    time: "25m ago",
-    labels: ["acid", "alien"]
+    summary: "Researchers flagged a non-seasonal cluster with unusually synchronized movement across shipping corridors.",
+    time: "16m ago",
+    labels: ["alien", "acid"],
+    tone: "info"
   },
   {
     id: 3,
-    title: "Market open: chip stocks rebound after supply chain update",
+    title: "Cover story: chip foundries report cleaner queue maps, enterprise demand steadies",
     category: "Business",
-    summary: "Foundry guidance points to lower packaging bottlenecks in Q3 and steadier enterprise demand.",
-    time: "39m ago",
-    labels: ["psychic"]
+    summary: "Quarterly guidance indicates better packaging throughput and fewer sudden allocation shocks.",
+    time: "24m ago",
+    labels: ["psychic", "premium"],
+    tone: "premium"
   },
   {
     id: 4,
-    title: "Security patch digest: three zero-days fixed in major mobile stack",
+    title: "Zero-day relay burst: mobile stack patched, exploitation attempts already detected",
     category: "Tech",
-    summary: "Vendors shipped coordinated updates; enterprise admins are advised to accelerate managed rollout windows.",
-    time: "54m ago",
-    labels: ["threat", "alien"]
+    summary: "Security teams advise accelerated rollout windows and stricter dependency visibility in MDM fleets.",
+    time: "37m ago",
+    labels: ["threat", "alien"],
+    tone: "urgent"
   },
   {
     id: 5,
-    title: "Culture brief: streaming platforms expand documentary slate",
+    title: "Culture lane expands: documentary studios launch weekly ‘signal capsule’ formats",
     category: "Culture",
-    summary: "Commissioning shifts toward short investigative formats with weekly episode release cycles.",
-    time: "1h ago",
-    labels: ["psychic"]
+    summary: "Short editorial arcs with confidence notes outperform long-form drops in completion rates.",
+    time: "51m ago",
+    labels: ["psychic", "premium"],
+    tone: "premium"
   },
   {
     id: 6,
-    title: "Urban mobility pilots add late-night electric bus lanes",
+    title: "City trial gets weird: autonomous buses reroute around late-night crowd pulses",
     category: "City",
-    summary: "Transit labs report faster station-to-station times and reduced local noise peaks after midnight.",
+    summary: "Transit labs found anomaly-aware routing reduced delays while improving passenger safety metrics.",
     time: "1h ago",
-    labels: ["acid", "hotspot"]
+    labels: ["acid", "hotspot"],
+    tone: "weird"
+  },
+  {
+    id: 7,
+    title: "Open-source policy tracker adds live confidence badges for each regulation draft",
+    category: "Policy",
+    summary: "Editors can now compare wording volatility and lobbying pressure snapshots in one pane.",
+    time: "1h 14m ago",
+    labels: ["alien", "psychic"],
+    tone: "info"
+  },
+  {
+    id: 8,
+    title: "Premium brief: models with smaller context windows show lower hallucination burst in support queues",
+    category: "Tech",
+    summary: "Support teams trade creative breadth for reliability under pressure windows and strict SLA regimes.",
+    time: "1h 31m ago",
+    labels: ["premium", "psychic"],
+    tone: "premium"
   }
 ];
