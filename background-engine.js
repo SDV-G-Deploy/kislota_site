@@ -64,10 +64,30 @@
         filamentB: 'rgba(152, 132, 255, 0.24)',
         tipStops: ['rgba(230, 251, 255, 0.60)', 'rgba(170, 232, 255, 0.44)', 'rgba(152, 125, 255, 0.16)']
       }
+    },
+    'signal-bloom': {
+      bloom: { layers: 2, petalsPerLayer: 10, radiusFactor: 0.128, stemHeightFactor: 0.28, petalLength: 120, petalThickness: 20, spread: 0.48 },
+      motion: { pulse: 0.012, sway: 0.022, filamentWiggle: 0.08 },
+      structure: { lanes: 7, laneGap: 0.34, asymmetry: 0.18, gateArc: 0.3, spokeBias: 0.24 },
+      tuning: { particlesMul: 0.84 },
+      palette: {
+        body: ['#050913', '#081225', '#050910'],
+        vignette: ['rgba(32, 88, 136, 0.10)', 'rgba(18, 44, 78, 0.10)', 'rgba(0, 0, 0, 0.64)'],
+        haze: ['rgba(92, 170, 248, ALPHA)', 'rgba(66, 126, 222, ALPHA2)', 'rgba(0, 0, 0, 0)'],
+        stem: ['rgba(94, 156, 204, 0.40)', 'rgba(34, 60, 98, 0.72)'],
+        petalStops: ['rgba(198, 236, 255, 0.46)', 'rgba(118, 198, 250, 0.42)', 'rgba(88, 136, 230, 0.38)', 'rgba(38, 66, 130, 0.42)'],
+        petalStroke: 'rgba(214, 238, 255, 0.12)',
+        glowStops: ['rgba(132, 214, 255, 0.10)', 'rgba(104, 164, 255, 0.06)', 'rgba(72, 116, 204, 0.03)'],
+        coreStops: ['rgba(206, 236, 255, 0.48)', 'rgba(124, 192, 248, 0.42)', 'rgba(78, 118, 206, 0.30)'],
+        filamentA: 'rgba(178, 226, 255, 0.26)',
+        filamentB: 'rgba(132, 176, 242, 0.20)',
+        tipStops: ['rgba(224, 244, 255, 0.46)', 'rgba(164, 214, 255, 0.34)', 'rgba(110, 150, 232, 0.13)']
+      }
     }
   };
 
   const scene = SCENES[sceneId] || SCENES['neon-pollen'];
+  const isSignalBloom = sceneId === 'signal-bloom';
 
   const perf = {
     fpsTarget: isMobile ? 24 : 40,
@@ -86,6 +106,10 @@
     perf.fpsTarget = Math.min(perf.fpsTarget, 30);
     perf.particlesBase = Math.round(perf.particlesBase * 0.72);
     perf.particlesMin = Math.max(10, Math.round(perf.particlesMin * 0.75));
+  }
+
+  if (scene.tuning?.particlesMul) {
+    perf.particlesBase = Math.max(perf.particlesMin, Math.round(perf.particlesBase * scene.tuning.particlesMul));
   }
 
   const canvas = document.createElement('canvas');
@@ -318,10 +342,21 @@
 
     ctx.strokeStyle = grad;
     ctx.lineCap = 'round';
-    ctx.lineWidth = Math.max(1.6, state.bloomRadius * 0.058);
+    ctx.lineWidth = Math.max(1.6, state.bloomRadius * (isSignalBloom ? 0.052 : 0.058));
     ctx.beginPath();
     ctx.moveTo(x, y0);
-    ctx.quadraticCurveTo(x + state.bloomRadius * 0.04, (y0 + y1) * 0.5, x - state.bloomRadius * 0.02, y1);
+    if (isSignalBloom) {
+      ctx.bezierCurveTo(
+        x + state.bloomRadius * 0.08,
+        y0 + state.stemHeight * 0.34,
+        x - state.bloomRadius * 0.14,
+        y0 + state.stemHeight * 0.68,
+        x + state.bloomRadius * 0.02,
+        y1
+      );
+    } else {
+      ctx.quadraticCurveTo(x + state.bloomRadius * 0.04, (y0 + y1) * 0.5, x - state.bloomRadius * 0.02, y1);
+    }
     ctx.stroke();
   }
 
@@ -333,24 +368,51 @@
     ctx.translate(state.centerX, state.centerY);
     ctx.globalCompositeOperation = 'lighter';
 
-    for (let layer = 0; layer < scene.bloom.layers; layer++) {
-      const layerScale = 1 - layer * 0.18;
-      const layerRot = layer * (Math.PI / scene.bloom.petalsPerLayer);
-      const alpha = layer === 0 ? 0.44 : 0.34;
+    if (isSignalBloom) {
+      const lanes = scene.structure.lanes;
+      const baseRot = Math.sin(t * 0.0003) * 0.1;
+      for (let layer = 0; layer < scene.bloom.layers; layer++) {
+        const layerScale = 1 - layer * 0.2;
+        const alpha = layer === 0 ? 0.34 : 0.24;
+        const laneOffset = layer * scene.structure.laneGap;
 
-      for (let i = 0; i < scene.bloom.petalsPerLayer; i++) {
-        const a = (i / scene.bloom.petalsPerLayer) * Math.PI * 2 + layerRot;
-        const sway = Math.sin(t * 0.0009 + i * 0.7 + layer * 1.4) * scene.motion.sway;
-        const radial = r * layerScale * (1 + Math.sin(t * 0.0013 + i) * 0.03);
+        for (let i = 0; i < lanes; i++) {
+          const lanePhase = i / lanes;
+          const a = lanePhase * Math.PI * 2 + laneOffset + baseRot;
+          const asym = (i % 2 ? 1 : -1) * scene.structure.asymmetry;
+          const sway = Math.sin(t * 0.0007 + i * 0.95 + layer * 1.2) * scene.motion.sway;
+          const radial = r * layerScale * (0.78 + (i % 3) * 0.08);
 
-        ctx.save();
-        ctx.rotate(a + sway);
-        ctx.translate(radial * 0.24, 0);
-        const lengthScale = pulse * (1 + Math.sin(i * 0.6 + t * 0.0008) * 0.03);
-        ctx.scale((r / 116) * lengthScale, (r / 128) * (1 + layer * 0.08));
-        ctx.globalAlpha = alpha;
-        ctx.drawImage(state.sprites.petal, 0, -state.sprites.petal.height * 0.5);
-        ctx.restore();
+          ctx.save();
+          ctx.rotate(a + sway + asym);
+          ctx.translate(radial * (0.16 + (i % 2) * 0.03), 0);
+          const lengthScale = pulse * (0.9 + (i % 4) * 0.07);
+          ctx.scale((r / 132) * lengthScale, (r / 154) * (1 + layer * 0.12));
+          ctx.globalAlpha = alpha;
+          ctx.drawImage(state.sprites.petal, 0, -state.sprites.petal.height * 0.5);
+          ctx.restore();
+        }
+      }
+    } else {
+      for (let layer = 0; layer < scene.bloom.layers; layer++) {
+        const layerScale = 1 - layer * 0.18;
+        const layerRot = layer * (Math.PI / scene.bloom.petalsPerLayer);
+        const alpha = layer === 0 ? 0.44 : 0.34;
+
+        for (let i = 0; i < scene.bloom.petalsPerLayer; i++) {
+          const a = (i / scene.bloom.petalsPerLayer) * Math.PI * 2 + layerRot;
+          const sway = Math.sin(t * 0.0009 + i * 0.7 + layer * 1.4) * scene.motion.sway;
+          const radial = r * layerScale * (1 + Math.sin(t * 0.0013 + i) * 0.03);
+
+          ctx.save();
+          ctx.rotate(a + sway);
+          ctx.translate(radial * 0.24, 0);
+          const lengthScale = pulse * (1 + Math.sin(i * 0.6 + t * 0.0008) * 0.03);
+          ctx.scale((r / 116) * lengthScale, (r / 128) * (1 + layer * 0.08));
+          ctx.globalAlpha = alpha;
+          ctx.drawImage(state.sprites.petal, 0, -state.sprites.petal.height * 0.5);
+          ctx.restore();
+        }
       }
     }
 
@@ -366,26 +428,63 @@
     ctx.translate(state.centerX, state.centerY);
     ctx.lineCap = 'round';
 
-    for (let i = 0; i < n; i++) {
-      const a = (i / n) * Math.PI * 2;
-      const wiggle = Math.sin(t * 0.0015 + i * 1.28) * scene.motion.filamentWiggle;
-      const len = r * (0.54 + (i % 7) * 0.034);
-      const c1x = Math.cos(a + wiggle) * len * 0.4;
-      const c1y = Math.sin(a + wiggle) * len * 0.4;
-      const ex = Math.cos(a + wiggle * 1.45) * len;
-      const ey = Math.sin(a + wiggle * 1.45) * len;
+    if (isSignalBloom) {
+      const lanes = scene.structure.lanes;
+      const perLane = Math.max(2, Math.round(n / lanes));
+      for (let lane = 0; lane < lanes; lane++) {
+        const laneBase = (lane / lanes) * Math.PI * 2;
+        const laneSkew = (lane % 2 ? 1 : -1) * scene.structure.spokeBias;
 
-      ctx.strokeStyle = i % 3 === 0 ? scene.palette.filamentA : scene.palette.filamentB;
-      ctx.lineWidth = i % 2 ? 0.95 : 1.2;
-      ctx.beginPath();
-      ctx.moveTo(0, 0);
-      ctx.quadraticCurveTo(c1x, c1y, ex, ey);
-      ctx.stroke();
+        for (let j = 0; j < perLane; j++) {
+          const idx = lane * perLane + j;
+          const step = j / perLane;
+          const gate = step * scene.structure.gateArc;
+          const wiggle = Math.sin(t * 0.0012 + idx * 0.84) * scene.motion.filamentWiggle;
+          const a = laneBase + gate + laneSkew + wiggle;
+          const len = r * (0.48 + step * 0.46 + (lane % 3) * 0.03);
+          const c1x = Math.cos(a - 0.18) * len * 0.38;
+          const c1y = Math.sin(a - 0.18) * len * 0.38;
+          const c2x = Math.cos(a + 0.08) * len * 0.74;
+          const c2y = Math.sin(a + 0.08) * len * 0.74;
+          const ex = Math.cos(a) * len;
+          const ey = Math.sin(a) * len;
 
-      if ((i & 3) === 0) {
-        const s = i % 5 === 0 ? 7 : 6;
-        ctx.globalAlpha = 0.78;
-        ctx.drawImage(state.sprites.tip, ex - s * 0.5, ey - s * 0.5, s, s);
+          ctx.strokeStyle = (lane + j) % 2 === 0 ? scene.palette.filamentA : scene.palette.filamentB;
+          ctx.lineWidth = j % 2 ? 0.9 : 1.1;
+          ctx.beginPath();
+          ctx.moveTo(0, 0);
+          ctx.bezierCurveTo(c1x, c1y, c2x, c2y, ex, ey);
+          ctx.stroke();
+
+          if ((idx & 2) === 0) {
+            const s = j % 4 === 0 ? 6.5 : 5.5;
+            ctx.globalAlpha = 0.66;
+            ctx.drawImage(state.sprites.tip, ex - s * 0.5, ey - s * 0.5, s, s);
+          }
+        }
+      }
+    } else {
+      for (let i = 0; i < n; i++) {
+        const a = (i / n) * Math.PI * 2;
+        const wiggle = Math.sin(t * 0.0015 + i * 1.28) * scene.motion.filamentWiggle;
+        const len = r * (0.54 + (i % 7) * 0.034);
+        const c1x = Math.cos(a + wiggle) * len * 0.4;
+        const c1y = Math.sin(a + wiggle) * len * 0.4;
+        const ex = Math.cos(a + wiggle * 1.45) * len;
+        const ey = Math.sin(a + wiggle * 1.45) * len;
+
+        ctx.strokeStyle = i % 3 === 0 ? scene.palette.filamentA : scene.palette.filamentB;
+        ctx.lineWidth = i % 2 ? 0.95 : 1.2;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.quadraticCurveTo(c1x, c1y, ex, ey);
+        ctx.stroke();
+
+        if ((i & 3) === 0) {
+          const s = i % 5 === 0 ? 7 : 6;
+          ctx.globalAlpha = 0.78;
+          ctx.drawImage(state.sprites.tip, ex - s * 0.5, ey - s * 0.5, s, s);
+        }
       }
     }
 
@@ -397,10 +496,10 @@
     const s = state.bloomRadius * (1.14 + Math.sin(t * 0.0013) * 0.02);
     ctx.save();
     ctx.globalCompositeOperation = 'lighter';
-    ctx.globalAlpha = mode === 'reading' ? 0.44 : 0.52;
+    ctx.globalAlpha = mode === 'reading' ? 0.44 : (isSignalBloom ? 0.38 : 0.52);
     ctx.drawImage(state.sprites.glow, state.centerX - s, state.centerY - s, s * 2, s * 2);
-    ctx.globalAlpha = mode === 'reading' ? 0.64 : 0.72;
-    const c = state.bloomRadius * 0.37;
+    ctx.globalAlpha = mode === 'reading' ? 0.64 : (isSignalBloom ? 0.58 : 0.72);
+    const c = state.bloomRadius * (isSignalBloom ? 0.34 : 0.37);
     ctx.drawImage(state.sprites.core, state.centerX - c, state.centerY - c, c * 2, c * 2);
     ctx.globalCompositeOperation = 'source-over';
     ctx.restore();
