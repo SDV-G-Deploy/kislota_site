@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kislota Digest — News Pulse</title>
+  <meta name="description" content="Kislota Digest: compact news pulse with semantic signal colors and clean readability." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper row">
+      <div class="brand">kislota<span class="dot">.</span>digest</div>
+      <nav class="top-nav" aria-label="Primary">
+        <a class="nav-link" href="#top">Top</a>
+        <a class="nav-link" href="#categories">Categories</a>
+        <a class="nav-link" href="#digest-notes">Digest Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="hero" id="top">
+      <p class="eyebrow">Daily news digest</p>
+      <h1>Signal-first briefing: one calm base, one active narrative pole, clear micro-alerts.</h1>
+      <p>
+        Kislota Digest keeps the screen readable while preserving energy: psychic cyan as the primary screen accent,
+        threat/alien/acid used as semantic state labels only, and amber hotspot reserved for tiny urgency moments.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#news-grid">Open today’s cards</a>
+        <a class="btn btn-ghost" href="#digest-notes">See trend notes</a>
+      </div>
+    </section>
+
+    <section class="categories" id="categories" aria-label="Categories filters">
+      <button class="chip active" data-category="All">All</button>
+      <button class="chip" data-category="Tech">Tech</button>
+      <button class="chip" data-category="Policy">Policy</button>
+      <button class="chip" data-category="Science">Science</button>
+      <button class="chip" data-category="Business">Business</button>
+      <button class="chip" data-category="Culture">Culture</button>
+      <button class="chip" data-category="City">City</button>
+    </section>
+
+    <div class="layout">
+      <section>
+        <article class="panel featured">
+          <p class="meta">Featured briefing · Updated 05:45 UTC</p>
+          <h2>Global platforms shift from “growth at any cost” to “risk + reliability” as baseline KPI.</h2>
+          <p>
+            Cross-sector briefings show the same move: fewer oversized launches, more controlled iteration,
+            tighter incident reporting, and stricter model governance. The appetite is still high, but noise tolerance is lower.
+          </p>
+          <div class="labels">
+            <span class="label psychic">psychic</span>
+            <span class="label threat">threat</span>
+            <span class="label hotspot">hotspot</span>
+          </div>
+        </article>
+
+        <section class="news-grid" id="news-grid" aria-live="polite"></section>
+      </section>
+
+      <aside class="panel sidebar" aria-label="Sidebar controls">
+        <small>Filters / labels</small>
+        <h3>Quick signal cut</h3>
+
+        <div class="filter-list">
+          <button class="filter-toggle" data-filter="threat">
+            <span>Threat watch</span>
+            <span class="label threat">red</span>
+          </button>
+          <button class="filter-toggle" data-filter="alien">
+            <span>Tech anomaly</span>
+            <span class="label alien">blue</span>
+          </button>
+          <button class="filter-toggle" data-filter="acid">
+            <span>Trend spike</span>
+            <span class="label acid">green</span>
+          </button>
+          <button class="filter-toggle" data-filter="psychic">
+            <span>Mainline pulse</span>
+            <span class="label psychic">cyan</span>
+          </button>
+        </div>
+
+        <a href="#top" class="btn btn-primary" style="width:100%;justify-content:center;">Subscribe digest</a>
+
+        <div class="legend">
+          <small>Color usage rule</small>
+          <ul>
+            <li>Dominant wash: dark base ladder</li>
+            <li>Narrative pole: psychic cyan (screen-level accent)</li>
+            <li>Micro-hotspots: threat/alien/acid/amber only as labels & states</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <section class="panel notes" id="digest-notes">
+      <h3>Digest Notes / Trends</h3>
+      <div class="note-grid">
+        <article class="note">
+          <p class="meta">Trend #1</p>
+          <p>Regulators increasingly require audit-ready logs as default, not post-incident extras.</p>
+        </article>
+        <article class="note">
+          <p class="meta">Trend #2</p>
+          <p>Editorial teams are pairing AI summaries with human “confidence notes” for trust framing.</p>
+        </article>
+        <article class="note">
+          <p class="meta">Trend #3</p>
+          <p>Infrastructure updates now ship with clearer rollback playbooks and visible reliability metrics.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>Kislota Digest — semantic color system based on Dandadan v4 handoff. <span class="hotspot">Micro-hotspot only where it matters.</span></p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
