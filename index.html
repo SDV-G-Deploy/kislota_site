@@ -3,163 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kislota Digest v2 — Signal Covers</title>
-  <meta name="description" content="Kislota Digest v2: bold editorial signal board with controlled multi-accent hierarchy." />
+  <title>Kislota Digest v3 — Editorial Front Page</title>
+  <meta name="description" content="Kislota Digest v3: a branded digital magazine demo with front-page composition, signal taxonomy, and editorial rhythm." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-noise" aria-hidden="true"></div>
 
   <header class="site-header">
-    <div class="wrapper row">
-      <div class="brand">kislota<span class="dot">.</span>digest <span class="version">v2</span></div>
+    <div class="wrapper masthead">
+      <a class="brand-lockup" href="#top" aria-label="Kislota Digest home">
+        <span class="brand-kicker">Independent Signal Press</span>
+        <span class="brand-wordmark">KISLOTA<span class="dot">.</span>DIGEST</span>
+        <span class="brand-meta">Edition 118 · Sunday · UTC Live Desk</span>
+      </a>
+
+      <div class="masthead-actions">
+        <span class="status-pill">Live update stream</span>
+        <a class="btn btn-ghost" href="article.html">Featured article</a>
+      </div>
+    </div>
+
+    <div class="wrapper strip-row">
       <nav class="top-nav" aria-label="Primary">
-        <a class="nav-link" href="#top">Top</a>
-        <a class="nav-link" href="#categories">Categories</a>
-        <a class="nav-link" href="#news-grid">Covers</a>
-        <a class="nav-link" href="#digest-notes">Trends</a>
+        <a class="nav-link" href="#front-page">Front Page</a>
+        <a class="nav-link" href="#latest-grid">Latest</a>
+        <a class="nav-link" href="#sections">Sections</a>
+        <a class="nav-link" href="#briefings">Briefings</a>
       </nav>
+      <p class="edition-note">Global editorial desk · Version v3 demo</p>
     </div>
   </header>
 
-  <main class="wrapper">
-    <section class="hero" id="top">
-      <div class="hero-glow hero-glow-main" aria-hidden="true"></div>
-      <div class="hero-glow hero-glow-hot" aria-hidden="true"></div>
+  <div class="ticker" aria-label="Live ticker">
+    <div class="wrapper ticker-track" id="ticker-track"></div>
+  </div>
 
-      <div class="hero-topline">
-        <p class="eyebrow">Dandadan-like news digest · Edition 117</p>
-        <span class="hero-badge">Live pulse</span>
+  <main class="wrapper page" id="top">
+    <section class="front-page" id="front-page">
+      <article class="hero panel">
+        <p class="kicker">Lead Story · Psychic Desk</p>
+        <h1>
+          Infrastructure week turns into a <span class="hero-accent">signal war</span>:
+          trust badges, rollback drills, and anomaly lanes become front-page priorities.
+        </h1>
+        <p class="hero-deck">
+          v3 framing pushes Kislota from landing page into media product logic: stronger masthead,
+          intentional editorial tempo, confidence metadata, coverage tags, and visible hierarchy across devices.
+        </p>
+
+        <div class="hero-meta-grid">
+          <p><span>Updated</span> 06:21 UTC</p>
+          <p><span>Edition</span> #118 / Europe–US cycle</p>
+          <p><span>Signal mix</span> Teal lead · Blue info · Red urgent</p>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="article.html">Read full cover story</a>
+          <a class="btn btn-ghost" href="#latest-grid">Scan latest cards</a>
+        </div>
+      </article>
+
+      <article class="featured panel">
+        <p class="kicker">Featured Analysis</p>
+        <h2>Why news products now expose reliability score, source breadth, and operational impact in every card</h2>
+        <p>
+          Front-page design now acts like control-room UI. Stories are sorted by urgency, confidence, and actionability,
+          not only by chronology. Editorial polish = better decisions.
+        </p>
+        <div class="meta-row">
+          <span class="label premium">premium</span>
+          <span class="label psychic">lead</span>
+          <span class="label hotspot">hotspot</span>
+        </div>
+        <a class="read-more" href="article.html">Open long read →</a>
+      </article>
+    </section>
+
+    <section class="sections-bar" id="sections" aria-label="Category filters">
+      <div class="section-header">
+        <p class="kicker">Sections</p>
+        <h3>Coverage lanes</h3>
       </div>
-
-      <h1>
-        The day in <span class="hero-accent">psychic teal</span>:
-        <br />loud signals, sharp edits, zero visual fog.
-      </h1>
-
-      <p class="hero-lead">
-        Editorial hierarchy first. Teal is the lead pole, alien blue guides info, threat red marks urgent,
-        acid lime appears only for anomaly spikes, amber tags hotspot friction, and violet/magenta flashes
-        stay premium + local.
-      </p>
-
-      <div class="hero-hotline">
-        <article class="hotline-item">
-          <p class="meta">Hotline / 05:47 UTC</p>
-          <h3>Regulatory rooms switched to “proof-first rollout” language overnight.</h3>
-        </article>
-        <article class="hotline-item is-urgent">
-          <p class="meta">Urgent / 06:03 UTC</p>
-          <h3>Exploit chatter surged in mobile infra forums after patch disclosure.</h3>
-        </article>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#news-grid">Open cover cards</a>
-        <a class="btn btn-ghost" href="#digest-notes">Read trend notes</a>
+      <div class="chips">
+        <button class="chip active" data-category="All">All</button>
+        <button class="chip" data-category="Tech">Tech</button>
+        <button class="chip" data-category="Policy">Policy</button>
+        <button class="chip" data-category="Science">Science</button>
+        <button class="chip" data-category="Business">Business</button>
+        <button class="chip" data-category="Culture">Culture</button>
+        <button class="chip" data-category="City">City</button>
       </div>
     </section>
 
-    <section class="categories" id="categories" aria-label="Categories filters">
-      <button class="chip active" data-category="All">All lanes</button>
-      <button class="chip" data-category="Tech">Tech</button>
-      <button class="chip" data-category="Policy">Policy</button>
-      <button class="chip" data-category="Science">Science</button>
-      <button class="chip" data-category="Business">Business</button>
-      <button class="chip" data-category="Culture">Culture</button>
-      <button class="chip" data-category="City">City</button>
-    </section>
-
-    <div class="layout">
+    <div class="main-layout">
       <section>
-        <article class="panel featured">
-          <p class="meta">Featured briefing · Updated 06:05 UTC</p>
-          <h2>Publishers now package headlines as collectible “signal covers” with confidence score overlays.</h2>
-          <p>
-            Teams are combining hard telemetry with editorial framing to reduce feed fatigue.
-            The winning format: fewer blocks, stronger hierarchy, clearer urgency lanes, and visible reliability tags.
-          </p>
-          <div class="labels">
-            <span class="label psychic">psychic</span>
-            <span class="label alien">alien</span>
-            <span class="label premium">premium</span>
-            <span class="label hotspot">hotspot</span>
-          </div>
-        </article>
-
-        <section class="news-grid" id="news-grid" aria-live="polite"></section>
+        <div class="section-headline">
+          <p class="kicker">Now Publishing</p>
+          <h3>Latest Front Cards</h3>
+        </div>
+        <section class="latest-grid" id="latest-grid" aria-live="polite"></section>
       </section>
 
-      <aside class="panel sidebar" aria-label="Sidebar controls">
-        <small>Quick signal cuts</small>
-        <h3>Filter by intensity</h3>
+      <aside class="sidebar">
+        <section class="panel widget" aria-label="Signal filters">
+          <p class="kicker">Signal board</p>
+          <h3>Filter by pulse</h3>
+          <div class="filter-list">
+            <button class="filter-toggle" data-filter="psychic"><span>Main pulse</span><span class="label psychic">lead</span></button>
+            <button class="filter-toggle" data-filter="alien"><span>Info stream</span><span class="label alien">info</span></button>
+            <button class="filter-toggle" data-filter="threat"><span>Threat watch</span><span class="label threat">urgent</span></button>
+            <button class="filter-toggle" data-filter="acid"><span>Anomaly lane</span><span class="label acid">weird</span></button>
+            <button class="filter-toggle" data-filter="hotspot"><span>Hotspot desk</span><span class="label hotspot">heat</span></button>
+            <button class="filter-toggle" data-filter="premium"><span>Premium curation</span><span class="label premium">flash</span></button>
+          </div>
+        </section>
 
-        <div class="filter-list">
-          <button class="filter-toggle" data-filter="threat">
-            <span>Threat watch</span>
-            <span class="label threat">urgent</span>
-          </button>
-          <button class="filter-toggle" data-filter="alien">
-            <span>Alien info</span>
-            <span class="label alien">info</span>
-          </button>
-          <button class="filter-toggle" data-filter="acid">
-            <span>Acid anomaly</span>
-            <span class="label acid">weird</span>
-          </button>
-          <button class="filter-toggle" data-filter="hotspot">
-            <span>Amber hotspot</span>
-            <span class="label hotspot">heat</span>
-          </button>
-          <button class="filter-toggle" data-filter="premium">
-            <span>Editorial flash</span>
-            <span class="label premium">premium</span>
-          </button>
-          <button class="filter-toggle" data-filter="psychic">
-            <span>Main pulse</span>
-            <span class="label psychic">lead</span>
-          </button>
-        </div>
+        <section class="panel widget trends" id="briefings">
+          <p class="kicker">Trends radar</p>
+          <h3>What’s accelerating</h3>
+          <ul id="trend-list"></ul>
+        </section>
 
-        <a href="#top" class="btn btn-primary btn-block">Subscribe digest</a>
-
-        <div class="legend">
-          <small>Color discipline</small>
-          <ul>
-            <li>Screen pole: psychic teal (dominant)</li>
-            <li>Blue/red/lime/orange: functional state accents</li>
-            <li>Violet/magenta: local premium flashes only</li>
-          </ul>
-        </div>
+        <section class="panel widget editions">
+          <p class="kicker">Edition snapshot</p>
+          <h3>Desk composition</h3>
+          <dl>
+            <div><dt>Stories</dt><dd id="total-stories">0</dd></div>
+            <div><dt>Urgent</dt><dd id="total-urgent">0</dd></div>
+            <div><dt>Avg confidence</dt><dd id="avg-confidence">0%</dd></div>
+          </dl>
+        </section>
       </aside>
     </div>
-
-    <section class="panel notes" id="digest-notes">
-      <h3>Digest Notes / Trends Radar</h3>
-      <div class="note-grid">
-        <article class="note">
-          <p class="meta">Trend #1 · reliability theater is out</p>
-          <p>Ops teams now demand rollback drills in public release notes, not internal docs.</p>
-        </article>
-        <article class="note">
-          <p class="meta">Trend #2 · editorial trust stack</p>
-          <p>More outlets show confidence meters + source diversity index directly on cards.</p>
-        </article>
-        <article class="note">
-          <p class="meta">Trend #3 · anomaly as product lane</p>
-          <p>“Weird but real” micro-stories are becoming a dedicated category with dedicated moderation.</p>
-        </article>
-        <article class="note">
-          <p class="meta">Trend #4 · premium flashes</p>
-          <p>Violet/magenta accents are used sparingly to signal expert curation, not generic emphasis.</p>
-        </article>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrapper">
-      <p>Kislota Digest v2 — editorial signal board with controlled multi-accent hierarchy.</p>
+    <div class="wrapper footer-grid">
+      <p>Kislota Digest v3 · Editorial product demo · Multi-accent system under controlled hierarchy.</p>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
 
