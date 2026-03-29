@@ -67,13 +67,13 @@
     },
     'signal-bloom': {
       bloom: { layers: 2, petalsPerLayer: 10, radiusFactor: 0.128, stemHeightFactor: 0.28, petalLength: 120, petalThickness: 20, spread: 0.48 },
-      motion: { pulse: 0.012, sway: 0.022, filamentWiggle: 0.08 },
+      motion: { pulse: 0.013, sway: 0.023, filamentWiggle: 0.085 },
       structure: { lanes: 7, laneGap: 0.34, asymmetry: 0.18, gateArc: 0.3, spokeBias: 0.24 },
-      tuning: { particlesMul: 0.84 },
+      tuning: { particlesMul: 0.88 },
       palette: {
         body: ['#050913', '#081225', '#050910'],
-        vignette: ['rgba(32, 88, 136, 0.10)', 'rgba(18, 44, 78, 0.10)', 'rgba(0, 0, 0, 0.64)'],
-        haze: ['rgba(92, 170, 248, ALPHA)', 'rgba(66, 126, 222, ALPHA2)', 'rgba(0, 0, 0, 0)'],
+        vignette: ['rgba(32, 88, 136, 0.11)', 'rgba(32, 30, 84, 0.10)', 'rgba(0, 0, 0, 0.64)'],
+        haze: ['rgba(96, 182, 252, ALPHA)', 'rgba(126, 88, 226, ALPHA2)', 'rgba(0, 0, 0, 0)'],
         stem: ['rgba(94, 156, 204, 0.40)', 'rgba(34, 60, 98, 0.72)'],
         petalStops: ['rgba(198, 236, 255, 0.46)', 'rgba(118, 198, 250, 0.42)', 'rgba(88, 136, 230, 0.38)', 'rgba(38, 66, 130, 0.42)'],
         petalStroke: 'rgba(214, 238, 255, 0.12)',
