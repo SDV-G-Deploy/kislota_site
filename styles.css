@@ -232,7 +232,8 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   border-color: color-mix(in srgb, var(--psychic) 38%, var(--line));
   background:
-    radial-gradient(140% 90% at 102% -12%, color-mix(in srgb, var(--magenta) 13%, transparent), transparent 64%),
+    radial-gradient(120% 92% at 104% -12%, color-mix(in srgb, var(--magenta) 14%, transparent), transparent 62%),
+    radial-gradient(112% 96% at -12% 112%, color-mix(in srgb, var(--acid) 10%, transparent), transparent 60%),
     linear-gradient(140deg, color-mix(in srgb, #1a2748 88%, transparent), color-mix(in srgb, #10172d 83%, transparent));
 }
 .homepage .hero::after {
@@ -246,6 +247,82 @@ a { color: inherit; text-decoration: none; }
   background: radial-gradient(circle at 35% 35%, rgba(203, 245, 108, 0.34), rgba(255, 79, 159, 0.12) 54%, transparent 74%);
   filter: blur(0.4px);
   pointer-events: none;
+}
+
+.acid-veins-host > *:not(.acid-veins-layer) {
+  position: relative;
+  z-index: 2;
+}
+
+.acid-veins-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: .9;
+}
+
+.acid-veins-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(42% 58% at 14% 86%, rgba(200, 245, 108, 0.16), transparent 72%),
+    radial-gradient(46% 62% at 90% 16%, rgba(255, 79, 159, 0.15), transparent 74%),
+    linear-gradient(115deg, rgba(183, 100, 255, 0.08), rgba(10, 16, 34, 0.03) 54%, rgba(200, 245, 108, 0.06));
+}
+
+.acid-veins-svg {
+  width: 100%;
+  height: 100%;
+  opacity: .86;
+  filter: drop-shadow(0 0 8px rgba(200, 245, 108, 0.3)) drop-shadow(0 0 14px rgba(255, 79, 159, 0.2));
+}
+
+.vein {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.vein-main {
+  stroke: rgba(198, 250, 112, 0.7);
+  stroke-width: 2.2;
+  stroke-dasharray: 6 13;
+  animation: veins-shift 8.6s linear infinite;
+}
+
+.vein-branch,
+.vein-branch2 {
+  stroke: rgba(255, 89, 176, 0.56);
+  stroke-width: 1.45;
+  stroke-dasharray: 5 11;
+  animation: veins-shift 10.8s linear infinite reverse;
+}
+
+.vein-branch2 {
+  stroke: rgba(193, 108, 255, 0.52);
+  animation-duration: 12.6s;
+}
+
+.vein-arc {
+  stroke: rgba(201, 250, 118, 0.44);
+  stroke-width: 1.1;
+  stroke-dasharray: 3 10;
+  animation: veins-flicker 5.4s steps(2, end) infinite;
+}
+
+@keyframes veins-shift {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -220; }
+}
+
+@keyframes veins-flicker {
+  0%, 100% { opacity: .28; }
+  40% { opacity: .8; }
+  68% { opacity: .42; }
 }
 .kicker { margin: 0; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--psychic); font-weight: 700; }
 .kicker-blip {
@@ -281,6 +358,39 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px;
   background: radial-gradient(circle, rgba(255, 79, 159, 0.22), rgba(99, 169, 255, 0.08) 52%, transparent 70%);
   pointer-events: none;
+}
+
+.acid-veins-pulse > *:not(.acid-veins-mini) {
+  position: relative;
+  z-index: 2;
+}
+
+.acid-veins-mini {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 80% at 92% 10%, rgba(255, 80, 165, 0.15), transparent 66%),
+    radial-gradient(88% 62% at 8% 100%, rgba(200, 245, 108, 0.12), transparent 74%);
+}
+
+.acid-veins-mini::before,
+.acid-veins-mini::after {
+  content: "";
+  position: absolute;
+  inset: auto 8% 18% 12%;
+  border-radius: 999px;
+  border-top: 1.3px solid rgba(193, 108, 255, 0.42);
+  transform: rotate(-7deg);
+  box-shadow: 0 0 14px rgba(193, 108, 255, 0.22);
+}
+
+.acid-veins-mini::after {
+  inset: auto 18% 12% 22%;
+  border-top-color: rgba(201, 250, 118, 0.38);
+  transform: rotate(8deg);
+  box-shadow: 0 0 14px rgba(201, 250, 118, 0.2);
 }
 .strange-pin {
   margin-left: .35rem;
@@ -443,7 +553,31 @@ a { color: inherit; text-decoration: none; }
   .homepage .latest-grid .card:nth-child(5)::after {
     display: none;
   }
+
+  .acid-veins-layer {
+    opacity: .54;
+  }
+
+  .acid-veins-svg {
+    opacity: .62;
+  }
+
+  .acid-veins-mini::before,
+  .acid-veins-mini::after {
+    inset: auto 12% 14% 12%;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+
+  .vein-main,
+  .vein-branch,
+  .vein-branch2,
+  .vein-arc {
+    animation: none !important;
+  }
+
+  .acid-veins-svg {
+    opacity: .58;
+  }
 }
