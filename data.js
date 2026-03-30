@@ -1,6 +1,16 @@
+window.editionConfig = {
+  editionId: "118",
+  editionName: "UTC Live Desk",
+  heroStoryId: 1,
+  featuredStoryId: 3,
+  continuationLabel: "Editorial continuation",
+  articleScene: "quiet-signal"
+};
+
 window.newsItems = [
   {
     id: 1,
+    storyClass: "lead",
     title: "Emergency memo leaked: AI procurement now requires incident rehearsal proof",
     deck: "Three agencies moved from paper-compliance to simulation-tested compliance after high-profile audit failures.",
     category: "Policy",
@@ -12,10 +22,17 @@ window.newsItems = [
     confidence: 92,
     impact: "High",
     labels: ["threat", "hotspot", "psychic"],
-    tone: "urgent"
+    tone: "urgent",
+    bodyKey: "procurement-rehearsal",
+    relatedIds: [4, 7, 3],
+    layoutSpan: "major",
+    layoutWeight: 10,
+    accentRole: "hero",
+    heroAccentPhrase: "incident rehearsal proof"
   },
   {
     id: 2,
+    storyClass: "anomaly",
     title: "Alien-blue dashboard goes public: ocean anomaly monitor spots triple heat filament",
     deck: "Researchers flagged a non-seasonal cluster with synchronized movement across shipping corridors.",
     category: "Science",
@@ -27,10 +44,16 @@ window.newsItems = [
     confidence: 84,
     impact: "Medium",
     labels: ["alien", "acid"],
-    tone: "info"
+    tone: "info",
+    bodyKey: "ocean-heat-filament",
+    relatedIds: [6, 5, 8],
+    layoutSpan: "puncture",
+    layoutWeight: 6,
+    accentRole: "anomaly"
   },
   {
     id: 3,
+    storyClass: "premium",
     title: "Cover story: chip foundries report cleaner queue maps, enterprise demand steadies",
     deck: "Quarterly guidance indicates better packaging throughput and fewer allocation shocks.",
     category: "Business",
@@ -42,10 +65,16 @@ window.newsItems = [
     confidence: 88,
     impact: "Medium",
     labels: ["psychic", "premium"],
-    tone: "premium"
+    tone: "premium",
+    bodyKey: "chip-queue-maps",
+    relatedIds: [8, 1, 5],
+    layoutSpan: "wide",
+    layoutWeight: 8,
+    accentRole: "featured"
   },
   {
     id: 4,
+    storyClass: "threat",
     title: "Zero-day relay burst: mobile stack patched, exploitation attempts already detected",
     deck: "Security teams advise accelerated rollout windows and stricter dependency visibility in MDM fleets.",
     category: "Tech",
@@ -57,10 +86,16 @@ window.newsItems = [
     confidence: 95,
     impact: "Critical",
     labels: ["threat", "alien"],
-    tone: "urgent"
+    tone: "urgent",
+    bodyKey: "relay-burst-patch",
+    relatedIds: [1, 7, 8],
+    layoutSpan: "wide",
+    layoutWeight: 9,
+    accentRole: "threat"
   },
   {
     id: 5,
+    storyClass: "brief",
     title: "Culture lane expands: documentary studios launch weekly signal capsule formats",
     deck: "Short editorial arcs with confidence notes outperform long-form drops in completion rates.",
     category: "Culture",
@@ -72,10 +107,16 @@ window.newsItems = [
     confidence: 81,
     impact: "Low",
     labels: ["psychic", "premium"],
-    tone: "premium"
+    tone: "premium",
+    bodyKey: "signal-capsules",
+    relatedIds: [3, 2, 8],
+    layoutSpan: "dense",
+    layoutWeight: 5,
+    accentRole: "brief"
   },
   {
     id: 6,
+    storyClass: "anomaly",
     title: "City trial gets weird: autonomous buses reroute around late-night crowd pulses",
     deck: "Transit labs found anomaly-aware routing reduced delays while improving passenger safety metrics.",
     category: "City",
@@ -87,10 +128,16 @@ window.newsItems = [
     confidence: 79,
     impact: "Medium",
     labels: ["acid", "hotspot"],
-    tone: "weird"
+    tone: "weird",
+    bodyKey: "bus-crowd-pulses",
+    relatedIds: [2, 4, 1],
+    layoutSpan: "dense",
+    layoutWeight: 4,
+    accentRole: "anomaly"
   },
   {
     id: 7,
+    storyClass: "brief",
     title: "Open-source policy tracker adds live confidence badges for each regulation draft",
     deck: "Editors can compare wording volatility and lobbying pressure snapshots in one pane.",
     category: "Policy",
@@ -102,10 +149,16 @@ window.newsItems = [
     confidence: 86,
     impact: "Medium",
     labels: ["alien", "psychic"],
-    tone: "info"
+    tone: "info",
+    bodyKey: "policy-badges",
+    relatedIds: [1, 4, 5],
+    layoutSpan: "dense",
+    layoutWeight: 6,
+    accentRole: "brief"
   },
   {
     id: 8,
+    storyClass: "premium",
     title: "Premium brief: constrained-context models cut hallucination bursts in support queues",
     deck: "Support teams trade creative breadth for reliability under strict SLA windows.",
     category: "Tech",
@@ -117,9 +170,73 @@ window.newsItems = [
     confidence: 90,
     impact: "High",
     labels: ["premium", "psychic"],
-    tone: "premium"
+    tone: "premium",
+    bodyKey: "constrained-context-models",
+    relatedIds: [3, 4, 1],
+    layoutSpan: "wide",
+    layoutWeight: 7,
+    accentRole: "featured"
   }
 ];
+
+window.articleBodies = {
+  "procurement-rehearsal": [
+    { type: "paragraph", text: "For two years, procurement teams treated incident rehearsal as optional theater. This cycle flips that assumption: rehearsal logs are now prerequisite evidence for large AI contracts." },
+    { type: "paragraph", text: "Two agencies told Kislota they are now scoring bids against rehearsal evidence before price optimization. If a vendor cannot show who owned rollback, who approved comms, and how quickly service recovered, the bid slips." },
+    { type: "subhead", text: "From checklist compliance to operational proof" },
+    { type: "paragraph", text: "Auditors are no longer asking whether policies exist. They ask whether teams can execute rollback, communication, and service continuity steps under timed pressure with named owners." },
+    { type: "callout", text: "Signal: vendors that can demonstrate rehearsal cadence are moving to preferred lanes faster than vendors with stronger slide decks." },
+    { type: "paragraph", text: "The immediate impact is less theatrical procurement language and more operational metrics: rehearsal frequency, failure recovery time, and confidence intervals by subsystem." },
+    { type: "paragraph", text: "Legal teams like the shift because evidence is timestamped and comparable across suppliers. Operations teams like it because failure drills expose hidden single-owner bottlenecks before real outages do." },
+    { type: "list", items: ["Publish rehearsal scope before signing", "Attach rollback owner map to every major release", "Track confidence drift during post-incident week"] },
+    { type: "signal-note", text: "Desk view: direction is stable; enforcement strictness will vary by agency until shared scoring templates land." }
+  ],
+  "ocean-heat-filament": [
+    { type: "paragraph", text: "The anomaly desk flagged a triple-filament heat shape moving along shipping-adjacent currents. The pattern is new enough to require caution, but stable enough to monitor as one coherent event." },
+    { type: "paragraph", text: "Routing analysts are watching because two of the three bands overlap container corridors where minor temperature drift can alter fuel planning and maintenance cadence. No alarm language yet, just operational scrutiny." },
+    { type: "subhead", text: "What makes this different" },
+    { type: "paragraph", text: "Instead of one isolated hotspot, the monitor shows synchronized movement across three thin bands. Analysts call it a routing concern first and a climate narrative second." },
+    { type: "quote", text: "We are not naming this a trend yet. We are naming it a watch condition with logistics implications.", by: "Science Desk monitor brief" },
+    { type: "list", items: ["Track filament persistence across 72h windows", "Separate shipping impact from climate extrapolation", "Publish uncertainty margins with every update"] },
+    { type: "signal-note", text: "Interpretation guardrail: avoid extrapolating annual conclusions from one short window." }
+  ],
+  "chip-queue-maps": [
+    { type: "paragraph", text: "Foundries are reporting cleaner queue telemetry: fewer invisible handoffs, better packaging visibility, and reduced surprise holds in mid-volume enterprise orders." },
+    { type: "paragraph", text: "The upgrade is procedural, not miraculous. Plants did not suddenly gain huge new capacity; they tightened queue disclosure and stopped hiding soft-priority overrides that used to trigger buyer panic." },
+    { type: "subhead", text: "Why this is a premium counterpoint" },
+    { type: "paragraph", text: "While the lead lane focuses on incident pressure, this story maps medium-term stability signals. The question is not speed; it is how durable the calmer queue behavior becomes across two quarters." },
+    { type: "callout", text: "Premium inference: queue transparency can suppress panic buying even when capacity is not materially higher." },
+    { type: "paragraph", text: "Integrator desks say lead-time promises are finally matching shipment reality often enough to plan quarterly rollouts without emergency substitutions. That lowers cost of contingency, even before prices move." },
+    { type: "list", items: ["Packaging visibility improved", "Allocation shocks less frequent", "Demand guidance less volatile"] },
+    { type: "signal-note", text: "Watchpoint: one major packaging choke can still snap this calm if smartphone demand spikes faster than expected." }
+  ],
+  "relay-burst-patch": [
+    { type: "paragraph", text: "Exploitation attempts arrived before broad patch completion. Security desks now treat this as a coordination stress test rather than a single CVE headline." },
+    { type: "paragraph", text: "Early probes targeted lagging MDM groups and unmanaged contractor devices first, then pivoted into older app stacks still carrying vulnerable relay modules. Teams with clean dependency maps closed exposure fastest." },
+    { type: "subhead", text: "Patch velocity versus patch quality" },
+    { type: "paragraph", text: "Fast deployment lowers open exposure, but rushed rollout increases rollback risk. Teams are choosing staged windows with strict dependency checks and tighter owner accountability." },
+    { type: "callout", text: "Kislota rule in this lane: ship quickly, but never blind. Every urgent patch gets a rollback owner before first wave goes live." },
+    { type: "list", items: ["Segment fleet by dependency risk", "Patch externally exposed cohorts first", "Log rollback triggers before rollout wave two"] },
+    { type: "signal-note", text: "Threat desk note: attack pressure is real; broad impact claims stay capped to confirmed telemetry." }
+  ],
+  "signal-capsules": [
+    { type: "paragraph", text: "Studios are moving to weekly capsule formats that combine concise narrative with explicit confidence notes. Completion rises when readers can see both arc and uncertainty in one pass." },
+    { type: "quote", text: "Short does not mean shallow. It means rhythm with receipts.", by: "Culture desk editor" }
+  ],
+  "bus-crowd-pulses": [
+    { type: "paragraph", text: "Autonomous routing pilots began treating crowd pulses as real-time signal input, not background noise. Delays fell as routes adjusted before station congestion peaked." },
+    { type: "callout", text: "Anomaly puncture: unusual behavior, practical outcome." }
+  ],
+  "policy-badges": [
+    { type: "paragraph", text: "Policy tracker updates now expose confidence badges directly in draft timelines, helping teams compare wording volatility without opening separate analysis views." },
+    { type: "list", items: ["Higher transparency in wording shifts", "Faster legal review triage", "Clearer lobbying pressure snapshots"] }
+  ],
+  "constrained-context-models": [
+    { type: "paragraph", text: "Support operations adopting constrained-context models report fewer hallucination bursts and cleaner escalation handoffs under strict SLA conditions." },
+    { type: "subhead", text: "Reliability over broad creativity" },
+    { type: "paragraph", text: "The tradeoff is intentional: narrower generation scope reduces stylistic range but improves repeatable correctness in customer-facing workflows." }
+  ]
+};
 
 window.tickerItems = [
   "Threat lane +18% mentions in last 2h",

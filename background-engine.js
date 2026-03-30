@@ -65,6 +65,25 @@
         tipStops: ['rgba(230, 251, 255, 0.60)', 'rgba(170, 232, 255, 0.44)', 'rgba(152, 125, 255, 0.16)']
       }
     },
+    'quiet-signal': {
+      bloom: { layers: 2, petalsPerLayer: 8, radiusFactor: 0.118, stemHeightFactor: 0.27, petalLength: 108, petalThickness: 16, spread: 0.42 },
+      motion: { pulse: 0.008, sway: 0.014, filamentWiggle: 0.05 },
+      structure: { lanes: 6, laneGap: 0.3, asymmetry: 0.14, gateArc: 0.26, spokeBias: 0.2 },
+      tuning: { particlesMul: 0.72 },
+      palette: {
+        body: ['#060a14', '#081120', '#060912'],
+        vignette: ['rgba(30, 70, 106, 0.09)', 'rgba(20, 24, 58, 0.08)', 'rgba(0, 0, 0, 0.66)'],
+        haze: ['rgba(88, 166, 226, ALPHA)', 'rgba(96, 84, 186, ALPHA2)', 'rgba(0, 0, 0, 0)'],
+        stem: ['rgba(80, 138, 186, 0.34)', 'rgba(30, 52, 86, 0.66)'],
+        petalStops: ['rgba(194, 228, 248, 0.36)', 'rgba(112, 182, 230, 0.34)', 'rgba(80, 126, 198, 0.32)', 'rgba(30, 54, 112, 0.34)'],
+        petalStroke: 'rgba(198, 226, 245, 0.10)',
+        glowStops: ['rgba(120, 198, 240, 0.08)', 'rgba(94, 148, 222, 0.05)', 'rgba(58, 92, 166, 0.02)'],
+        coreStops: ['rgba(196, 226, 246, 0.36)', 'rgba(116, 178, 228, 0.34)', 'rgba(76, 114, 192, 0.26)'],
+        filamentA: 'rgba(166, 214, 242, 0.20)',
+        filamentB: 'rgba(124, 162, 220, 0.16)',
+        tipStops: ['rgba(214, 236, 248, 0.34)', 'rgba(154, 204, 236, 0.26)', 'rgba(102, 142, 204, 0.10)']
+      }
+    },
     'signal-bloom': {
       bloom: { layers: 2, petalsPerLayer: 10, radiusFactor: 0.128, stemHeightFactor: 0.28, petalLength: 120, petalThickness: 20, spread: 0.48 },
       motion: { pulse: 0.013, sway: 0.023, filamentWiggle: 0.085 },
@@ -87,7 +106,7 @@
   };
 
   const scene = SCENES[sceneId] || SCENES['neon-pollen'];
-  const isSignalBloom = sceneId === 'signal-bloom';
+  const isSignalBloom = sceneId === 'signal-bloom' || sceneId === 'quiet-signal';
 
   const perf = {
     fpsTarget: isMobile ? 24 : 40,
