@@ -3,66 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kislota Digest — Featured Article</title>
-  <meta name="description" content="Featured editorial article from Kislota Digest v3." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+  <title>Kislota Digest — Article</title>
+  <meta name="description" content="Article view from Kislota Digest v3." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="article-view" data-bg-scene="quiet-signal" data-bg-mode="reading" data-bg-veil="0.5">
+<body data-bg-scene="lily" data-bg-mode="reading" data-bg-veil="0.46">
   <div class="bg-noise" aria-hidden="true"></div>
 
   <header class="site-header article-header">
     <div class="wrapper masthead">
-      <a class="brand-lockup" href="index.html" aria-label="Kislota Digest front page">
-        <span class="brand-kicker">Kislota Digest · Long read desk</span>
-        <span class="brand-wordmark">KISLOTA<span class="dot">.</span>DIGEST</span>
-        <span class="brand-meta">Edition 118 · Cover Story · Reading mode</span>
+      <a class="brand-lockup" href="index.html">
+        <span class="brand-kicker">Kislota Digest</span>
+        <span class="brand-wordmark">FEATURE STORY</span>
+        <span class="brand-meta" id="article-brand-meta">Edition 118 · Live article</span>
       </a>
       <a class="btn btn-ghost" href="index.html">← Back to front page</a>
     </div>
   </header>
 
   <main class="wrapper article-page">
-    <div class="reading-progress" aria-hidden="true"><span id="reading-progress-bar"></span></div>
     <article class="panel article-card" id="article-root">
-      <p class="kicker" id="article-kicker">Kislota Cover Story · Premium Flash</p>
-      <h1 id="article-title">From pretty layouts to editorial systems: why v3 feels like a media brand</h1>
-      <p class="article-deck" id="article-deck">
-        The jump from v2 to v3 is not cosmetic. It’s structural: masthead identity, front-page rhythm,
-        metadata-rich story cards, and product-like side rails that guide reading behavior.
-      </p>
+      <p class="kicker" id="article-kicker">Cover Story · Live feed</p>
+      <h1 id="article-title">Loading article…</h1>
+      <p class="article-deck" id="article-deck">Preparing selected story details.</p>
 
-      <div class="meta-row" id="article-labels">
-        <span class="label premium">premium</span>
-        <span class="label psychic">lead</span>
-        <span class="label alien">analysis</span>
-        <span class="article-time" id="article-time">Published 06:25 UTC · 6 min read</span>
-      </div>
-
-      <aside class="article-framing" id="article-framing"></aside>
+      <div class="meta-row" id="article-labels"></div>
+      <p class="article-time" id="article-time"></p>
 
       <div class="article-content" id="article-content"></div>
-
-      <section class="article-continuation" id="article-continuation"></section>
-
-      <section class="related-stories" id="related-stories">
-        <p class="kicker">Continue reading</p>
-        <h2>Related stories</h2>
-        <ul id="related-list"></ul>
-      </section>
     </article>
   </main>
 
-  <script src="data.js"></script>
-  <script>
-    (function applyEditionArticleScene() {
-      var configuredScene = window.editionConfig && window.editionConfig.articleScene;
-      if (configuredScene) document.body.dataset.bgScene = configuredScene;
-    })();
-  </script>
   <script src="background-engine.js"></script>
-  <script src="article-script.js"></script>
+  <script src="data.js"></script>
+  <script src="article.js"></script>
 </body>
 </html>

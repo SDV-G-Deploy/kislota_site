@@ -3,198 +3,89 @@ const chips = document.querySelectorAll('.chip[data-category]');
 const quickFilterButtons = document.querySelectorAll('.filter-toggle[data-filter]');
 const tickerTrack = document.getElementById('ticker-track');
 const trendList = document.getElementById('trend-list');
-const classMix = document.getElementById('class-mix');
-const deskNotes = document.getElementById('desk-notes');
+
+const heroKicker = document.getElementById('hero-kicker');
+const heroTitle = document.getElementById('hero-title');
+const heroDeck = document.getElementById('hero-deck');
+const heroUpdated = document.getElementById('hero-meta-updated');
+const heroEdition = document.getElementById('hero-meta-edition');
+const heroSignalMix = document.getElementById('hero-meta-signal-mix');
+const heroPrimaryCta = document.getElementById('hero-primary-cta');
+
+const featuredKicker = document.getElementById('featured-kicker');
+const featuredTitle = document.getElementById('featured-title');
+const featuredDeck = document.getElementById('featured-deck');
+const featuredMeta = document.getElementById('featured-meta');
+const featuredLabels = document.getElementById('featured-labels');
+const featuredCta = document.getElementById('featured-cta');
 
 let activeCategory = 'All';
 let activeSignal = null;
-
-const storyClassMeta = {
-  lead: { name: 'Lead', cue: 'Front spine', tone: 'psychic' },
-  threat: { name: 'Threat', cue: 'Escalation watch', tone: 'threat' },
-  premium: { name: 'Premium', cue: 'Deep analysis', tone: 'premium' },
-  anomaly: { name: 'Anomaly', cue: 'Pattern break', tone: 'acid' },
-  brief: { name: 'Brief', cue: 'Operational update', tone: 'alien' }
-};
 
 function labelsMarkup(labels = []) {
   return labels.map((label) => `<span class="label ${label}">${label}</span>`).join('');
 }
 
-function baseCardTop(item) {
-  const meta = storyClassMeta[item.storyClass] || storyClassMeta.brief;
-  return `
-    <div class="card-top">
-      <p class="kicker">${item.category} · ${item.edition}</p>
-      <span class="signal-badge">${item.impact}</span>
-    </div>
-    <div class="card-class-mark">
-      <span class="label ${meta.tone}">${meta.name}</span>
-      <small>${meta.cue}</small>
-    </div>
-  `;
-}
-
-function cardWrapper(item, variantClass, inner) {
-  const href = `article.html?story=${encodeURIComponent(item.id)}`;
-  const toneClass = item.tone ? `tone-${item.tone}` : '';
-  const spanClass = item.layoutSpan ? `span-${item.layoutSpan}` : '';
-  const accentClass = item.accentRole ? `accent-${item.accentRole}` : '';
-  return `
-    <article class="panel card ${toneClass} class-${item.storyClass} ${variantClass} ${spanClass} ${accentClass}" data-category="${item.category}" data-labels="${item.labels.join(' ')}" data-story-class="${item.storyClass}">
-      <a class="card-link" href="${href}" aria-label="Open story: ${item.title}">
-        ${inner}
-      </a>
-    </article>
-  `;
-}
-
-function leadCard(item) {
-  return cardWrapper(item, 'card-lead', `
-    ${baseCardTop(item)}
-    <h4>${item.title}</h4>
-    <p class="deck">${item.deck}</p>
-    <div class="meta-line emphasis">
-      <span>Conf. ${item.confidence}%</span>
-      <span>${item.readTime} read</span>
-      <span>By ${item.author}</span>
-    </div>
-    <div class="labels">${labelsMarkup(item.labels)}</div>
-  `);
-}
-
-function threatCard(item) {
-  return cardWrapper(item, 'card-threat', `
-    ${baseCardTop(item)}
-    <h4>${item.title}</h4>
-    <p class="deck">${item.deck}</p>
-    <div class="alert-row">
-      <strong>Action window:</strong>
-      <span>${item.timestamp} · ${item.coverage}</span>
-    </div>
-    <div class="meta-line compact">
-      <span>Conf. ${item.confidence}%</span>
-      <span>${item.readTime}</span>
-    </div>
-    <div class="labels">${labelsMarkup(item.labels)}</div>
-  `);
-}
-
-function premiumCard(item) {
-  return cardWrapper(item, 'card-premium', `
-    ${baseCardTop(item)}
-    <h4>${item.title}</h4>
-    <p class="deck">${item.deck}</p>
-    <div class="meta-line compact">
-      <span>Context note: ${item.coverage}</span>
-      <span>${item.readTime} read</span>
-    </div>
-    <div class="meta-line compact">
-      <span>By ${item.author}</span>
-      <span>Conf. ${item.confidence}%</span>
-    </div>
-    <div class="labels">${labelsMarkup(item.labels)}</div>
-  `);
-}
-
-function anomalyCard(item) {
-  return cardWrapper(item, 'card-anomaly', `
-    ${baseCardTop(item)}
-    <h4>${item.title}</h4>
-    <p class="deck">${item.deck}</p>
-    <div class="anomaly-row">
-      <span class="label acid">anomaly</span>
-      <span>${item.coverage}</span>
-      <span>${item.timestamp}</span>
-    </div>
-    <div class="meta-line compact">
-      <span>${item.readTime}</span>
-      <span>Conf. ${item.confidence}%</span>
-    </div>
-  `);
-}
-
-function briefCard(item) {
-  return cardWrapper(item, 'card-brief', `
-    ${baseCardTop(item)}
-    <h4>${item.title}</h4>
-    <p class="deck">${item.deck}</p>
-    <div class="meta-line compact">
-      <span>${item.timestamp}</span>
-      <span>${item.readTime}</span>
-      <span>${item.coverage}</span>
-    </div>
-    <div class="labels">${labelsMarkup(item.labels)}</div>
-  `);
-}
-
 function cardMarkup(item) {
-  switch (item.storyClass) {
-    case 'lead':
-      return leadCard(item);
-    case 'threat':
-      return threatCard(item);
-    case 'premium':
-      return premiumCard(item);
-    case 'anomaly':
-      return anomalyCard(item);
-    case 'brief':
-    default:
-      return briefCard(item);
-  }
-}
-
-function emptyStateMarkup() {
-  const signalNote = activeSignal ? ` + ${activeSignal}` : '';
-
+  const toneClass = item.tone ? `tone-${item.tone}` : '';
+  const labels = Array.isArray(item.labels) ? item.labels : [];
+  const href = sanitizeHref(item.href || `article.html?id=${encodeURIComponent(item.articleId || item.id || '')}`);
   return `
-    <article class="panel empty-state" role="status" aria-live="polite">
-      <p class="kicker">No cards in this lane</p>
-      <h4>0 stories match <span>${activeCategory}${signalNote}</span></h4>
-      <p>Try another section or clear the pulse filter to widen the stream.</p>
-    </article>
+    <a class="card-link" href="${href}">
+      <article class="panel card ${toneClass}" data-category="${item.category}" data-labels="${labels.join(' ')}">
+        <div class="card-top">
+          <p class="kicker">${item.category} · ${item.edition}</p>
+          <span class="signal-badge">${item.impact}</span>
+        </div>
+        <h4>${item.title}</h4>
+        <p class="deck">${item.deck}</p>
+        <div class="meta-line">
+          <span>${item.timestamp}</span>
+          <span>${item.readTime} read</span>
+          <span>Conf. ${item.confidence}%</span>
+        </div>
+        <div class="meta-line compact">
+          <span>By ${item.author}</span>
+          <span>${item.coverage}</span>
+        </div>
+        <div class="labels">${labelsMarkup(labels)}</div>
+      </article>
+    </a>
   `;
 }
 
 function getFilteredItems() {
-  return window.newsItems
-    .filter((item) => {
-      const byCategory = activeCategory === 'All' || item.category === activeCategory;
-      const bySignal = !activeSignal || item.labels.includes(activeSignal);
-      return byCategory && bySignal;
-    })
-    .sort((a, b) => (b.layoutWeight || 0) - (a.layoutWeight || 0));
+  return window.newsItems.filter((item) => {
+    const byCategory = activeCategory === 'All' || item.category === activeCategory;
+    const labels = Array.isArray(item.labels) ? item.labels : [];
+    const bySignal = !activeSignal || labels.includes(activeSignal);
+    return byCategory && bySignal;
+  });
 }
 
 function render(items) {
   if (!grid) return;
-  if (!items.length) {
-    grid.innerHTML = emptyStateMarkup();
-    return;
-  }
-  grid.innerHTML = items.map(cardMarkup).join('');
-}
-
-function setPressedState(buttons, predicate) {
-  buttons.forEach((btn) => {
-    const isActive = predicate(btn);
-    btn.classList.toggle('active', isActive);
-    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-  });
+  const list = items.length ? items : window.newsItems;
+  grid.innerHTML = list.map(cardMarkup).join('');
 }
 
 function setActiveChip(category) {
   activeCategory = category;
-  setPressedState(chips, (chip) => chip.dataset.category === category);
+  chips.forEach((chip) => chip.classList.toggle('active', chip.dataset.category === category));
 }
 
 function setActiveSignal(signal) {
   activeSignal = signal;
-  setPressedState(quickFilterButtons, (btn) => btn.dataset.filter === signal);
+  quickFilterButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.filter === signal));
 }
 
 function renderTicker() {
-  if (!tickerTrack || !window.tickerItems) return;
+  if (!tickerTrack) return;
+  if (!Array.isArray(window.tickerItems) || window.tickerItems.length === 0) {
+    tickerTrack.innerHTML = '<span class="ticker-item">Live feed online</span>';
+    return;
+  }
+
   const content = window.tickerItems
     .map((item) => `<span class="ticker-item">${item}</span>`)
     .join('<span class="ticker-sep">✦</span>');
@@ -203,14 +94,9 @@ function renderTicker() {
 
 function renderTrends(items) {
   if (!trendList) return;
-
-  if (!items.length) {
-    trendList.innerHTML = '<li class="trend-empty"><strong>No active tags for this filter</strong></li>';
-    return;
-  }
-
   const byLabel = items.reduce((acc, item) => {
-    item.labels.forEach((label) => {
+    const labels = Array.isArray(item.labels) ? item.labels : [];
+    labels.forEach((label) => {
       acc[label] = (acc[label] || 0) + 1;
     });
     return acc;
@@ -220,49 +106,20 @@ function renderTrends(items) {
     .sort((a, b) => b[1] - a[1])
     .slice(0, 4);
 
-  trendList.innerHTML = sorted
-    .map(([label, count]) => `<li><span class="label ${label}">${label}</span><strong>${count} stories</strong></li>`)
-    .join('');
-}
-
-function renderClassMix(items) {
-  if (!classMix) return;
-  const counts = items.reduce((acc, item) => {
-    acc[item.storyClass] = (acc[item.storyClass] || 0) + 1;
-    return acc;
-  }, {});
-
-  const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
-  if (!sorted.length) {
-    classMix.innerHTML = '<li class="trend-empty"><strong>No class mix for this filter</strong></li>';
-    return;
-  }
-
-  classMix.innerHTML = sorted
-    .map(([storyClass, count]) => {
-      const meta = storyClassMeta[storyClass] || storyClassMeta.brief;
-      return `<li><span class="label ${meta.tone}">${meta.name}</span><strong>${count} cards</strong></li>`;
-    })
-    .join('');
-}
-
-function renderDeskNotes(items) {
-  if (!deskNotes) return;
-  const urgent = items.filter((item) => item.storyClass === 'threat').length;
-  const premium = items.filter((item) => item.storyClass === 'premium').length;
-  const anomaly = items.filter((item) => item.storyClass === 'anomaly').length;
-
-  deskNotes.innerHTML = `
-    <li><span>Escalation lane</span><strong>${urgent || 0} active</strong></li>
-    <li><span>Premium depth</span><strong>${premium || 0} queued</strong></li>
-    <li><span>Anomaly checks</span><strong>${anomaly || 0} flagged</strong></li>
-  `;
+  trendList.innerHTML = sorted.length
+    ? sorted
+        .map(([label, count]) => `<li><span class="label ${label}">${label}</span><strong>${count} stories</strong></li>`)
+        .join('')
+    : '<li><strong>No active label trends</strong></li>';
 }
 
 function renderStats(items) {
   const total = items.length;
-  const urgent = items.filter((item) => item.storyClass === 'threat').length;
-  const avg = total ? Math.round(items.reduce((sum, item) => sum + item.confidence, 0) / total) : 0;
+  const urgent = items.filter((item) => {
+    const labels = Array.isArray(item.labels) ? item.labels : [];
+    return labels.includes('threat');
+  }).length;
+  const avg = total ? Math.round(items.reduce((sum, item) => sum + (Number(item.confidence) || 0), 0) / total) : 0;
 
   const totalEl = document.getElementById('total-stories');
   const urgentEl = document.getElementById('total-urgent');
@@ -273,72 +130,262 @@ function renderStats(items) {
   if (avgEl) avgEl.textContent = `${avg}%`;
 }
 
-function getStoryById(storyId) {
-  return window.newsItems.find((item) => item.id === storyId);
-}
-
-function escapeHtml(value = '') {
-  return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
-}
-
-function formatHeroTitle(story) {
-  const baseTitle = escapeHtml(story.title || '');
-  const accent = (story.heroAccentPhrase || '').trim();
-  if (!accent) return baseTitle;
-  return `${baseTitle} <span class="hero-accent">${escapeHtml(accent)}</span>`;
-}
-
-function hydrateHero() {
-  const heroRoot = document.getElementById('hero-story');
-  if (!heroRoot || !window.editionConfig) return;
-
-  const story = getStoryById(window.editionConfig.heroStoryId) || window.newsItems[0];
-  if (!story) return;
-
-  heroRoot.querySelector('[data-hero-kicker]').textContent = `Lead Story · ${story.edition}`;
-  heroRoot.querySelector('[data-hero-title]').innerHTML = formatHeroTitle(story);
-  heroRoot.querySelector('[data-hero-deck]').textContent = story.deck;
-
-  const meta = heroRoot.querySelectorAll('[data-hero-meta]');
-  if (meta[0]) meta[0].innerHTML = `<span>Updated</span> ${story.timestamp}`;
-  if (meta[1]) meta[1].innerHTML = `<span>Edition</span> #${window.editionConfig.editionId} / ${window.editionConfig.editionName}`;
-  if (meta[2]) meta[2].innerHTML = `<span>Signal mix</span> ${story.labels.slice(0, 3).join(' · ')}`;
-
-  const readLink = heroRoot.querySelector('[data-hero-link]');
-  if (readLink) readLink.setAttribute('href', `article.html?story=${encodeURIComponent(story.id)}`);
-}
-
-function hydrateFeatured() {
-  const featuredRoot = document.getElementById('featured-premium');
-  if (!featuredRoot || !window.editionConfig) return;
-
-  const story = getStoryById(window.editionConfig.featuredStoryId) || window.newsItems.find((item) => item.storyClass === 'premium') || window.newsItems[0];
-  if (!story) return;
-
-  const link = `article.html?story=${encodeURIComponent(story.id)}`;
-  featuredRoot.querySelector('[data-featured-title]').textContent = story.title;
-  featuredRoot.querySelector('[data-featured-deck]').textContent = story.deck;
-  featuredRoot.querySelector('[data-featured-meta]').textContent = `${story.edition} · ${story.readTime} · Conf. ${story.confidence}%`;
-
-  const cta = featuredRoot.querySelector('[data-featured-link]');
-  if (cta) cta.setAttribute('href', link);
-
-  const mastheadFeaturedLink = document.querySelector('[data-masthead-featured-link]');
-  if (mastheadFeaturedLink) mastheadFeaturedLink.setAttribute('href', link);
-}
-
 function rerender() {
   const items = getFilteredItems();
+  const baseItems = window.newsItems;
   render(items);
-  renderTrends(items);
-  renderClassMix(items);
-  renderDeskNotes(items);
-  renderStats(items);
+  renderTrends(items.length ? items : baseItems);
+  renderStats(items.length ? items : baseItems);
+}
+
+function formatIsoToUtc(iso) {
+  if (!iso || typeof iso !== 'string') return '';
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return '';
+  const hours = String(date.getUTCHours()).padStart(2, '0');
+  const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+  return `${hours}:${minutes} UTC`;
+}
+
+function sanitizeHref(href) {
+  if (!href || typeof href !== 'string') return 'article.html';
+  const trimmed = href.trim();
+  if (!trimmed) return 'article.html';
+  if (/^(\.\/|\.\.\/|\/|[a-z0-9_-]+\.html(?:\?[^#]*)?(?:#.*)?$)/i.test(trimmed)) return trimmed;
+
+  try {
+    const url = new URL(trimmed, window.location.origin);
+    if (url.protocol === 'http:' || url.protocol === 'https:') return url.href;
+  } catch (_) {
+    return 'article.html';
+  }
+
+  return 'article.html';
+}
+
+function setSafeHref(anchor, href) {
+  if (!anchor) return;
+  const safeHref = sanitizeHref(href);
+  anchor.setAttribute('href', safeHref);
+
+  const isExternal = /^https?:\/\//i.test(safeHref);
+  if (isExternal) {
+    anchor.setAttribute('target', '_blank');
+    anchor.setAttribute('rel', 'noopener noreferrer');
+  } else {
+    anchor.removeAttribute('target');
+    anchor.removeAttribute('rel');
+  }
+}
+
+function splitTitleForAccent(rawTitle) {
+  const title = (rawTitle || '').trim();
+  if (!title) return null;
+
+  const separatorMatch = title.match(/[:—–-]\s+/);
+  if (separatorMatch && separatorMatch.index !== undefined) {
+    const splitAt = separatorMatch.index + separatorMatch[0].length;
+    const before = title.slice(0, splitAt);
+    const afterPart = title.slice(splitAt).trim();
+    const words = afterPart.split(/\s+/).filter(Boolean);
+    const accent = words.slice(0, Math.min(4, words.length)).join(' ');
+    const after = words.slice(Math.min(4, words.length)).join(' ');
+    if (accent) return { before: `${before} `, accent, after: after ? ` ${after}` : '' };
+  }
+
+  const words = title.split(/\s+/).filter(Boolean);
+  if (words.length >= 6) {
+    const accentStart = Math.max(1, Math.floor(words.length / 2) - 1);
+    const accent = words.slice(accentStart, accentStart + 3).join(' ');
+    const before = words.slice(0, accentStart).join(' ');
+    const after = words.slice(accentStart + 3).join(' ');
+    return { before: before ? `${before} ` : '', accent, after: after ? ` ${after}` : '' };
+  }
+
+  return { before: '', accent: title, after: '' };
+}
+
+function setAccentedHeadline(element, title, accentClass = 'hero-accent') {
+  if (!element) return;
+  const split = splitTitleForAccent(title);
+  if (!split) return;
+
+  element.replaceChildren();
+  if (split.before) element.appendChild(document.createTextNode(split.before));
+
+  const accent = document.createElement('span');
+  accent.className = accentClass;
+  accent.textContent = split.accent;
+  element.appendChild(accent);
+
+  if (split.after) element.appendChild(document.createTextNode(split.after));
+}
+
+function deriveLeadLabels(item) {
+  const labels = new Set();
+
+  const category = String(item?.category || '').toLowerCase();
+  if (category.includes('security') || category.includes('policy')) labels.add('threat');
+  else if (category.includes('science')) labels.add('acid');
+  else if (category.includes('business')) labels.add('hotspot');
+  else labels.add('psychic');
+
+  const impact = String(item?.impact || '').toLowerCase();
+  if (impact.includes('high')) labels.add('threat');
+  else if (impact.includes('medium')) labels.add('hotspot');
+  else labels.add('alien');
+
+  const confidence = Number(item?.confidence) || 0;
+  if (confidence >= 85) labels.add('premium');
+
+  if (Array.isArray(item?.labels)) {
+    item.labels.forEach((label) => {
+      if (['psychic', 'alien', 'threat', 'acid', 'hotspot', 'premium'].includes(label)) labels.add(label);
+    });
+  }
+
+  return Array.from(labels).slice(0, 3);
+}
+
+function renderFeaturedLabels(item) {
+  if (!featuredLabels) return;
+  const labels = deriveLeadLabels(item);
+  if (!labels.length) return;
+
+  featuredLabels.replaceChildren();
+  labels.forEach((label) => {
+    const span = document.createElement('span');
+    span.className = `label ${label}`;
+    span.textContent = label;
+    featuredLabels.appendChild(span);
+  });
+}
+
+function normalizeLeadItem(item) {
+  if (!item || typeof item !== 'object' || !item.title) return null;
+
+  const articleId = item.articleId ?? item.id ?? '';
+
+  return {
+    articleId,
+    title: item.title,
+    deck: item.deck ?? '',
+    category: item.category ?? 'General',
+    timestamp: item.timestamp ?? '',
+    author: item.author ?? 'Desk',
+    coverage: item.coverage ?? 'General',
+    confidence: Number(item.confidence) || 0,
+    impact: item.impact ?? 'Low',
+    labels: Array.isArray(item.labels) ? item.labels : [],
+    kicker: item.kicker ?? '',
+    meta: item.meta ?? '',
+    ctaLabel: item.ctaLabel ?? 'Read more',
+    href: item.href ?? `article.html?id=${encodeURIComponent(articleId)}`
+  };
+}
+
+function renderLeadPanels(hero, featured) {
+  if (hero) {
+    if (heroKicker) {
+      heroKicker.textContent = hero.kicker || `Lead Story · ${hero.category} Desk`;
+      const blip = document.createElement('span');
+      blip.className = 'kicker-blip';
+      blip.setAttribute('aria-hidden', 'true');
+      blip.textContent = '⬢';
+      heroKicker.appendChild(document.createTextNode(' '));
+      heroKicker.appendChild(blip);
+    }
+    if (heroTitle) setAccentedHeadline(heroTitle, hero.title, 'hero-accent');
+    if (heroDeck) heroDeck.textContent = hero.deck;
+    if (heroUpdated) heroUpdated.textContent = formatIsoToUtc(hero.timestamp) || hero.timestamp || 'Live';
+    if (heroEdition) heroEdition.textContent = `${hero.category} · ${hero.coverage} · ${hero.author}`;
+    if (heroSignalMix) heroSignalMix.textContent = `${hero.impact} impact · Conf. ${hero.confidence}%`;
+    if (heroPrimaryCta) {
+      heroPrimaryCta.textContent = hero.ctaLabel || 'Read full cover story';
+      setSafeHref(heroPrimaryCta, hero.href || 'article.html');
+    }
+  }
+
+  if (featured) {
+    if (featuredKicker) {
+      featuredKicker.textContent = featured.kicker || 'Featured Analysis';
+      const pin = document.createElement('span');
+      pin.className = 'strange-pin';
+      pin.setAttribute('aria-hidden', 'true');
+      pin.textContent = 'acid veins';
+      featuredKicker.appendChild(document.createTextNode(' '));
+      featuredKicker.appendChild(pin);
+    }
+    if (featuredTitle) setAccentedHeadline(featuredTitle, featured.title, 'featured-accent');
+    if (featuredDeck) featuredDeck.textContent = featured.deck;
+    if (featuredMeta) {
+      const updated = formatIsoToUtc(featured.timestamp) || 'Live';
+      featuredMeta.textContent = featured.meta || `${featured.coverage} · ${featured.author} · ${updated} · Conf. ${featured.confidence}%`;
+    }
+    renderFeaturedLabels(featured);
+    if (featuredCta) {
+      featuredCta.textContent = `${featured.ctaLabel || 'Open long read'} →`;
+      setSafeHref(featuredCta, featured.href || 'article.html');
+    }
+  }
+}
+
+function normalizeFeedPayload(payload) {
+  if (!payload || typeof payload !== 'object' || !Array.isArray(payload.newsItems)) {
+    return null;
+  }
+
+  const normalizedNews = payload.newsItems
+    .filter((item) => item && typeof item === 'object' && item.title)
+    .map((item, idx) => {
+      const articleId = item.articleId ?? item.id ?? idx + 1;
+      return {
+        id: item.id ?? idx + 1,
+        articleId,
+        title: item.title,
+        deck: item.deck ?? '',
+        category: item.category ?? 'General',
+        timestamp: item.timestamp ?? '',
+        edition: item.edition ?? 'Global Desk',
+        readTime: item.readTime ?? '2 min',
+        author: item.author ?? 'Desk',
+        coverage: item.coverage ?? 'General',
+        confidence: Number(item.confidence) || 0,
+        impact: item.impact ?? 'Low',
+        labels: Array.isArray(item.labels) ? item.labels : [],
+        tone: item.tone ?? 'info',
+        href: item.href ?? `article.html?id=${encodeURIComponent(String(articleId))}`
+      };
+    });
+
+  if (!normalizedNews.length) return null;
+
+  return {
+    newsItems: normalizedNews,
+    tickerItems: Array.isArray(payload.tickerItems) ? payload.tickerItems : [],
+    heroItem: normalizeLeadItem(payload.heroItem),
+    featuredItem: normalizeLeadItem(payload.featuredItem)
+  };
+}
+
+async function loadFeed() {
+  try {
+    const response = await fetch('./generated/latest.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const payload = await response.json();
+    const normalized = normalizeFeedPayload(payload);
+    if (!normalized) throw new Error('Invalid feed payload');
+
+    window.newsItems = normalized.newsItems;
+    window.tickerItems = normalized.tickerItems;
+    window.heroItem = normalized.heroItem;
+    window.featuredItem = normalized.featuredItem;
+  } catch (error) {
+    if (!Array.isArray(window.newsItems)) window.newsItems = [];
+    if (!Array.isArray(window.tickerItems)) window.tickerItems = [];
+    window.heroItem = null;
+    window.featuredItem = null;
+  }
 }
 
 chips.forEach((chip) => {
@@ -356,9 +403,8 @@ quickFilterButtons.forEach((btn) => {
   });
 });
 
-renderTicker();
-hydrateHero();
-hydrateFeatured();
-setActiveChip(activeCategory);
-setActiveSignal(activeSignal);
-rerender();
+loadFeed().finally(() => {
+  renderTicker();
+  renderLeadPanels(window.heroItem, window.featuredItem);
+  rerender();
+});

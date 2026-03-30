@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kislota Digest v3 — Editorial Front Page</title>
   <meta name="description" content="Kislota Digest v3: a branded digital magazine demo with front-page composition, signal taxonomy, and editorial rhythm." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="homepage" data-bg-scene="signal-bloom" data-bg-mode="ambient" data-bg-veil="0.33">
@@ -23,7 +20,7 @@
 
       <div class="masthead-actions">
         <span class="status-pill">Live update stream</span>
-        <a class="btn btn-ghost" data-masthead-featured-link href="article.html?story=3">Featured article</a>
+        <a class="btn btn-ghost" href="article.html">Featured article</a>
       </div>
     </div>
 
@@ -44,7 +41,7 @@
 
   <main class="wrapper page" id="top">
     <section class="front-page" id="front-page">
-      <article class="hero panel acid-veins-host" id="hero-story">
+      <article class="hero panel acid-veins-host">
         <div class="acid-veins-layer" aria-hidden="true">
           <svg class="acid-veins-svg" viewBox="0 0 720 420" preserveAspectRatio="none" focusable="false" aria-hidden="true">
             <path class="vein vein-main" d="M-40 310 C80 250, 150 350, 250 285 C320 238, 395 316, 470 262 C540 212, 615 278, 760 198" />
@@ -53,40 +50,43 @@
             <path class="vein vein-arc" d="M144 64 C224 22, 338 56, 410 32 C502 4, 620 52, 726 26" />
           </svg>
         </div>
-        <p class="kicker" data-hero-kicker>Lead Story · Psychic Desk <span class="kicker-blip" aria-hidden="true">⬢</span></p>
-        <h1 data-hero-title>
+        <p class="kicker" id="hero-kicker">Lead Story · Psychic Desk <span class="kicker-blip" aria-hidden="true">⬢</span></p>
+        <h1 id="hero-title">
           Infrastructure week turns into a <span class="hero-accent">signal war</span>:
           trust badges, rollback drills, and anomaly lanes become front-page priorities.
         </h1>
-        <p class="hero-deck" data-hero-deck>
+        <p class="hero-deck" id="hero-deck">
           v3 framing pushes Kislota from landing page into media product logic: stronger masthead,
           intentional editorial tempo, confidence metadata, coverage tags, and visible hierarchy across devices.
         </p>
 
         <div class="hero-meta-grid">
-          <p data-hero-meta><span>Updated</span> 06:21 UTC</p>
-          <p data-hero-meta><span>Edition</span> #118 / Europe–US cycle</p>
-          <p data-hero-meta><span>Signal mix</span> Teal lead · Blue info · Red urgent</p>
+          <p><span>Updated</span> <span id="hero-meta-updated">06:21 UTC</span></p>
+          <p><span>Edition</span> <span id="hero-meta-edition">#118 / Europe–US cycle</span></p>
+          <p><span>Signal mix</span> <span id="hero-meta-signal-mix">Teal lead · Blue info · Red urgent</span></p>
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" data-hero-link href="article.html">Read full cover story</a>
+          <a class="btn btn-primary" id="hero-primary-cta" href="article.html">Read full cover story</a>
           <a class="btn btn-ghost" href="#latest-grid">Scan latest cards</a>
         </div>
       </article>
 
-      <article class="featured panel" id="featured-premium">
-        <p class="kicker">Premium Counterpoint</p>
-        <h2 data-featured-title>Analysis loading…</h2>
-        <p data-featured-deck>
-          Curated depth lane for context-first reading.
+      <article class="featured panel acid-veins-pulse">
+        <div class="acid-veins-mini" aria-hidden="true"></div>
+        <p class="kicker" id="featured-kicker">Featured Analysis <span class="strange-pin" aria-hidden="true">acid veins</span></p>
+        <h2 id="featured-title">Why news products now expose reliability score, source breadth, and operational impact in every card</h2>
+        <p id="featured-deck">
+          Front-page design now acts like control-room UI. Stories are sorted by urgency, confidence, and actionability,
+          not only by chronology. Editorial polish = better decisions.
         </p>
-        <p class="featured-meta" data-featured-meta>Long read desk · 6 min · Conf. 90%</p>
-        <div class="meta-row">
+        <div class="meta-row" id="featured-labels">
           <span class="label premium">premium</span>
-          <span class="label alien">context</span>
+          <span class="label psychic">lead</span>
+          <span class="label hotspot">hotspot</span>
         </div>
-        <a class="read-more" data-featured-link href="article.html">Open analysis →</a>
+        <p class="kicker" id="featured-meta">Analysis · Desk curated</p>
+        <a class="read-more" id="featured-cta" href="article.html">Open long read →</a>
       </article>
     </section>
 
@@ -96,13 +96,13 @@
         <h3>Coverage lanes</h3>
       </div>
       <div class="chips">
-        <button class="chip active" data-category="All" aria-pressed="true">All</button>
-        <button class="chip" data-category="Tech" aria-pressed="false">Tech</button>
-        <button class="chip" data-category="Policy" aria-pressed="false">Policy</button>
-        <button class="chip" data-category="Science" aria-pressed="false">Science</button>
-        <button class="chip" data-category="Business" aria-pressed="false">Business</button>
-        <button class="chip" data-category="Culture" aria-pressed="false">Culture</button>
-        <button class="chip" data-category="City" aria-pressed="false">City</button>
+        <button class="chip active" data-category="All">All</button>
+        <button class="chip" data-category="Tech">Tech</button>
+        <button class="chip" data-category="Policy">Policy</button>
+        <button class="chip" data-category="Science">Science</button>
+        <button class="chip" data-category="Business">Business</button>
+        <button class="chip" data-category="Culture">Culture</button>
+        <button class="chip" data-category="City">City</button>
       </div>
     </section>
 
@@ -116,40 +116,33 @@
       </section>
 
       <aside class="sidebar">
-        <section class="panel widget instrument" aria-label="Signal filters">
-          <p class="kicker">Editorial console</p>
-          <h3>Route the stream</h3>
+        <section class="panel widget" aria-label="Signal filters">
+          <p class="kicker">Signal board</p>
+          <h3>Filter by pulse</h3>
           <div class="filter-list">
-            <button class="filter-toggle" data-filter="psychic" aria-pressed="false"><span>Lead spine</span><span class="label psychic">lead</span></button>
-            <button class="filter-toggle" data-filter="alien" aria-pressed="false"><span>Info flow</span><span class="label alien">info</span></button>
-            <button class="filter-toggle" data-filter="threat" aria-pressed="false"><span>Urgency lane</span><span class="label threat">threat</span></button>
-            <button class="filter-toggle" data-filter="premium" aria-pressed="false"><span>Curated depth</span><span class="label premium">premium</span></button>
-            <button class="filter-toggle" data-filter="acid" aria-pressed="false"><span>Anomaly puncture</span><span class="label acid">anomaly</span></button>
-            <button class="filter-toggle" data-filter="hotspot" aria-pressed="false"><span>Heat marker</span><span class="label hotspot">heat</span></button>
+            <button class="filter-toggle" data-filter="psychic"><span>Main pulse</span><span class="label psychic">lead</span></button>
+            <button class="filter-toggle" data-filter="alien"><span>Info stream</span><span class="label alien">info</span></button>
+            <button class="filter-toggle" data-filter="threat"><span>Threat watch</span><span class="label threat">urgent</span></button>
+            <button class="filter-toggle" data-filter="acid"><span>Anomaly lane</span><span class="label acid">weird</span></button>
+            <button class="filter-toggle" data-filter="hotspot"><span>Hotspot desk</span><span class="label hotspot">heat</span></button>
+            <button class="filter-toggle" data-filter="premium"><span>Premium curation</span><span class="label premium">flash</span></button>
           </div>
         </section>
 
         <section class="panel widget trends" id="briefings">
-          <p class="kicker">Signal briefings</p>
-          <h3>Tag pressure</h3>
+          <p class="kicker">Trends radar</p>
+          <h3>What’s accelerating</h3>
           <ul id="trend-list"></ul>
         </section>
 
-        <section class="panel widget class-board">
-          <p class="kicker">Story class board</p>
-          <h3>Current mix</h3>
-          <ul id="class-mix"></ul>
-        </section>
-
         <section class="panel widget editions">
-          <p class="kicker">Desk logbook</p>
-          <h3>Operating snapshot</h3>
+          <p class="kicker">Edition snapshot</p>
+          <h3>Desk composition</h3>
           <dl>
             <div><dt>Stories</dt><dd id="total-stories">0</dd></div>
-            <div><dt>Threat cards</dt><dd id="total-urgent">0</dd></div>
+            <div><dt>Urgent</dt><dd id="total-urgent">0</dd></div>
             <div><dt>Avg confidence</dt><dd id="avg-confidence">0%</dd></div>
           </dl>
-          <ul class="desk-notes" id="desk-notes"></ul>
         </section>
       </aside>
     </div>
