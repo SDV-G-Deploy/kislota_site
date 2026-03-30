@@ -18,9 +18,23 @@ const featuredDeck = document.getElementById('featured-deck');
 const featuredMeta = document.getElementById('featured-meta');
 const featuredLabels = document.getElementById('featured-labels');
 const featuredCta = document.getElementById('featured-cta');
+const smokeStatusList = document.getElementById('smoke-status-list');
 
 let activeCategory = 'All';
 let activeSignal = null;
+
+const smokeState = {
+  source: 'fallback',
+  sourceNote: 'demo data',
+  itemCount: 0,
+  tickerCount: 0,
+  heroHydrated: false,
+  featuredHydrated: false,
+  articleLinksResolvable: 0,
+  articleLinksTotal: 0,
+  payloadTimestamp: '',
+  error: ''
+};
 
 function labelsMarkup(labels = []) {
   return labels.map((label) => `<span class="label ${label}">${label}</span>`).join('');
@@ -330,6 +344,54 @@ function renderLeadPanels(hero, featured) {
   }
 }
 
+function assessArticleLinks(items) {
+  if (!Array.isArray(items)) return { ok: 0, total: 0 };
+  const total = items.length;
+  const ok = items.reduce((count, item) => {
+    const href = sanitizeHref(item?.href || '');
+    if (!href) return count;
+
+    try {
+      const url = new URL(href, window.location.origin);
+      const isArticleRoute = /article\.html$/i.test(url.pathname) && Boolean(url.searchParams.get('id'));
+      const isExternal = /^https?:$/i.test(url.protocol) && url.origin !== window.location.origin;
+      return count + (isArticleRoute || isExternal ? 1 : 0);
+    } catch (_) {
+      return count;
+    }
+  }, 0);
+
+  return { ok, total };
+}
+
+function renderSmokeStatus() {
+  if (!smokeStatusList) return;
+
+  const sourceClass = smokeState.source === 'live' ? 'smoke-ok' : 'smoke-warn';
+  const tickerClass = smokeState.tickerCount > 0 ? 'smoke-ok' : 'smoke-warn';
+  const leadReady = smokeState.heroHydrated && smokeState.featuredHydrated;
+  const leadClass = leadReady ? 'smoke-ok' : 'smoke-warn';
+  const linkRatio = smokeState.articleLinksTotal
+    ? `${smokeState.articleLinksResolvable}/${smokeState.articleLinksTotal}`
+    : '0/0';
+  const linkClass = smokeState.articleLinksTotal > 0 && smokeState.articleLinksResolvable === smokeState.articleLinksTotal
+    ? 'smoke-ok'
+    : smokeState.articleLinksResolvable > 0
+      ? 'smoke-warn'
+      : 'smoke-bad';
+
+  const payloadTime = smokeState.payloadTimestamp || (smokeState.source === 'live' ? 'not provided' : smokeState.sourceNote);
+
+  smokeStatusList.innerHTML = `
+    <li><span>Feed source</span><strong class="${sourceClass}">${smokeState.source === 'live' ? 'live latest.json' : 'fallback demo'}</strong></li>
+    <li><span>Feed items</span><strong>${smokeState.itemCount}</strong></li>
+    <li><span>Ticker</span><strong class="${tickerClass}">${smokeState.tickerCount > 0 ? `${smokeState.tickerCount} entries` : 'missing'}</strong></li>
+    <li><span>Hero / featured</span><strong class="${leadClass}">${leadReady ? 'hydrated' : 'partial'}</strong></li>
+    <li><span>Article links</span><strong class="${linkClass}">${linkRatio} resolvable</strong></li>
+    <li><span>Payload time</span><strong>${payloadTime}</strong></li>
+  `;
+}
+
 function normalizeFeedPayload(payload) {
   if (!payload || typeof payload !== 'object' || !Array.isArray(payload.newsItems)) {
     return null;
@@ -380,11 +442,37 @@ async function loadFeed() {
     window.tickerItems = normalized.tickerItems;
     window.heroItem = normalized.heroItem;
     window.featuredItem = normalized.featuredItem;
+
+    const { ok, total } = assessArticleLinks(window.newsItems);
+    smokeState.source = 'live';
+    smokeState.sourceNote = 'generated/latest.json';
+    smokeState.itemCount = window.newsItems.length;
+    smokeState.tickerCount = Array.isArray(window.tickerItems) ? window.tickerItems.length : 0;
+    smokeState.heroHydrated = Boolean(window.heroItem?.title);
+    smokeState.featuredHydrated = Boolean(window.featuredItem?.title);
+    smokeState.articleLinksResolvable = ok;
+    smokeState.articleLinksTotal = total;
+    smokeState.payloadTimestamp = typeof payload?.generatedAt === 'string'
+      ? payload.generatedAt
+      : (window.newsItems[0]?.timestamp || '');
+    smokeState.error = '';
   } catch (error) {
     if (!Array.isArray(window.newsItems)) window.newsItems = [];
     if (!Array.isArray(window.tickerItems)) window.tickerItems = [];
     window.heroItem = null;
     window.featuredItem = null;
+
+    const { ok, total } = assessArticleLinks(window.newsItems);
+    smokeState.source = 'fallback';
+    smokeState.sourceNote = 'latest.json unavailable';
+    smokeState.itemCount = window.newsItems.length;
+    smokeState.tickerCount = Array.isArray(window.tickerItems) ? window.tickerItems.length : 0;
+    smokeState.heroHydrated = false;
+    smokeState.featuredHydrated = false;
+    smokeState.articleLinksResolvable = ok;
+    smokeState.articleLinksTotal = total;
+    smokeState.payloadTimestamp = '';
+    smokeState.error = error instanceof Error ? error.message : 'unknown error';
   }
 }
 
@@ -407,4 +495,5 @@ loadFeed().finally(() => {
   renderTicker();
   renderLeadPanels(window.heroItem, window.featuredItem);
   rerender();
+  renderSmokeStatus();
 });

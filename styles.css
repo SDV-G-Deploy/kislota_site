@@ -466,6 +466,54 @@ a { color: inherit; text-decoration: none; }
 .editions dt { color: var(--muted); }
 .editions dd { margin: 0; color: var(--text-strong); font-weight: 700; }
 
+.smoke-widget {
+  border-color: color-mix(in srgb, var(--psychic) 28%, var(--line));
+}
+
+.smoke-list {
+  list-style: none;
+  padding: 0;
+  margin: .62rem 0 0;
+  display: grid;
+  gap: .42rem;
+}
+
+.smoke-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: .6rem;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: .4rem;
+  font-size: .82rem;
+}
+
+.smoke-list span {
+  color: var(--muted);
+}
+
+.smoke-list strong {
+  font-weight: 700;
+  color: var(--text-strong);
+  text-align: right;
+}
+
+.smoke-ok { color: var(--psychic) !important; }
+.smoke-warn { color: var(--hotspot) !important; }
+.smoke-bad { color: var(--threat) !important; }
+
+.article-smoke {
+  margin: .7rem 0 .4rem;
+  padding: .56rem .62rem;
+  border: 1px dashed color-mix(in srgb, var(--alien) 45%, var(--line));
+  border-radius: var(--radius-sm);
+  font-size: .78rem;
+  color: var(--muted);
+}
+
+.article-smoke strong {
+  color: var(--text-strong);
+}
+
 .label { font-size: .68rem; border-radius: 999px; padding: .22rem .5rem; border: 1px solid transparent; font-weight: 700; text-transform: lowercase; }
 .psychic { color: var(--psychic); background: color-mix(in srgb, var(--psychic) 20%, transparent); border-color: color-mix(in srgb, var(--psychic) 35%, transparent); }
 .alien { color: var(--alien); background: color-mix(in srgb, var(--alien) 20%, transparent); border-color: color-mix(in srgb, var(--alien) 35%, transparent); }

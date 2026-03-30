@@ -5,6 +5,15 @@ const articleDeck = document.getElementById('article-deck');
 const articleLabels = document.getElementById('article-labels');
 const articleTime = document.getElementById('article-time');
 const articleContent = document.getElementById('article-content');
+const articleSmokeStatus = document.getElementById('article-smoke-status');
+
+const articleSmoke = {
+  source: 'fallback',
+  reason: 'latest.json unavailable',
+  matched: false,
+  tickerCount: 0,
+  payloadTimestamp: ''
+};
 
 function qs() {
   return new URLSearchParams(window.location.search);
@@ -167,6 +176,22 @@ function pushLabel(textValue, cssClass = '') {
   articleLabels.appendChild(span);
 }
 
+function renderArticleSmoke() {
+  if (!articleSmokeStatus) return;
+  const sourceLabel = articleSmoke.source === 'live' ? 'live latest.json' : 'fallback data';
+  const sourceClass = articleSmoke.source === 'live' ? 'smoke-ok' : 'smoke-warn';
+  const matchClass = articleSmoke.matched ? 'smoke-ok' : 'smoke-bad';
+  const payload = articleSmoke.payloadTimestamp || 'n/a';
+
+  articleSmokeStatus.innerHTML = `
+    Live smoke:
+    <strong class="${sourceClass}">${sourceLabel}</strong>
+    · article id ${articleSmoke.matched ? '<strong class="smoke-ok">resolved</strong>' : '<strong class="smoke-bad">not resolved</strong>'}
+    · ticker ${articleSmoke.tickerCount}
+    · payload ${payload}
+  `;
+}
+
 function renderArticle(item) {
   if (!articleTitle || !articleDeck || !articleContent || !articleTime) return;
 
@@ -252,12 +277,23 @@ async function initArticle() {
   const pool = buildArticlePool(payload);
   const selected = resolveArticle(pool, qs());
 
+  articleSmoke.source = payload ? 'live' : 'fallback';
+  articleSmoke.reason = payload ? 'generated/latest.json' : 'latest.json unavailable';
+  articleSmoke.tickerCount = Array.isArray(payload?.tickerItems) ? payload.tickerItems.length : (Array.isArray(window.tickerItems) ? window.tickerItems.length : 0);
+  articleSmoke.payloadTimestamp = typeof payload?.generatedAt === 'string'
+    ? payload.generatedAt
+    : (Array.isArray(payload?.newsItems) && payload.newsItems[0]?.timestamp ? payload.newsItems[0].timestamp : '');
+
   if (!selected) {
+    articleSmoke.matched = false;
     renderFallback();
+    renderArticleSmoke();
     return;
   }
 
+  articleSmoke.matched = true;
   renderArticle(selected);
+  renderArticleSmoke();
 }
 
 initArticle();
