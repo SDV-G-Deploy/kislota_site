@@ -42,11 +42,14 @@ function labelsMarkup(labels = []) {
 
 function cardMarkup(item) {
   const toneClass = item.tone ? `tone-${item.tone}` : '';
+  const storyClass = item.storyClass ? `story-${item.storyClass}` : '';
+  const accentRole = item.accentRole ? `accent-${item.accentRole}` : '';
+  const layoutSpan = item.layoutSpan ? `span-${item.layoutSpan}` : '';
   const labels = Array.isArray(item.labels) ? item.labels : [];
   const href = sanitizeHref(item.href || `article.html?id=${encodeURIComponent(item.articleId || item.id || '')}`);
   return `
-    <a class="card-link" href="${href}">
-      <article class="panel card ${toneClass}" data-category="${item.category}" data-labels="${labels.join(' ')}">
+    <a class="card-link ${layoutSpan}" href="${href}">
+      <article class="panel card ${toneClass} ${storyClass} ${accentRole}" data-category="${item.category}" data-labels="${labels.join(' ')}">
         <div class="card-top">
           <p class="kicker">${item.category} · ${item.edition}</p>
           <span class="signal-badge">${item.impact}</span>
@@ -416,6 +419,9 @@ function normalizeFeedPayload(payload) {
         impact: item.impact ?? 'Low',
         labels: Array.isArray(item.labels) ? item.labels : [],
         tone: item.tone ?? 'info',
+        storyClass: item.storyClass ?? 'brief',
+        accentRole: item.accentRole ?? 'brief',
+        layoutSpan: item.layoutSpan ?? 'dense',
         href: item.href ?? `article.html?id=${encodeURIComponent(String(articleId))}`
       };
     });

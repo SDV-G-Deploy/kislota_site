@@ -424,8 +424,40 @@ a { color: inherit; text-decoration: none; }
 .main-layout { display: grid; grid-template-columns: minmax(0,2fr) minmax(290px,1fr); gap: .9rem; }
 .latest-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .75rem; }
 .card-link { display: block; color: inherit; text-decoration: none; }
+.card-link.span-major,
+.card-link.span-wide {
+  grid-column: span 2;
+}
 .card { padding: .85rem; min-height: 230px; transition: .18s ease; box-shadow: 0 11px 30px rgba(3,8,22,.34); }
 .homepage .latest-grid .card { position: relative; overflow: hidden; }
+.homepage .latest-grid .card.story-lead,
+.homepage .latest-grid .card.story-threat {
+  border-color: color-mix(in srgb, var(--threat) 34%, var(--line));
+}
+.homepage .latest-grid .card.story-premium {
+  border-color: color-mix(in srgb, var(--violet) 36%, var(--line));
+}
+.homepage .latest-grid .card.story-anomaly {
+  border-color: color-mix(in srgb, var(--acid) 36%, var(--line));
+}
+.homepage .latest-grid .card.accent-hero::before,
+.homepage .latest-grid .card.accent-featured::before,
+.homepage .latest-grid .card.accent-anomaly::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .55;
+}
+.homepage .latest-grid .card.accent-hero::before {
+  background: radial-gradient(90% 70% at 100% 0%, rgba(255, 97, 110, 0.2), transparent 64%);
+}
+.homepage .latest-grid .card.accent-featured::before {
+  background: radial-gradient(90% 70% at 100% 0%, rgba(183, 100, 255, 0.2), transparent 64%);
+}
+.homepage .latest-grid .card.accent-anomaly::before {
+  background: radial-gradient(80% 64% at 100% 0%, rgba(200, 245, 108, 0.2), transparent 62%);
+}
 .homepage .latest-grid .card-link:nth-child(1) .card::after,
 .homepage .latest-grid .card-link:nth-child(5) .card::after {
   content: "";
@@ -593,6 +625,8 @@ a { color: inherit; text-decoration: none; }
   }
 
   .latest-grid { grid-template-columns: 1fr; }
+  .card-link.span-major,
+  .card-link.span-wide { grid-column: span 1; }
   .sections-bar { flex-direction: column; align-items: start; }
   .ticker-track { animation-duration: 36s; }
   .card { min-height: 0; }
