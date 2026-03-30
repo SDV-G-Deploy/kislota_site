@@ -26,12 +26,73 @@ function appendSection(root, heading, body) {
   root.appendChild(p);
 }
 
+function appendSectionNode(root, heading, node) {
+  const h2 = document.createElement('h2');
+  h2.textContent = heading;
+  root.appendChild(h2);
+  root.appendChild(node);
+}
+
 function pushLabel(textValue, cssClass = '') {
   if (!articleLabels) return;
   const span = document.createElement('span');
   span.className = cssClass ? `label ${cssClass}` : 'label';
   span.textContent = textValue;
   articleLabels.appendChild(span);
+}
+
+function safeHttpUrl(raw) {
+  if (!raw || typeof raw !== 'string') return '';
+  try {
+    const url = new URL(raw);
+    return url.protocol === 'http:' || url.protocol === 'https:' ? url.href : '';
+  } catch (_) {
+    return '';
+  }
+}
+
+function normalizeArticlePayload(payload, expectedId) {
+  if (!payload || typeof payload !== 'object') return null;
+
+  const id = String(payload.id || '').trim();
+  const title = String(payload.title || '').trim();
+  const sourceUrl = safeHttpUrl(payload.sourceUrl);
+
+  if (!id || !title || !sourceUrl) return null;
+  if (expectedId && id !== expectedId) return null;
+
+  return {
+    id,
+    title,
+    category: String(payload.category || 'General'),
+    deck: String(payload.deck || ''),
+    summary: String(payload.summary || ''),
+    publishedAt: String(payload.publishedAt || payload.timestamp || 'n/a'),
+    updatedAt: String(payload.updatedAt || payload.timestamp || 'n/a'),
+    readTime: String(payload.readTime || 'n/a'),
+    author: String(payload.author || payload.sourceName || 'Desk'),
+    sourceName: String(payload.sourceName || 'Unknown source'),
+    sourceId: typeof payload.sourceId === 'string' ? payload.sourceId : '',
+    sourceUrl,
+    confidence: Number(payload.confidence) || 0,
+    impact: String(payload.impact || 'Low'),
+    storyClass: String(payload.storyClass || 'brief'),
+    labels: Array.isArray(payload.labels) ? payload.labels.map(String) : [],
+    topics: Array.isArray(payload.topics) ? payload.topics.map(String) : [],
+    relatedArticleIds: Array.isArray(payload.relatedArticleIds) ? payload.relatedArticleIds.map(String) : [],
+    provenance: payload.provenance && typeof payload.provenance === 'object' ? payload.provenance : {}
+  };
+}
+
+function buildArtifactVersionToken(edition) {
+  const queryToken = qs().get('v');
+  if (queryToken && queryToken.trim()) return encodeURIComponent(queryToken.trim());
+  const raw = edition?.updatedAt || edition?.editionId || '';
+  return raw ? encodeURIComponent(raw) : '';
+}
+
+function artifactUrl(path, versionToken = '') {
+  return versionToken ? `${path}?v=${versionToken}` : path;
 }
 
 function renderError(reason) {
@@ -64,7 +125,8 @@ function renderArticle(item) {
   if (articleDeck) articleDeck.textContent = item.deck || 'Summary/provenance digest payload.';
 
   clearElement(articleLabels);
-  pushLabel(item.impact.toLowerCase(), item.impact === 'High' ? 'threat' : item.impact === 'Medium' ? 'hotspot' : 'alien');
+  const impactClass = item.impact === 'High' ? 'threat' : item.impact === 'Medium' ? 'hotspot' : 'alien';
+  pushLabel(item.impact.toLowerCase(), impactClass);
   pushLabel(`conf ${item.confidence}%`, 'premium');
   pushLabel(item.storyClass, 'psychic');
   (Array.isArray(item.labels) ? item.labels : []).slice(0, 3).forEach((label) => pushLabel(label));
@@ -76,11 +138,20 @@ function renderArticle(item) {
   clearElement(articleContent);
   appendSection(articleContent, 'Digest summary', item.summary || 'No summary available.');
   appendSection(articleContent, 'Product note', item.provenance?.note || 'Summary/provenance view.');
-  appendSection(
-    articleContent,
-    'Provenance',
-    `Source: ${item.sourceName}${item.sourceId ? ` · Source ID: ${item.sourceId}` : ''} · URL: ${item.sourceUrl}`
-  );
+
+  const provenance = document.createElement('p');
+  provenance.appendChild(document.createTextNode(`Source: ${item.sourceName}`));
+  if (item.sourceId) provenance.appendChild(document.createTextNode(` · Source ID: ${item.sourceId}`));
+  provenance.appendChild(document.createTextNode(' · URL: '));
+
+  const sourceUrlAnchor = document.createElement('a');
+  sourceUrlAnchor.href = item.sourceUrl;
+  sourceUrlAnchor.target = '_blank';
+  sourceUrlAnchor.rel = 'noopener noreferrer';
+  sourceUrlAnchor.textContent = item.sourceUrl;
+  provenance.appendChild(sourceUrlAnchor);
+
+  appendSectionNode(articleContent, 'Provenance', provenance);
 
   if (Array.isArray(item.topics) && item.topics.length) {
     appendSection(articleContent, 'Detected topics', item.topics.join(', '));
@@ -88,9 +159,16 @@ function renderArticle(item) {
 
   if (Array.isArray(item.relatedArticleIds) && item.relatedArticleIds.length) {
     const links = document.createElement('p');
-    links.innerHTML = `Related digest articles: ${item.relatedArticleIds
-      .map((id) => `<a href="article.html?id=${encodeURIComponent(id)}">${id.slice(0, 8)}</a>`)
-      .join(' · ')}`;
+    links.appendChild(document.createTextNode('Related digest articles: '));
+
+    item.relatedArticleIds.forEach((id, idx) => {
+      if (idx > 0) links.appendChild(document.createTextNode(' · '));
+      const link = document.createElement('a');
+      link.href = `article.html?id=${encodeURIComponent(id)}`;
+      link.textContent = id.slice(0, 8);
+      links.appendChild(link);
+    });
+
     articleContent.appendChild(links);
   }
 
@@ -114,14 +192,24 @@ async function initArticle() {
   }
 
   try {
-    const response = await fetch(`./generated/articles/${encodeURIComponent(articleId)}.json`, { cache: 'no-store' });
+    const editionResponse = await fetch(artifactUrl('./generated/edition.json', String(Date.now())), { cache: 'no-store' });
+    const edition = editionResponse.ok ? await editionResponse.json() : null;
+    const versionToken = buildArtifactVersionToken(edition);
+
+    const response = await fetch(artifactUrl(`./generated/articles/${encodeURIComponent(articleId)}.json`, versionToken), { cache: 'no-store' });
     if (!response.ok) {
       renderError(`HTTP ${response.status} when loading generated/articles/${articleId}.json`);
       return;
     }
 
     const payload = await response.json();
-    renderArticle(payload);
+    const normalized = normalizeArticlePayload(payload, articleId);
+    if (!normalized) {
+      renderError('Generated artifact is malformed or mismatched for this article id.');
+      return;
+    }
+
+    renderArticle(normalized);
   } catch (error) {
     renderError(error instanceof Error ? error.message : 'unknown error');
   }

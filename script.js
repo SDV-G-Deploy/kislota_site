@@ -85,8 +85,24 @@ function getFilteredItems() {
 
 function render(items) {
   if (!grid) return;
-  const list = items.length ? items : window.newsItems;
-  grid.innerHTML = list.map(cardMarkup).join('');
+
+  if (!items.length) {
+    const categoryNote = activeCategory !== 'All' ? ` in “${activeCategory}”` : '';
+    const signalNote = activeSignal ? ` with signal “${activeSignal}”` : '';
+    grid.innerHTML = `
+      <article class="panel card empty-state-card" role="status" aria-live="polite">
+        <div class="card-top">
+          <p class="kicker">No matching stories</p>
+          <span class="signal-badge">Filter state</span>
+        </div>
+        <h4>Nothing matches the current filter set</h4>
+        <p class="deck">No digest cards found${categoryNote}${signalNote}. Clear one filter to return to the latest published cards.</p>
+      </article>
+    `;
+    return;
+  }
+
+  grid.innerHTML = items.map(cardMarkup).join('');
 }
 
 function setActiveChip(category) {
@@ -99,17 +115,79 @@ function setActiveSignal(signal) {
   quickFilterButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.filter === signal));
 }
 
+let tickerCleanup = null;
+
+function prefersReducedMotion() {
+  return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
+function makeTickerSegmentMarkup(items) {
+  return items
+    .map((item) => `<span class="ticker-item">${item}</span>`)
+    .join('<span class="ticker-sep" aria-hidden="true">✦</span>');
+}
+
+function applyTickerMetrics() {
+  if (!tickerTrack) return;
+  const segment = tickerTrack.querySelector('.ticker-segment');
+  if (!segment) return;
+
+  const loopDistance = Math.max(1, Math.ceil(segment.getBoundingClientRect().width));
+  const pxPerSecond = 68;
+  const duration = Math.max(16, Math.round((loopDistance / pxPerSecond) * 10) / 10);
+
+  tickerTrack.style.setProperty('--ticker-loop-distance', `${loopDistance}px`);
+  tickerTrack.style.setProperty('--ticker-duration', `${duration}s`);
+}
+
+function initTickerMarquee() {
+  if (!tickerTrack || prefersReducedMotion()) return;
+
+  applyTickerMetrics();
+
+  let resizeObserver = null;
+  if (typeof ResizeObserver !== 'undefined') {
+    resizeObserver = new ResizeObserver(() => {
+      window.requestAnimationFrame(applyTickerMetrics);
+    });
+    const segment = tickerTrack.querySelector('.ticker-segment');
+    if (segment) resizeObserver.observe(segment);
+  }
+
+  const onResize = () => window.requestAnimationFrame(applyTickerMetrics);
+  window.addEventListener('resize', onResize);
+
+  tickerCleanup = () => {
+    window.removeEventListener('resize', onResize);
+    if (resizeObserver) resizeObserver.disconnect();
+  };
+}
+
 function renderTicker() {
   if (!tickerTrack) return;
+
+  if (typeof tickerCleanup === 'function') {
+    tickerCleanup();
+    tickerCleanup = null;
+  }
+
   if (!Array.isArray(window.tickerItems) || window.tickerItems.length === 0) {
+    tickerTrack.classList.remove('ticker-ready');
     tickerTrack.innerHTML = '<span class="ticker-item">Live feed online</span>';
+    tickerTrack.style.removeProperty('--ticker-loop-distance');
+    tickerTrack.style.removeProperty('--ticker-duration');
     return;
   }
 
-  const content = window.tickerItems
-    .map((item) => `<span class="ticker-item">${item}</span>`)
-    .join('<span class="ticker-sep">✦</span>');
-  tickerTrack.innerHTML = `${content}<span class="ticker-sep">✦</span>${content}`;
+  const segmentMarkup = makeTickerSegmentMarkup(window.tickerItems);
+  tickerTrack.innerHTML = `
+    <span class="ticker-segment" aria-hidden="false">${segmentMarkup}</span>
+    <span class="ticker-sep" aria-hidden="true">✦</span>
+    <span class="ticker-segment" aria-hidden="true">${segmentMarkup}</span>
+  `;
+  tickerTrack.classList.add('ticker-ready');
+
+  initTickerMarquee();
 }
 
 function renderTrends(items) {
@@ -399,6 +477,38 @@ function renderSmokeStatus() {
   `;
 }
 
+function syncCategoryChips(items) {
+  const available = new Set((Array.isArray(items) ? items : []).map((item) => String(item?.category || '').trim()).filter(Boolean));
+
+  chips.forEach((chip) => {
+    const category = chip.dataset.category;
+    if (!category || category === 'All') {
+      chip.disabled = false;
+      chip.classList.remove('chip-disabled');
+      return;
+    }
+
+    const enabled = available.has(category);
+    chip.disabled = !enabled;
+    chip.classList.toggle('chip-disabled', !enabled);
+    chip.title = enabled ? '' : `No published stories in ${category} right now`;
+
+    if (!enabled && activeCategory === category) {
+      setActiveChip('All');
+    }
+  });
+}
+
+function buildArtifactVersionToken({ edition, latestPayload }) {
+  const raw = edition?.updatedAt || latestPayload?.generatedAt || latestPayload?.editionId || '';
+  if (typeof raw !== 'string' || !raw.trim()) return '';
+  return encodeURIComponent(raw.trim());
+}
+
+function artifactUrl(path, versionToken = '') {
+  return versionToken ? `${path}?v=${versionToken}` : path;
+}
+
 function normalizeEditionPayload(payload) {
   if (!payload || typeof payload !== 'object') return null;
   if (!payload.editionId || !payload.editionName) return null;
@@ -455,25 +565,41 @@ function normalizeFeedPayload(payload) {
 
 async function loadFeed() {
   try {
-    const [editionResponse, latestResponse] = await Promise.all([
-      fetch('./generated/edition.json', { cache: 'no-store' }),
-      fetch('./generated/latest.json', { cache: 'no-store' })
-    ]);
-
-    if (!latestResponse.ok) throw new Error(`latest.json HTTP ${latestResponse.status}`);
-    const latestPayload = await latestResponse.json();
-    const normalized = normalizeFeedPayload(latestPayload);
-    if (!normalized) throw new Error('Invalid latest feed payload');
+    const editionResponse = await fetch(artifactUrl('./generated/edition.json', String(Date.now())), { cache: 'no-store' });
 
     let edition = null;
     if (editionResponse.ok) {
       edition = normalizeEditionPayload(await editionResponse.json());
     }
 
+    const latestVersionToken = buildArtifactVersionToken({ edition, latestPayload: null }) || String(Date.now());
+    const latestResponse = await fetch(artifactUrl('./generated/latest.json', latestVersionToken), { cache: 'no-store' });
+
+    if (!latestResponse.ok) throw new Error(`latest.json HTTP ${latestResponse.status}`);
+    const latestPayload = await latestResponse.json();
+    const normalized = normalizeFeedPayload(latestPayload);
+    if (!normalized) throw new Error('Invalid latest feed payload');
+
+    const finalVersionToken = buildArtifactVersionToken({ edition, latestPayload });
+
     window.newsItems = normalized.newsItems;
     window.tickerItems = normalized.tickerItems;
     window.heroItem = normalized.heroItem;
     window.featuredItem = normalized.featuredItem;
+
+    if (window.heroItem?.articleId) {
+      window.heroItem.href = `article.html?id=${encodeURIComponent(String(window.heroItem.articleId))}${finalVersionToken ? `&v=${finalVersionToken}` : ''}`;
+    }
+    if (window.featuredItem?.articleId) {
+      window.featuredItem.href = `article.html?id=${encodeURIComponent(String(window.featuredItem.articleId))}${finalVersionToken ? `&v=${finalVersionToken}` : ''}`;
+    }
+
+    window.newsItems = window.newsItems.map((item) => ({
+      ...item,
+      href: `article.html?id=${encodeURIComponent(String(item.articleId || item.id || ''))}${finalVersionToken ? `&v=${finalVersionToken}` : ''}`
+    }));
+
+    syncCategoryChips(window.newsItems);
 
     if (editionNote) {
       editionNote.textContent = edition
@@ -482,7 +608,8 @@ async function loadFeed() {
     }
 
     if (mastheadFeaturedLink && edition?.featuredArticleId) {
-      setSafeHref(mastheadFeaturedLink, `article.html?id=${encodeURIComponent(edition.featuredArticleId)}`);
+      const href = `article.html?id=${encodeURIComponent(edition.featuredArticleId)}${finalVersionToken ? `&v=${finalVersionToken}` : ''}`;
+      setSafeHref(mastheadFeaturedLink, href);
     }
 
     const { ok, total } = assessArticleLinks(window.newsItems);
@@ -505,6 +632,8 @@ async function loadFeed() {
     window.heroItem = null;
     window.featuredItem = null;
 
+    syncCategoryChips(window.newsItems);
+
     const { ok, total } = assessArticleLinks(window.newsItems);
     smokeState.source = 'fallback';
     smokeState.sourceNote = 'edition/latest unavailable';
@@ -524,6 +653,7 @@ async function loadFeed() {
 
 chips.forEach((chip) => {
   chip.addEventListener('click', () => {
+    if (chip.disabled) return;
     setActiveChip(chip.dataset.category);
     rerender();
   });
