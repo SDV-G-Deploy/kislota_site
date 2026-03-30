@@ -1,0 +1,40 @@
+{
+  "id": "b310e6c1-8545-4fde-b0f9-d51300642731",
+  "title": "Okta’s CEO is betting big on AI agent identity",
+  "headline": "Okta’s CEO is betting big on AI agent identity",
+  "deck": "Today, I’m talking with Todd McKinnon, who is co-founder and CEO of Okta, a platform that lets big companies manage security and identity across all the apps and services their employees use. Think of it like login manag",
+  "summary": "Today, I’m talking with Todd McKinnon, who is co-founder and CEO of Okta, a platform that lets big companies manage security and identity across all the apps and services their employees use. Think of it like login manag",
+  "category": "AI",
+  "storyClass": "anomaly",
+  "confidence": 84,
+  "impact": "Medium",
+  "publishedAt": "2026-03-30T15:15:00.000Z",
+  "updatedAt": "2026-03-30T16:48:09.841Z",
+  "sourceName": "The Verge",
+  "author": "The Verge",
+  "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+  "sourceUrl": "https://www.theverge.com/podcast/902264/oktas-ceo-is-betting-big-on-ai-agent-identity",
+  "topics": [
+    "ai",
+    "business",
+    "security",
+    "science",
+    "policy"
+  ],
+  "labels": [
+    "alien",
+    "threat",
+    "acid"
+  ],
+  "provenance": {
+    "kind": "summary-digest",
+    "note": "This page is a summary/provenance digest view generated from source metadata. It is not a rewritten full original article.",
+    "sourceUrl": "https://www.theverge.com/podcast/902264/oktas-ceo-is-betting-big-on-ai-agent-identity"
+  },
+  "readTime": "2 min",
+  "relatedArticleIds": [
+    "561cfe06-664f-428d-90c8-20b150cb94d9",
+    "873768ea-2e53-4ec2-a7f7-2b21ae0e7117",
+    "35696878-84e9-4b5b-9bd5-582a74ec4bd6"
+  ]
+}

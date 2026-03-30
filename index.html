@@ -20,7 +20,7 @@
 
       <div class="masthead-actions">
         <span class="status-pill">Live update stream</span>
-        <a class="btn btn-ghost" href="article.html">Featured article</a>
+        <a class="btn btn-ghost" id="masthead-featured-link" href="#front-page">Featured digest article</a>
       </div>
     </div>
 
@@ -31,7 +31,7 @@
         <a class="nav-link" href="#sections">Sections</a>
         <a class="nav-link" href="#briefings">Briefings</a>
       </nav>
-      <p class="edition-note">Global editorial desk · Version v3 demo</p>
+      <p class="edition-note" id="edition-note">Global editorial desk · Summary/provenance digest</p>
     </div>
   </header>
 
@@ -67,7 +67,7 @@
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" id="hero-primary-cta" href="article.html">Read full cover story</a>
+          <a class="btn btn-primary" id="hero-primary-cta" href="#latest-grid">Open digest article</a>
           <a class="btn btn-ghost" href="#latest-grid">Scan latest cards</a>
         </div>
       </article>
@@ -86,7 +86,7 @@
           <span class="label hotspot">hotspot</span>
         </div>
         <p class="kicker" id="featured-meta">Analysis · Desk curated</p>
-        <a class="read-more" id="featured-cta" href="article.html">Open long read →</a>
+        <a class="read-more" id="featured-cta" href="#latest-grid">Open digest article →</a>
       </article>
     </section>
 
@@ -97,12 +97,12 @@
       </div>
       <div class="chips">
         <button class="chip active" data-category="All">All</button>
-        <button class="chip" data-category="Tech">Tech</button>
+        <button class="chip" data-category="AI">AI</button>
         <button class="chip" data-category="Policy">Policy</button>
-        <button class="chip" data-category="Science">Science</button>
+        <button class="chip" data-category="Security">Security</button>
         <button class="chip" data-category="Business">Business</button>
-        <button class="chip" data-category="Culture">Culture</button>
-        <button class="chip" data-category="City">City</button>
+        <button class="chip" data-category="Science">Science</button>
+        <button class="chip" data-category="General">General</button>
       </div>
     </section>
 

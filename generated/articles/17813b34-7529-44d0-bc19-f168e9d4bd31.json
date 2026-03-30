@@ -1,0 +1,34 @@
+{
+  "id": "17813b34-7529-44d0-bc19-f168e9d4bd31",
+  "title": "Apple @ 50",
+  "headline": "Apple @ 50",
+  "deck": "Fifty years ago, on April 1st, 1976, Apple Computer Company was founded. Today it’s one of the most valuable companies in the world, celebrated for producing ubiquitous products like the iPad and iPhone to now-nostalgia ",
+  "summary": "Fifty years ago, on April 1st, 1976, Apple Computer Company was founded. Today it’s one of the most valuable companies in the world, celebrated for producing ubiquitous products like the iPad and iPhone to now-nostalgia ",
+  "category": "General",
+  "storyClass": "lead",
+  "confidence": 87,
+  "impact": "Medium",
+  "publishedAt": "2026-03-30T13:05:16.000Z",
+  "updatedAt": "2026-03-30T16:48:09.849Z",
+  "sourceName": "The Verge",
+  "author": "The Verge",
+  "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+  "sourceUrl": "https://www.theverge.com/tech/899623/apple-50-anniversary",
+  "topics": [
+    "general"
+  ],
+  "labels": [
+    "psychic"
+  ],
+  "provenance": {
+    "kind": "summary-digest",
+    "note": "This page is a summary/provenance digest view generated from source metadata. It is not a rewritten full original article.",
+    "sourceUrl": "https://www.theverge.com/tech/899623/apple-50-anniversary"
+  },
+  "readTime": "2 min",
+  "relatedArticleIds": [
+    "b310e6c1-8545-4fde-b0f9-d51300642731",
+    "561cfe06-664f-428d-90c8-20b150cb94d9",
+    "873768ea-2e53-4ec2-a7f7-2b21ae0e7117"
+  ]
+}

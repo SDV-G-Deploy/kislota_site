@@ -1,0 +1,39 @@
+{
+  "id": "7c177602-cf5b-4be8-91d3-445a7b17f6f6",
+  "title": "Forecasting potential misuses of language models for disinformation campaigns and how to reduce risk",
+  "headline": "Forecasting potential misuses of language models for disinformation campaigns and how to reduce risk",
+  "deck": "OpenAI researchers collaborated with Georgetown University’s Center for Security and Emerging Technology and the Stanford Internet Observatory to investigate how large language models might be misused for disinformation ",
+  "summary": "OpenAI researchers collaborated with Georgetown University’s Center for Security and Emerging Technology and the Stanford Internet Observatory to investigate how large language models might be misused for disinformation ",
+  "category": "Security",
+  "storyClass": "anomaly",
+  "confidence": 73,
+  "impact": "Medium",
+  "publishedAt": "2023-01-11T08:00:00.000Z",
+  "updatedAt": "2026-03-30T16:48:09.882Z",
+  "sourceName": "OpenAI News",
+  "author": "OpenAI News",
+  "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
+  "sourceUrl": "https://openai.com/index/forecasting-misuse",
+  "topics": [
+    "security",
+    "policy",
+    "ai",
+    "science"
+  ],
+  "labels": [
+    "threat",
+    "alien",
+    "acid"
+  ],
+  "provenance": {
+    "kind": "summary-digest",
+    "note": "This page is a summary/provenance digest view generated from source metadata. It is not a rewritten full original article.",
+    "sourceUrl": "https://openai.com/index/forecasting-misuse"
+  },
+  "readTime": "2 min",
+  "relatedArticleIds": [
+    "b310e6c1-8545-4fde-b0f9-d51300642731",
+    "561cfe06-664f-428d-90c8-20b150cb94d9",
+    "873768ea-2e53-4ec2-a7f7-2b21ae0e7117"
+  ]
+}

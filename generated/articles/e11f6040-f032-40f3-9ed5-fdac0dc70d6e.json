@@ -1,0 +1,36 @@
+{
+  "id": "e11f6040-f032-40f3-9ed5-fdac0dc70d6e",
+  "title": "How AI Assistants are Moving the Security Goalposts",
+  "headline": "How AI Assistants are Moving the Security Goalposts",
+  "deck": "AI-based assistants or \"agents\" -- autonomous programs that have access to the user's computer, files, online services and can automate virtually any task -- are growing in popularity with developers and IT workers. But ",
+  "summary": "AI-based assistants or \"agents\" -- autonomous programs that have access to the user's computer, files, online services and can automate virtually any task -- are growing in popularity with developers and IT workers. But ",
+  "category": "Security",
+  "storyClass": "brief",
+  "confidence": 65,
+  "impact": "Medium",
+  "publishedAt": "2026-03-08T23:35:42.000Z",
+  "updatedAt": "2026-03-30T16:38:15.160Z",
+  "sourceName": "Krebs on Security",
+  "author": "Krebs on Security",
+  "sourceId": "7b3cbf29-30dd-486c-a522-70aee5ccd7a8",
+  "sourceUrl": "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts",
+  "topics": [
+    "security",
+    "ai"
+  ],
+  "labels": [
+    "threat",
+    "alien"
+  ],
+  "provenance": {
+    "kind": "summary-digest",
+    "note": "This page is a summary/provenance digest view generated from source metadata. It is not a rewritten full original article.",
+    "sourceUrl": "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts"
+  },
+  "readTime": "2 min",
+  "relatedArticleIds": [
+    "b310e6c1-8545-4fde-b0f9-d51300642731",
+    "561cfe06-664f-428d-90c8-20b150cb94d9",
+    "873768ea-2e53-4ec2-a7f7-2b21ae0e7117"
+  ]
+}

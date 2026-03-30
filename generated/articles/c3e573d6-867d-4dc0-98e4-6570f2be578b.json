@@ -1,0 +1,37 @@
+{
+  "id": "c3e573d6-867d-4dc0-98e4-6570f2be578b",
+  "title": "Partial government shutdown becomes the longest in US history",
+  "headline": "Partial government shutdown becomes the longest in US history",
+  "deck": "The 44-day funding lapse for the Department of Homeland Security has led to travel chaos at US airports.",
+  "summary": "The 44-day funding lapse for the Department of Homeland Security has led to travel chaos at US airports.",
+  "category": "Security",
+  "storyClass": "brief",
+  "confidence": 73,
+  "impact": "Medium",
+  "publishedAt": "2026-03-30T01:13:51.000Z",
+  "updatedAt": "2026-03-30T16:48:09.851Z",
+  "sourceName": "BBC World News",
+  "author": "BBC World News",
+  "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
+  "sourceUrl": "https://www.bbc.com/news/articles/cyv1qpzq5v7o",
+  "topics": [
+    "security",
+    "policy",
+    "business"
+  ],
+  "labels": [
+    "threat",
+    "premium"
+  ],
+  "provenance": {
+    "kind": "summary-digest",
+    "note": "This page is a summary/provenance digest view generated from source metadata. It is not a rewritten full original article.",
+    "sourceUrl": "https://www.bbc.com/news/articles/cyv1qpzq5v7o"
+  },
+  "readTime": "2 min",
+  "relatedArticleIds": [
+    "b310e6c1-8545-4fde-b0f9-d51300642731",
+    "561cfe06-664f-428d-90c8-20b150cb94d9",
+    "873768ea-2e53-4ec2-a7f7-2b21ae0e7117"
+  ]
+}

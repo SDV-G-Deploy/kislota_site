@@ -1,55 +1,34 @@
 {
-  "generatedAt": "2026-03-30T13:58:35.997Z",
+  "generatedAt": "2026-03-30T16:48:09.902Z",
+  "editionId": "daily-live",
   "newsItems": [
     {
       "id": 1,
-      "articleId": "bdf9375d08472994a8a3aede37981612fc197d4275ff0498e869873820e4d6e4",
-      "title": "Spain closes airspace to US aircraft involved in Iran war",
-      "deck": "It follows a decision by the Spanish government to deny the US use of the two jointly run military bases in Andalusia.",
-      "category": "Policy",
-      "timestamp": "2026-03-30T12:27:25.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BBC World News",
-      "coverage": "Policy",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "tone": "info",
-      "storyClass": "lead",
-      "accentRole": "hero",
-      "layoutSpan": "major",
-      "href": "article.html?id=bdf9375d08472994a8a3aede37981612fc197d4275ff0498e869873820e4d6e4&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fcwy368j1e3lo"
-    },
-    {
-      "id": 2,
-      "articleId": "c720bf728da92d557f52c1ea3eda400088a7dd4cf256e848a7a898972cbeec48",
-      "title": "Helping disaster response teams turn AI into action across Asia",
-      "deck": "AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation",
+      "articleId": "b310e6c1-8545-4fde-b0f9-d51300642731",
+      "title": "Okta’s CEO is betting big on AI agent identity",
+      "deck": "Today, I’m talking with Todd McKinnon, who is co-founder and CEO of Okta, a platform that lets big companies manage security and identity across all the apps and services their employees use. Think of it like login manag",
       "category": "AI",
-      "timestamp": "2026-03-29T22:15:00.000Z",
+      "timestamp": "2026-03-30T15:15:00.000Z",
       "edition": "Global Desk",
       "readTime": "2 min",
-      "author": "OpenAI News",
-      "coverage": "AI",
-      "confidence": 75,
+      "author": "The Verge",
+      "coverage": "The Verge",
+      "confidence": 84,
       "impact": "Medium",
       "labels": [
         "alien",
-        "psychic"
+        "threat",
+        "acid"
       ],
-      "tone": "weird",
+      "tone": "urgent",
       "storyClass": "anomaly",
       "accentRole": "anomaly",
-      "layoutSpan": "puncture",
-      "href": "article.html?id=c720bf728da92d557f52c1ea3eda400088a7dd4cf256e848a7a898972cbeec48&url=https%3A%2F%2Fopenai.com%2Findex%2Fhelping-disaster-response-teams-asia"
+      "layoutSpan": "major",
+      "href": "article.html?id=b310e6c1-8545-4fde-b0f9-d51300642731"
     },
     {
-      "id": 3,
-      "articleId": "805ad915d6df91ed6614621ee4c8c7f017a33a922c7a6ad873b579db9443288a",
+      "id": 2,
+      "articleId": "561cfe06-664f-428d-90c8-20b150cb94d9",
       "title": "Speech by Commissioner Kadis at the Agriculture and Fisheries Council on improvement and simplification in the roll out of the amended EU Fisheries Control Regulation",
       "deck": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, Simplification, reduction of administrative burden, proportionality of the rules, compliance and the competitiveness of the EU fish...",
       "category": "Policy",
@@ -57,69 +36,65 @@
       "edition": "Global Desk",
       "readTime": "2 min",
       "author": "European Commission Press Corner",
-      "coverage": "Policy",
-      "confidence": 75,
+      "coverage": "European Commission Press Corner",
+      "confidence": 79,
       "impact": "Medium",
       "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=805ad915d6df91ed6614621ee4c8c7f017a33a922c7a6ad873b579db9443288a&url=https%3A%2F%2Fec.europa.eu%2Fcommission%2Fpresscorner%2Fdetail%2Fen%2Fspeech_26_756"
-    },
-    {
-      "id": 4,
-      "articleId": "3a6325c0a9c26b36d623f9c2d26cb8e054e47517241322a5e71745310f56e844",
-      "title": "Partial government shutdown becomes the longest in US history",
-      "deck": "The 44-day funding lapse for the Department of Homeland Security has led to travel chaos at US airports.",
-      "category": "Security",
-      "timestamp": "2026-03-30T01:13:51.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BBC World News",
-      "coverage": "Security / Policy / Business",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
-        "premium",
-        "psychic"
-      ],
-      "tone": "urgent",
-      "storyClass": "threat",
-      "accentRole": "threat",
-      "layoutSpan": "wide",
-      "href": "article.html?id=3a6325c0a9c26b36d623f9c2d26cb8e054e47517241322a5e71745310f56e844&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fcyv1qpzq5v7o"
-    },
-    {
-      "id": 5,
-      "articleId": "55eedc17a0c98dd7d991786a63d3b8dd205be46be0b3e804e334910a0c4b6833",
-      "title": "Xbox’s next big games showcase happens on June 7th",
-      "deck": "It may be the end of March, but gaming companies are already getting ready for the summer. First up is Xbox, which just announced that it will be holding its next major showcase event on June 7th. That's a typical window",
-      "category": "General",
-      "timestamp": "2026-03-30T13:18:57.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "The Verge",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
         "hotspot"
       ],
       "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
+      "storyClass": "lead",
+      "accentRole": "hero",
       "layoutSpan": "dense",
-      "href": "article.html?id=55eedc17a0c98dd7d991786a63d3b8dd205be46be0b3e804e334910a0c4b6833&url=https%3A%2F%2Fwww.theverge.com%2Fgames%2F903282%2Fxbox-games-showcase-2026-sgf-date"
+      "href": "article.html?id=561cfe06-664f-428d-90c8-20b150cb94d9"
     },
     {
-      "id": 6,
-      "articleId": "33b9c0e51e4fdb5964898f9d00af73f7f13dc1df25bd5077e5d0fe2692c893f8",
+      "id": 3,
+      "articleId": "873768ea-2e53-4ec2-a7f7-2b21ae0e7117",
+      "title": "How the US could try to seize Iran's Kharg Island",
+      "deck": "Donald Trump has indicated he could send troops to take control of Iran's key oil export terminal.",
+      "category": "General",
+      "timestamp": "2026-03-30T14:54:47.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "BBC World News",
+      "coverage": "BBC World News",
+      "confidence": 74,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "dense",
+      "href": "article.html?id=873768ea-2e53-4ec2-a7f7-2b21ae0e7117"
+    },
+    {
+      "id": 4,
+      "articleId": "35696878-84e9-4b5b-9bd5-582a74ec4bd6",
+      "title": "The best deals we’ve found from Amazon’s Big Spring Sale (so far)",
+      "deck": "Amazon loves to manufacture an event. March is historically a dry spell for deals; however, with Amazon’s third annual Big Spring Sale, which runs through tomorrow, March 31st, the retail behemoth is hoping to lure in wo",
+      "category": "AI",
+      "timestamp": "2026-03-30T15:05:00.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "The Verge",
+      "coverage": "The Verge",
+      "confidence": 80,
+      "impact": "Medium",
+      "labels": [
+        "alien"
+      ],
+      "tone": "weird",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "puncture",
+      "href": "article.html?id=35696878-84e9-4b5b-9bd5-582a74ec4bd6"
+    },
+    {
+      "id": 5,
+      "articleId": "289cfa07-a9fa-428c-8222-ceef23ea7fb0",
       "title": "Speech by Commissioner Kadis at the Agriculture and Fisheries Council: Implementation dialogue on small-scale and coastal fisheries",
       "deck": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, I would like to thank you for adding this point to the agenda of today's Council and for the opportunity to present the outcome of ...",
       "category": "Policy",
@@ -127,415 +102,43 @@
       "edition": "Global Desk",
       "readTime": "2 min",
       "author": "European Commission Press Corner",
-      "coverage": "Policy",
-      "confidence": 75,
+      "coverage": "European Commission Press Corner",
+      "confidence": 79,
       "impact": "Medium",
       "labels": [
-        "hotspot",
-        "psychic"
+        "hotspot"
+      ],
+      "tone": "info",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "dense",
+      "href": "article.html?id=289cfa07-a9fa-428c-8222-ceef23ea7fb0"
+    },
+    {
+      "id": 6,
+      "articleId": "4b43c438-730d-4ea6-bbb8-d427ba6ab4e4",
+      "title": "Spain closes airspace to US aircraft involved in Iran war",
+      "deck": "It follows a decision by the Spanish government to deny the US use of the two jointly run military bases in Andalusia.",
+      "category": "Policy",
+      "timestamp": "2026-03-30T15:29:15.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "BBC World News",
+      "coverage": "BBC World News",
+      "confidence": 71,
+      "impact": "Low",
+      "labels": [
+        "hotspot"
       ],
       "tone": "info",
       "storyClass": "brief",
       "accentRole": "brief",
       "layoutSpan": "dense",
-      "href": "article.html?id=33b9c0e51e4fdb5964898f9d00af73f7f13dc1df25bd5077e5d0fe2692c893f8&url=https%3A%2F%2Fec.europa.eu%2Fcommission%2Fpresscorner%2Fdetail%2Fen%2Fspeech_26_755"
+      "href": "article.html?id=4b43c438-730d-4ea6-bbb8-d427ba6ab4e4"
     },
     {
       "id": 7,
-      "articleId": "8df5c0692e496fad28e704e06d8068e2920e2a163d550176a3ebd8913b145676",
-      "title": "Latin Patriarch will have access to Jerusalem holy site after police stopped entry",
-      "deck": "The Israeli PM says Cardinal Pierbattista Pizzaballa had been asked not to enter the church over concerns about Iranian strikes.",
-      "category": "General",
-      "timestamp": "2026-03-30T13:30:32.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BBC World News",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=8df5c0692e496fad28e704e06d8068e2920e2a163d550176a3ebd8913b145676&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fcvg0128z41eo"
-    },
-    {
-      "id": 8,
-      "articleId": "3521b29551aa0b4b12de8cd2d0faa18be85a745536e74797a67e8bca19fa9534",
-      "title": "Speech by Commissioner Kadis at the Agriculture and Fisheries Council: Energy transition in the EU fisheries and aquaculture sector",
-      "deck": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, I thank the Presidency for the initiative to put this item on the agenda of the Agrifish Council. Energy transition is critical for...",
-      "category": "Policy",
-      "timestamp": "2026-03-30T09:22:25.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "European Commission Press Corner",
-      "coverage": "Policy",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=3521b29551aa0b4b12de8cd2d0faa18be85a745536e74797a67e8bca19fa9534&url=https%3A%2F%2Fec.europa.eu%2Fcommission%2Fpresscorner%2Fdetail%2Fen%2Fspeech_26_754"
-    },
-    {
-      "id": 9,
-      "articleId": "102c83b0d473f4d946f9633a6300059c64ea584d5c6b82ada630fa355fe90041",
-      "title": "For $200 more, you can get a MacBook Air",
-      "deck": "It was January 2008, and Steve Jobs had just pulled the MacBook Air out of a manila envelope onstage at Macworld. Within minutes, Windows PC executives everywhere lost their minds. They grabbed the nearest office envelop",
-      "category": "General",
-      "timestamp": "2026-03-30T13:05:19.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "The Verge",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=102c83b0d473f4d946f9633a6300059c64ea584d5c6b82ada630fa355fe90041&url=https%3A%2F%2Fwww.theverge.com%2Ftech%2F901698%2Fmacbook-air-history"
-    },
-    {
-      "id": 10,
-      "articleId": "749c7cac09b5acf63d0dad61ff75c0e9f3d791cde2c455871de0f8842dd9b73a",
-      "title": "Tech CEOs suddenly love blaming AI for mass job cuts. Why?",
-      "deck": "More tech leaders are pointing to job cuts caused by AI tools - and a need for more investment cash.",
-      "category": "AI",
-      "timestamp": "2026-03-29T23:07:04.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BBC World News",
-      "coverage": "AI",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "alien",
-        "psychic"
-      ],
-      "tone": "weird",
-      "storyClass": "anomaly",
-      "accentRole": "anomaly",
-      "layoutSpan": "puncture",
-      "href": "article.html?id=749c7cac09b5acf63d0dad61ff75c0e9f3d791cde2c455871de0f8842dd9b73a&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fcde5y2x51y8o"
-    },
-    {
-      "id": 11,
-      "articleId": "d92d0a6987ff29e301d3351ba1a52eab22cd919e8c8af8c566a75a087be5465b",
-      "title": "Daily News 30 / 03 / 2026",
-      "deck": "European Commission Daily news Brussels, 30 Mar 2026 Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry The European Commission approved today a €1.5 billion work progr...",
-      "category": "Policy",
-      "timestamp": "2026-03-30T09:04:17.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "European Commission Press Corner",
-      "coverage": "Policy",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=d92d0a6987ff29e301d3351ba1a52eab22cd919e8c8af8c566a75a087be5465b&url=https%3A%2F%2Fec.europa.eu%2Fcommission%2Fpresscorner%2Fdetail%2Fen%2Fmex_26_753"
-    },
-    {
-      "id": 12,
-      "articleId": "e0f5a8ff2574bcc1560ef219b7b7aaccd15a3b08c35cf5f3db308bbc929ed9f5",
-      "title": "The mad dash to build the future of multimedia",
-      "deck": "It's 1989. To play a video, listen to a song, or show photos on a desktop computer requires bolting on expensive hardware, built by a different company, using different software. There are no standards, no portability, n",
-      "category": "General",
-      "timestamp": "2026-03-30T13:05:17.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "The Verge",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=e0f5a8ff2574bcc1560ef219b7b7aaccd15a3b08c35cf5f3db308bbc929ed9f5&url=https%3A%2F%2Fwww.theverge.com%2Ftech%2F902721%2Fquicktime-history-apple"
-    },
-    {
-      "id": 13,
-      "articleId": "263c2043f1c3113e3ab2b204765bddc1da423d44d0daf75aa22eb2b65535f86b",
-      "title": "Inside our approach to the Model Spec",
-      "deck": "Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.",
-      "category": "AI",
-      "timestamp": "2026-03-25T10:00:00.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "OpenAI News",
-      "coverage": "AI",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "alien",
-        "psychic"
-      ],
-      "tone": "weird",
-      "storyClass": "anomaly",
-      "accentRole": "anomaly",
-      "layoutSpan": "puncture",
-      "href": "article.html?id=263c2043f1c3113e3ab2b204765bddc1da423d44d0daf75aa22eb2b65535f86b&url=https%3A%2F%2Fopenai.com%2Findex%2Four-approach-to-the-model-spec"
-    },
-    {
-      "id": 14,
-      "articleId": "91bd26f8932a418d87acbf008474e9fcf4dc8a01f58812db1a066eefcf7cde6b",
-      "title": "Three killed as unfinished building collapses on church service in Ghana",
-      "deck": "Locals say the structure, in a school complex, was in use despite lying unfinished for a number of years.",
-      "category": "General",
-      "timestamp": "2026-03-30T13:17:00.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BBC World News",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=91bd26f8932a418d87acbf008474e9fcf4dc8a01f58812db1a066eefcf7cde6b&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fckgex51zzd8o"
-    },
-    {
-      "id": 15,
-      "articleId": "1afff366380c2e555b72c022fe2b55e4776f8476b7022dcf0115308e13330770",
-      "title": "Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry",
-      "deck": "European Commission Press release Brussels, 30 Mar 2026 The European Commission approved today a €1.5 billion work programme under the European Defence Industry Programme (EDIP).",
-      "category": "Policy",
-      "timestamp": "2026-03-30T08:32:23.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "European Commission Press Corner",
-      "coverage": "Policy",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=1afff366380c2e555b72c022fe2b55e4776f8476b7022dcf0115308e13330770&url=https%3A%2F%2Fec.europa.eu%2Fcommission%2Fpresscorner%2Fdetail%2Fen%2Fip_26_752"
-    },
-    {
-      "id": 16,
-      "articleId": "6406e93d9b2eb8578740b70e226b2eef12d643930ec71bb583b2fce62c78df66",
-      "title": "How AI Assistants are Moving the Security Goalposts",
-      "deck": "AI-based assistants or \"agents\" -- autonomous programs that have access to the user's computer, files, online services and can automate virtually any task -- are growing in popularity with developers and IT workers. But ",
-      "category": "Security",
-      "timestamp": "2026-03-08T23:35:42.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BrianKrebs",
-      "coverage": "Security / AI",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
-        "alien",
-        "psychic"
-      ],
-      "tone": "urgent",
-      "storyClass": "threat",
-      "accentRole": "threat",
-      "layoutSpan": "wide",
-      "href": "article.html?id=6406e93d9b2eb8578740b70e226b2eef12d643930ec71bb583b2fce62c78df66&url=https%3A%2F%2Fkrebsonsecurity.com%2F2026%2F03%2Fhow-ai-assistants-are-moving-the-security-goalposts"
-    },
-    {
-      "id": 17,
-      "articleId": "4ebfa0742e27454dcbf8de0d79ad9a3d7052c7658e4105329895a260b9dc406b",
-      "title": "Kris Jenner's image spreads in Chinese social media good luck trend",
-      "deck": "Hundreds of thousands of posts have been shared in the past three days as users hope for prosperity",
-      "category": "General",
-      "timestamp": "2026-03-30T12:59:23.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BBC World News",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=4ebfa0742e27454dcbf8de0d79ad9a3d7052c7658e4105329895a260b9dc406b&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fc0rx57zgz52o"
-    },
-    {
-      "id": 18,
-      "articleId": "fb38dfafd80a435f42a8e1b192005db1585b1e3172fe3e649b92463f8b276bfa",
-      "title": "Introducing the OpenAI Safety Bug Bounty program",
-      "deck": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
-      "category": "AI",
-      "timestamp": "2026-03-25T00:00:00.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "OpenAI News",
-      "coverage": "AI",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "alien",
-        "psychic"
-      ],
-      "tone": "weird",
-      "storyClass": "anomaly",
-      "accentRole": "anomaly",
-      "layoutSpan": "puncture",
-      "href": "article.html?id=fb38dfafd80a435f42a8e1b192005db1585b1e3172fe3e649b92463f8b276bfa&url=https%3A%2F%2Fopenai.com%2Findex%2Fsafety-bug-bounty"
-    },
-    {
-      "id": 19,
-      "articleId": "50605397c6bb03aaa12954def1d9b08ca4e95856d886ef70c1a75c01bc9643d0",
-      "title": "Microsoft Patch Tuesday, March 2026 Edition",
-      "deck": "Microsoft Corp. today pushed security updates to fix at least 77 vulnerabilities in its Windows operating systems and other software. There are no pressing \"zero-day\" flaws this month (compared to February's five zero-da",
-      "category": "Security",
-      "timestamp": "2026-03-11T00:32:51.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BrianKrebs",
-      "coverage": "Security",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
-        "psychic"
-      ],
-      "tone": "urgent",
-      "storyClass": "threat",
-      "accentRole": "threat",
-      "layoutSpan": "wide",
-      "href": "article.html?id=50605397c6bb03aaa12954def1d9b08ca4e95856d886ef70c1a75c01bc9643d0&url=https%3A%2F%2Fkrebsonsecurity.com%2F2026%2F03%2Fmicrosoft-patch-tuesday-march-2026-edition"
-    },
-    {
-      "id": 20,
-      "articleId": "f0e30771c73b37dc63323c6f26c7cfbc0de648039468fcc2aaada84b2df78762",
-      "title": "48-hour curfew imposed after attack on bar in Nigerian city",
-      "deck": "The raid led to revenge attacks in Jos, with 22 reported dead so far in one of the most volatile parts of the country.",
-      "category": "General",
-      "timestamp": "2026-03-30T12:23:38.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BBC World News",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=f0e30771c73b37dc63323c6f26c7cfbc0de648039468fcc2aaada84b2df78762&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fcvg4q9n573do"
-    },
-    {
-      "id": 21,
-      "articleId": "d75d7d2ee74818d4f55705e575e64e1b77fcc54e45f438e9a480dc7577c40a88",
-      "title": "Helping developers build safer AI experiences for teens",
-      "deck": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
-      "category": "AI",
-      "timestamp": "2026-03-24T11:00:00.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "OpenAI News",
-      "coverage": "AI",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "alien",
-        "psychic"
-      ],
-      "tone": "weird",
-      "storyClass": "anomaly",
-      "accentRole": "anomaly",
-      "layoutSpan": "puncture",
-      "href": "article.html?id=d75d7d2ee74818d4f55705e575e64e1b77fcc54e45f438e9a480dc7577c40a88&url=https%3A%2F%2Fopenai.com%2Findex%2Fteen-safety-policies-gpt-oss-safeguard"
-    },
-    {
-      "id": 22,
-      "articleId": "c7437cf0e6fa4943cb8713121d2f48699eac9a358bfb10a385da8545d3e1dcbb",
-      "title": "Who is the Kimwolf Botmaster “Dort”?",
-      "deck": "In early January 2026, KrebsOnSecurity revealed how a security researcher disclosed a vulnerability that was used to assemble Kimwolf, the world's largest and most disruptive botnet. Since then, the person in control of ",
-      "category": "Security",
-      "timestamp": "2026-02-28T12:01:57.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BrianKrebs",
-      "coverage": "Security",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
-        "psychic"
-      ],
-      "tone": "urgent",
-      "storyClass": "threat",
-      "accentRole": "threat",
-      "layoutSpan": "wide",
-      "href": "article.html?id=c7437cf0e6fa4943cb8713121d2f48699eac9a358bfb10a385da8545d3e1dcbb&url=https%3A%2F%2Fkrebsonsecurity.com%2F2026%2F02%2Fwho-is-the-kimwolf-botmaster-dort"
-    },
-    {
-      "id": 23,
-      "articleId": "5930d5d60d7d1f936667075fff54b842b2e07b2c1d84e842824c7721fd41482e",
-      "title": "Commission publishes guidance to support implementation of new packaging rules, for a more sustainable and competitive EU packaging sector",
-      "deck": "European Commission Press release Brussels, 30 Mar 2026 Today, the European Commission published guidelines on the implementation of the Packaging and Packaging Waste Regulation (PPWR) to facilitate the uniform applicati",
-      "category": "Policy",
-      "timestamp": "2026-03-29T22:00:00.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "European Commission Press Corner",
-      "coverage": "Policy / Business",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "premium",
-        "psychic"
-      ],
-      "tone": "premium",
-      "storyClass": "premium",
-      "accentRole": "featured",
-      "layoutSpan": "wide",
-      "href": "article.html?id=5930d5d60d7d1f936667075fff54b842b2e07b2c1d84e842824c7721fd41482e&url=https%3A%2F%2Fec.europa.eu%2Fcommission%2Fpresscorner%2Fdetail%2Fen%2Fip_26_664"
-    },
-    {
-      "id": 24,
-      "articleId": "92f243d511a7220e3d264ba89d9ef6921bed0e6434fc25d0307667e2e45d2f08",
+      "articleId": "17813b34-7529-44d0-bc19-f168e9d4bd31",
       "title": "Apple @ 50",
       "deck": "Fifty years ago, on April 1st, 1976, Apple Computer Company was founded. Today it’s one of the most valuable companies in the world, celebrated for producing ubiquitous products like the iPad and iPhone to now-nostalgia ",
       "category": "General",
@@ -543,31 +146,318 @@
       "edition": "Global Desk",
       "readTime": "2 min",
       "author": "The Verge",
-      "coverage": "General",
+      "coverage": "The Verge",
+      "confidence": 87,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "dense",
+      "href": "article.html?id=17813b34-7529-44d0-bc19-f168e9d4bd31"
+    },
+    {
+      "id": 8,
+      "articleId": "888eb508-4ec2-4f93-8439-a7b8d56c7a66",
+      "title": "Speech by Commissioner Kadis at the Agriculture and Fisheries Council: Energy transition in the EU fisheries and aquaculture sector",
+      "deck": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, I thank the Presidency for the initiative to put this item on the agenda of the Agrifish Council. Energy transition is critical for...",
+      "category": "Policy",
+      "timestamp": "2026-03-30T09:22:25.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "European Commission Press Corner",
+      "coverage": "European Commission Press Corner",
+      "confidence": 79,
+      "impact": "Medium",
+      "labels": [
+        "hotspot"
+      ],
+      "tone": "info",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "dense",
+      "href": "article.html?id=888eb508-4ec2-4f93-8439-a7b8d56c7a66"
+    },
+    {
+      "id": 9,
+      "articleId": "c3e573d6-867d-4dc0-98e4-6570f2be578b",
+      "title": "Partial government shutdown becomes the longest in US history",
+      "deck": "The 44-day funding lapse for the Department of Homeland Security has led to travel chaos at US airports.",
+      "category": "Security",
+      "timestamp": "2026-03-30T01:13:51.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "BBC World News",
+      "coverage": "BBC World News",
+      "confidence": 73,
+      "impact": "Medium",
+      "labels": [
+        "threat",
+        "premium"
+      ],
+      "tone": "urgent",
+      "storyClass": "brief",
+      "accentRole": "brief",
+      "layoutSpan": "wide",
+      "href": "article.html?id=c3e573d6-867d-4dc0-98e4-6570f2be578b"
+    },
+    {
+      "id": 10,
+      "articleId": "e97fbb4f-7358-405d-b0de-882bb4354d37",
+      "title": "Xbox’s next big games showcase happens on June 7th",
+      "deck": "It may be the end of March, but gaming companies are already getting ready for the summer. First up is Xbox, which just announced that it will be holding its next major showcase event on June 7th. That's a typical window",
+      "category": "General",
+      "timestamp": "2026-03-30T13:18:57.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "The Verge",
+      "coverage": "The Verge",
+      "confidence": 79,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "dense",
+      "href": "article.html?id=e97fbb4f-7358-405d-b0de-882bb4354d37"
+    },
+    {
+      "id": 11,
+      "articleId": "5b323535-df99-4756-b049-dd153090e229",
+      "title": "Commission publishes guidance to support implementation of new packaging rules, for a more sustainable and competitive EU packaging sector",
+      "deck": "European Commission Press release Brussels, 30 Mar 2026 Today, the European Commission published guidelines on the implementation of the Packaging and Packaging Waste Regulation (PPWR) to facilitate the uniform applicati",
+      "category": "Policy",
+      "timestamp": "2026-03-29T22:00:00.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "European Commission Press Corner",
+      "coverage": "European Commission Press Corner",
+      "confidence": 80,
+      "impact": "Medium",
+      "labels": [
+        "hotspot",
+        "premium"
+      ],
+      "tone": "premium",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "wide",
+      "href": "article.html?id=5b323535-df99-4756-b049-dd153090e229"
+    },
+    {
+      "id": 12,
+      "articleId": "1a460184-4a3e-4172-9c76-e3b0695f0e42",
+      "title": "Helping disaster response teams turn AI into action across Asia",
+      "deck": "AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation",
+      "category": "AI",
+      "timestamp": "2026-03-29T22:15:00.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "OpenAI News",
+      "coverage": "OpenAI News",
+      "confidence": 73,
+      "impact": "Medium",
+      "labels": [
+        "alien"
+      ],
+      "tone": "weird",
+      "storyClass": "brief",
+      "accentRole": "brief",
+      "layoutSpan": "puncture",
+      "href": "article.html?id=1a460184-4a3e-4172-9c76-e3b0695f0e42"
+    },
+    {
+      "id": 13,
+      "articleId": "1b0eba27-6920-4f50-ba71-aaa60457ca09",
+      "title": "For $200 more, you can get a MacBook Air",
+      "deck": "This is part of our package about Apple's 50th anniversary, read more here. It was January 2008, and Steve Jobs had just pulled the MacBook Air out of a manila envelope onstage at Macworld. Within minutes, Windows PC exe",
+      "category": "General",
+      "timestamp": "2026-03-30T13:05:19.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "The Verge",
+      "coverage": "The Verge",
+      "confidence": 79,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "dense",
+      "href": "article.html?id=1b0eba27-6920-4f50-ba71-aaa60457ca09"
+    },
+    {
+      "id": 14,
+      "articleId": "b7f5f4ba-476b-4f52-b7a6-a3bf4e41735c",
+      "title": "Latin Patriarch will have access to Jerusalem holy site after police stopped entry",
+      "deck": "The Israeli PM says Cardinal Pierbattista Pizzaballa had been asked not to enter the church over concerns about Iranian strikes.",
+      "category": "General",
+      "timestamp": "2026-03-30T13:30:32.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "BBC World News",
+      "coverage": "BBC World News",
       "confidence": 75,
       "impact": "Medium",
       "labels": [
-        "psychic",
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "brief",
+      "accentRole": "brief",
+      "layoutSpan": "dense",
+      "href": "article.html?id=b7f5f4ba-476b-4f52-b7a6-a3bf4e41735c"
+    },
+    {
+      "id": 15,
+      "articleId": "cb320965-2612-48d0-a714-8e124df4492e",
+      "title": "Daily News 30 / 03 / 2026",
+      "deck": "European Commission Daily news Brussels, 30 Mar 2026 Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry The European Commission approved today a €1.5 billion work progr...",
+      "category": "Policy",
+      "timestamp": "2026-03-30T09:04:17.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "European Commission Press Corner",
+      "coverage": "European Commission Press Corner",
+      "confidence": 74,
+      "impact": "Medium",
+      "labels": [
         "hotspot"
       ],
       "tone": "info",
       "storyClass": "brief",
       "accentRole": "brief",
       "layoutSpan": "dense",
-      "href": "article.html?id=92f243d511a7220e3d264ba89d9ef6921bed0e6434fc25d0307667e2e45d2f08&url=https%3A%2F%2Fwww.theverge.com%2Ftech%2F899623%2Fapple-50-anniversary"
+      "href": "article.html?id=cb320965-2612-48d0-a714-8e124df4492e"
     },
     {
-      "id": 25,
-      "articleId": "5becf449a527f5c9c85cf1a79382721e0a50eba2c41081a28ef73f4a2d94908c",
-      "title": "Codex Security: now in research preview",
-      "deck": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
+      "id": 16,
+      "articleId": "67501b04-6f1d-4532-8419-5b7f20730b76",
+      "title": "The origin story of Apple’s long-running relationship with Foxconn",
+      "deck": "In 2025, Patrick McGee published Apple in China: The Capture of the World's Greatest Company, a deeply-reported look at the tech giant's investment in - and growing reliance on - China. The following excerpt, pulled from",
+      "category": "General",
+      "timestamp": "2026-03-30T13:00:00.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "The Verge",
+      "coverage": "The Verge",
+      "confidence": 79,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "dense",
+      "href": "article.html?id=67501b04-6f1d-4532-8419-5b7f20730b76"
+    },
+    {
+      "id": 17,
+      "articleId": "bdd30042-e2de-46d2-899a-b4d421f112fd",
+      "title": "Tech CEOs suddenly love blaming AI for mass job cuts. Why?",
+      "deck": "More tech leaders are pointing to job cuts caused by AI tools - and a need for more investment cash.",
+      "category": "AI",
+      "timestamp": "2026-03-29T23:07:04.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "BBC World News",
+      "coverage": "BBC World News",
+      "confidence": 69,
+      "impact": "Low",
+      "labels": [
+        "alien"
+      ],
+      "tone": "weird",
+      "storyClass": "brief",
+      "accentRole": "brief",
+      "layoutSpan": "puncture",
+      "href": "article.html?id=bdd30042-e2de-46d2-899a-b4d421f112fd"
+    },
+    {
+      "id": 18,
+      "articleId": "d7fe15b4-e023-42a9-b40c-0a0f7eea157d",
+      "title": "Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry",
+      "deck": "European Commission Press release Brussels, 30 Mar 2026 The European Commission approved today a €1.5 billion work programme under the European Defence Industry Programme (EDIP).",
+      "category": "Policy",
+      "timestamp": "2026-03-30T08:32:23.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "European Commission Press Corner",
+      "coverage": "European Commission Press Corner",
+      "confidence": 75,
+      "impact": "Medium",
+      "labels": [
+        "hotspot"
+      ],
+      "tone": "info",
+      "storyClass": "brief",
+      "accentRole": "brief",
+      "layoutSpan": "dense",
+      "href": "article.html?id=d7fe15b4-e023-42a9-b40c-0a0f7eea157d"
+    },
+    {
+      "id": 19,
+      "articleId": "a7f11e63-c74d-480a-9178-92ca09916de4",
+      "title": "Vivo launches X300 Ultra flagship ‘designed for professional photography’",
+      "deck": "The camera module on the Vivo X300 Ultra (pictured) is certainly eye-catching. | Image: Vivo Vivo has launched the X300 Ultra in China today, the company's latest flagship that really puts the \"camera\" in cameraphone. Th",
+      "category": "General",
+      "timestamp": "2026-03-30T12:30:00.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "The Verge",
+      "coverage": "The Verge",
+      "confidence": 78,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "dense",
+      "href": "article.html?id=a7f11e63-c74d-480a-9178-92ca09916de4"
+    },
+    {
+      "id": 20,
+      "articleId": "90b8cc82-57fb-44ae-9ec8-7a81e0390d5f",
+      "title": "Air Canada CEO to retire after criticism for English-only condolence video",
+      "deck": "Michael Rousseau faced calls to resign for his English-only message after the fatal Air Canada collision at LaGuardia airport.",
+      "category": "General",
+      "timestamp": "2026-03-30T13:55:01.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "BBC World News",
+      "coverage": "BBC World News",
+      "confidence": 74,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "brief",
+      "accentRole": "brief",
+      "layoutSpan": "dense",
+      "href": "article.html?id=90b8cc82-57fb-44ae-9ec8-7a81e0390d5f"
+    },
+    {
+      "id": 21,
+      "articleId": "7c177602-cf5b-4be8-91d3-445a7b17f6f6",
+      "title": "Forecasting potential misuses of language models for disinformation campaigns and how to reduce risk",
+      "deck": "OpenAI researchers collaborated with Georgetown University’s Center for Security and Emerging Technology and the Stanford Internet Observatory to investigate how large language models might be misused for disinformation ",
       "category": "Security",
-      "timestamp": "2026-03-06T10:00:00.000Z",
+      "timestamp": "2023-01-11T08:00:00.000Z",
       "edition": "Global Desk",
       "readTime": "2 min",
       "author": "OpenAI News",
-      "coverage": "Security / AI / Science",
-      "confidence": 75,
+      "coverage": "OpenAI News",
+      "confidence": 73,
       "impact": "Medium",
       "labels": [
         "threat",
@@ -575,14 +465,125 @@
         "acid"
       ],
       "tone": "urgent",
-      "storyClass": "threat",
-      "accentRole": "threat",
+      "storyClass": "anomaly",
+      "accentRole": "anomaly",
       "layoutSpan": "wide",
-      "href": "article.html?id=5becf449a527f5c9c85cf1a79382721e0a50eba2c41081a28ef73f4a2d94908c&url=https%3A%2F%2Fopenai.com%2Findex%2Fcodex-security-now-in-research-preview"
+      "href": "article.html?id=7c177602-cf5b-4be8-91d3-445a7b17f6f6"
+    },
+    {
+      "id": 22,
+      "articleId": "43f02cc4-2d03-4da6-9f7f-98cffacc83f8",
+      "title": "Commission allocates €21.5 million in emergency support to farmers in Bulgaria, Estonia and Hungary",
+      "deck": "European Commission Press release Brussels, 30 Mar 2026 Today, Member States endorsed the Commission's proposal to mobilise €21.5 million from the agricultural reserve to support farmers in Bulgaria (BG), Estonia (EE) an",
+      "category": "Policy",
+      "timestamp": "2026-03-29T22:00:00.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "European Commission Press Corner",
+      "coverage": "European Commission Press Corner",
+      "confidence": 76,
+      "impact": "Medium",
+      "labels": [
+        "hotspot"
+      ],
+      "tone": "info",
+      "storyClass": "brief",
+      "accentRole": "brief",
+      "layoutSpan": "dense",
+      "href": "article.html?id=43f02cc4-2d03-4da6-9f7f-98cffacc83f8"
+    },
+    {
+      "id": 23,
+      "articleId": "64d33c9e-0800-4498-a908-fd07c8aa18d5",
+      "title": "The mad dash to build the future of multimedia",
+      "deck": "This is part of our package about Apple's 50th anniversary, read more here. It's 1989. To play a video, listen to a song, or show photos on a desktop computer requires bolting on expensive hardware, built by a different ",
+      "category": "General",
+      "timestamp": "2026-03-30T13:05:17.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "The Verge",
+      "coverage": "The Verge",
+      "confidence": 77,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "lead",
+      "accentRole": "hero",
+      "layoutSpan": "dense",
+      "href": "article.html?id=64d33c9e-0800-4498-a908-fd07c8aa18d5"
+    },
+    {
+      "id": 24,
+      "articleId": "1dbdb059-c205-4329-bf6f-a8dd5cd98382",
+      "title": "Inside our approach to the Model Spec",
+      "deck": "Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.",
+      "category": "AI",
+      "timestamp": "2026-03-25T10:00:00.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "OpenAI News",
+      "coverage": "OpenAI News",
+      "confidence": 65,
+      "impact": "Low",
+      "labels": [
+        "alien"
+      ],
+      "tone": "weird",
+      "storyClass": "brief",
+      "accentRole": "brief",
+      "layoutSpan": "puncture",
+      "href": "article.html?id=1dbdb059-c205-4329-bf6f-a8dd5cd98382"
+    },
+    {
+      "id": 25,
+      "articleId": "ed659c55-0daf-4c79-b4b0-fd2614d2383f",
+      "title": "Fuel rations and free buses: How countries are responding to rising oil prices",
+      "deck": "Governments around the world have introduced measures to limit the impact of price increases.",
+      "category": "General",
+      "timestamp": "2026-03-30T15:07:13.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "BBC World News",
+      "coverage": "BBC World News",
+      "confidence": 70,
+      "impact": "Low",
+      "labels": [
+        "psychic"
+      ],
+      "tone": "info",
+      "storyClass": "brief",
+      "accentRole": "brief",
+      "layoutSpan": "dense",
+      "href": "article.html?id=ed659c55-0daf-4c79-b4b0-fd2614d2383f"
     },
     {
       "id": 26,
-      "articleId": "4603399e07314fd051d57e7bc5baef7acf00bcfb12d32e275a6c170b1b63f006",
+      "articleId": "c38507ee-faad-43e5-83a8-394eac7c7fe3",
+      "title": "Scaling security with responsible disclosure",
+      "deck": "OpenAI introduces its Outbound Coordinated Disclosure Policy to guide how it responsibly reports vulnerabilities in third-party software—emphasizing integrity, collaboration, and proactive security at scale.",
+      "category": "Security",
+      "timestamp": "2025-06-09T10:00:00.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "OpenAI News",
+      "coverage": "OpenAI News",
+      "confidence": 67,
+      "impact": "Medium",
+      "labels": [
+        "threat",
+        "alien"
+      ],
+      "tone": "urgent",
+      "storyClass": "anomaly",
+      "accentRole": "anomaly",
+      "layoutSpan": "wide",
+      "href": "article.html?id=c38507ee-faad-43e5-83a8-394eac7c7fe3"
+    },
+    {
+      "id": 27,
+      "articleId": "01a9643f-c60f-4ea3-8476-b43be27e6248",
       "title": "Commission approves €6 billion Italian State aid scheme for renewable hydrogen",
       "deck": "European Commission Press release Brussels, 30 Mar 2026 The European Commission has approved, under EU State aid rules, a €6 billion Italian scheme to support the production of renewable hydrogen for the transport an...",
       "category": "Policy",
@@ -590,199 +591,154 @@
       "edition": "Global Desk",
       "readTime": "2 min",
       "author": "European Commission Press Corner",
-      "coverage": "Policy",
-      "confidence": 75,
+      "coverage": "European Commission Press Corner",
+      "confidence": 72,
       "impact": "Medium",
       "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "tone": "info",
-      "storyClass": "brief",
-      "accentRole": "brief",
-      "layoutSpan": "dense",
-      "href": "article.html?id=4603399e07314fd051d57e7bc5baef7acf00bcfb12d32e275a6c170b1b63f006&url=https%3A%2F%2Fec.europa.eu%2Fcommission%2Fpresscorner%2Fdetail%2Fen%2Fip_26_738"
-    },
-    {
-      "id": 27,
-      "articleId": "ef93269872b9ca8039dbc51369099da5fababdc996d59ded0e3a38d50b4a150c",
-      "title": "Why does the US have Iran's Kharg Island in its sights?",
-      "deck": "The tiny island is home to one of the most critical pieces of Iran's energy infrastructure.",
-      "category": "General",
-      "timestamp": "2026-03-30T12:11:07.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BBC World News",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
         "hotspot"
       ],
       "tone": "info",
       "storyClass": "brief",
       "accentRole": "brief",
       "layoutSpan": "dense",
-      "href": "article.html?id=ef93269872b9ca8039dbc51369099da5fababdc996d59ded0e3a38d50b4a150c&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fc8jxzlwvd8ro"
+      "href": "article.html?id=01a9643f-c60f-4ea3-8476-b43be27e6248"
     },
     {
       "id": 28,
-      "articleId": "e9da180f0d470a1cb3c7b64c504823610d4f2f90bf74bc25a4e94da1634c1b9a",
-      "title": "‘Starkiller’ Phishing Service Proxies Real Login Pages, MFA",
-      "deck": "Most phishing websites are little more than static copies of login pages for popular online destinations, and they are often quickly taken down by anti-abuse activists and security firms. But a stealthy new phishing-as-a",
-      "category": "Security",
-      "timestamp": "2026-02-20T20:00:30.000Z",
-      "edition": "Global Desk",
-      "readTime": "2 min",
-      "author": "BrianKrebs",
-      "coverage": "Security",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
-        "psychic"
-      ],
-      "tone": "urgent",
-      "storyClass": "threat",
-      "accentRole": "threat",
-      "layoutSpan": "wide",
-      "href": "article.html?id=e9da180f0d470a1cb3c7b64c504823610d4f2f90bf74bc25a4e94da1634c1b9a&url=https%3A%2F%2Fkrebsonsecurity.com%2F2026%2F02%2Fstarkiller-phishing-service-proxies-real-login-pages-mfa"
-    },
-    {
-      "id": 29,
-      "articleId": "1ba2801c79e44bbc5741d73eeb940f41370631237f7f7a1539388f002ecc9948",
-      "title": "Equipping workers with insights about compensation",
-      "deck": "New research shows Americans send nearly 3 million daily messages to ChatGPT asking about compensation and earnings, helping close the wage information gap.",
-      "category": "Business",
-      "timestamp": "2026-03-17T00:00:00.000Z",
+      "articleId": "1eeb8e6e-5e5a-45bb-a70d-fb23407c84c6",
+      "title": "Improving verifiability in AI development",
+      "deck": "We’ve contributed to a multi-stakeholder report by 58 co-authors at 30 organizations, including the Centre for the Future of Intelligence, Mila, Schwartz Reisman Institute for Technology and Society, Center for Advanced ",
+      "category": "AI",
+      "timestamp": "2020-04-16T07:00:00.000Z",
       "edition": "Global Desk",
       "readTime": "2 min",
       "author": "OpenAI News",
-      "coverage": "Business / Science",
-      "confidence": 75,
+      "coverage": "OpenAI News",
+      "confidence": 73,
       "impact": "Medium",
       "labels": [
-        "premium",
-        "acid",
-        "psychic"
+        "alien",
+        "threat",
+        "acid"
       ],
-      "tone": "premium",
-      "storyClass": "premium",
-      "accentRole": "featured",
+      "tone": "urgent",
+      "storyClass": "anomaly",
+      "accentRole": "anomaly",
       "layoutSpan": "wide",
-      "href": "article.html?id=1ba2801c79e44bbc5741d73eeb940f41370631237f7f7a1539388f002ecc9948&url=https%3A%2F%2Fopenai.com%2Findex%2Fequipping-workers-with-insights-about-compensation"
+      "href": "article.html?id=1eeb8e6e-5e5a-45bb-a70d-fb23407c84c6"
     },
     {
-      "id": 30,
-      "articleId": "ac4d710d094c5d98347a0bbc87c39310dc13709371fd6aaf9b0a3c12a73317dc",
-      "title": "The origin story of Apple’s long-running relationship with FoxConn",
-      "deck": "In 2025, Patrick McGee published Apple in China: The Capture of the World's Greatest Company, a deeply-reported look at the tech giant's investment in - and growing reliance on - China. The following excerpt, pulled from",
+      "id": 29,
+      "articleId": "868810e4-fa34-415a-988d-f38c6e3e0ac5",
+      "title": "Russian oil tanker reaches Cuba after Trump appears to loosen blockade",
+      "deck": "The tanker has reached Cuban waters just hours after Donald Trump said he had \"no problem\" with it.",
       "category": "General",
-      "timestamp": "2026-03-30T13:00:00.000Z",
+      "timestamp": "2026-03-30T14:46:15.000Z",
       "edition": "Global Desk",
       "readTime": "2 min",
-      "author": "The Verge",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
+      "author": "BBC World News",
+      "coverage": "BBC World News",
+      "confidence": 71,
+      "impact": "Low",
       "labels": [
-        "psychic",
-        "hotspot"
+        "psychic"
       ],
       "tone": "info",
       "storyClass": "brief",
       "accentRole": "brief",
       "layoutSpan": "dense",
-      "href": "article.html?id=ac4d710d094c5d98347a0bbc87c39310dc13709371fd6aaf9b0a3c12a73317dc&url=https%3A%2F%2Fwww.theverge.com%2Ftech%2F898077%2Fapple-in-china-patrick-mcgee-foxconn"
+      "href": "article.html?id=868810e4-fa34-415a-988d-f38c6e3e0ac5"
+    },
+    {
+      "id": 30,
+      "articleId": "643a5d06-921d-41b9-84a5-25f03131932a",
+      "title": "Surging developer productivity with custom GPTs",
+      "deck": "Paf adopted ChatGPT Enterprise across its entire company, with engineers using custom GPTs on a daily basis to speed up routine development tasks. Paf also integrated ChatGPT Enterprise into the grit:lab coding academy (",
+      "category": "Business",
+      "timestamp": "2024-06-18T08:45:00.000Z",
+      "edition": "Global Desk",
+      "readTime": "2 min",
+      "author": "OpenAI News",
+      "coverage": "OpenAI News",
+      "confidence": 65,
+      "impact": "Medium",
+      "labels": [
+        "premium",
+        "alien",
+        "acid"
+      ],
+      "tone": "premium",
+      "storyClass": "anomaly",
+      "accentRole": "anomaly",
+      "layoutSpan": "wide",
+      "href": "article.html?id=643a5d06-921d-41b9-84a5-25f03131932a"
     }
   ],
   "tickerItems": [
-    "Category pressure: General 10 · Policy 8 · Security 6",
-    "Source concentration: BBC World News leads with 8/30 items",
-    "Signal confidence: 75/100 desk average",
-    "Urgency mix: 0/30 high-impact signals (90+ confidence)",
-    "Freshness: 70% published in the last 24h"
+    "Published 30 stable digest articles",
+    "Article routes resolve from generated/articles/*.json"
   ],
   "heroItem": {
-    "articleId": "bdf9375d08472994a8a3aede37981612fc197d4275ff0498e869873820e4d6e4",
-    "title": "Spain closes airspace to US aircraft involved in Iran war",
-    "deck": "It follows a decision by the Spanish government to deny the US use of the two jointly run military bases in Andalusia.",
-    "category": "Policy",
-    "timestamp": "2026-03-30T12:27:25.000Z",
-    "author": "BBC World News",
-    "coverage": "Policy",
-    "confidence": 75,
+    "articleId": "b310e6c1-8545-4fde-b0f9-d51300642731",
+    "title": "Okta’s CEO is betting big on AI agent identity",
+    "deck": "Today, I’m talking with Todd McKinnon, who is co-founder and CEO of Okta, a platform that lets big companies manage security and identity across all the apps and services their employees use. Think of it like login manag",
+    "category": "AI",
+    "timestamp": "2026-03-30T15:15:00.000Z",
+    "author": "The Verge",
+    "coverage": "The Verge",
+    "confidence": 84,
     "impact": "Medium",
-    "kicker": "Lead Story · Policy Desk",
-    "meta": "Policy · BBC World News · Conf. 75%",
-    "ctaLabel": "Read full cover story",
-    "href": "article.html?id=bdf9375d08472994a8a3aede37981612fc197d4275ff0498e869873820e4d6e4&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Farticles%2Fcwy368j1e3lo"
+    "kicker": "Lead Story · AI Desk",
+    "meta": "The Verge · The Verge",
+    "ctaLabel": "Open digest article",
+    "href": "article.html?id=b310e6c1-8545-4fde-b0f9-d51300642731"
   },
   "featuredItem": {
-    "articleId": "c720bf728da92d557f52c1ea3eda400088a7dd4cf256e848a7a898972cbeec48",
-    "title": "Helping disaster response teams turn AI into action across Asia",
-    "deck": "AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation",
-    "category": "AI",
-    "timestamp": "2026-03-29T22:15:00.000Z",
-    "author": "OpenAI News",
-    "coverage": "AI",
-    "confidence": 75,
+    "articleId": "561cfe06-664f-428d-90c8-20b150cb94d9",
+    "title": "Speech by Commissioner Kadis at the Agriculture and Fisheries Council on improvement and simplification in the roll out of the amended EU Fisheries Control Regulation",
+    "deck": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, Simplification, reduction of administrative burden, proportionality of the rules, compliance and the competitiveness of the EU fish...",
+    "category": "Policy",
+    "timestamp": "2026-03-30T12:14:49.000Z",
+    "author": "European Commission Press Corner",
+    "coverage": "European Commission Press Corner",
+    "confidence": 79,
     "impact": "Medium",
-    "kicker": "Featured Analysis · AI",
-    "meta": "AI · OpenAI News · Conf. 75%",
-    "ctaLabel": "Open long read",
-    "href": "article.html?id=c720bf728da92d557f52c1ea3eda400088a7dd4cf256e848a7a898972cbeec48&url=https%3A%2F%2Fopenai.com%2Findex%2Fhelping-disaster-response-teams-asia"
+    "kicker": "Featured Analysis · Policy",
+    "meta": "European Commission Press Corner · European Commission Press Corner",
+    "ctaLabel": "Open digest article",
+    "href": "article.html?id=561cfe06-664f-428d-90c8-20b150cb94d9"
   },
   "articleDetails": [
     {
-      "id": "bdf9375d08472994a8a3aede37981612fc197d4275ff0498e869873820e4d6e4",
-      "title": "Spain closes airspace to US aircraft involved in Iran war",
-      "deck": "It follows a decision by the Spanish government to deny the US use of the two jointly run military bases in Andalusia.",
-      "summary": "It follows a decision by the Spanish government to deny the US use of the two jointly run military bases in Andalusia.",
-      "timestamp": "2026-03-30T12:27:25.000Z",
-      "category": "Policy",
-      "author": "BBC World News",
-      "sourceName": "BBC World News",
-      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
-      "sourceUrl": "https://www.bbc.com/news/articles/cwy368j1e3lo",
-      "coverage": "Policy",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "topics": [
-        "Policy"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "c720bf728da92d557f52c1ea3eda400088a7dd4cf256e848a7a898972cbeec48",
-      "title": "Helping disaster response teams turn AI into action across Asia",
-      "deck": "AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation",
-      "summary": "AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation",
-      "timestamp": "2026-03-29T22:15:00.000Z",
+      "id": "b310e6c1-8545-4fde-b0f9-d51300642731",
+      "title": "Okta’s CEO is betting big on AI agent identity",
+      "deck": "Today, I’m talking with Todd McKinnon, who is co-founder and CEO of Okta, a platform that lets big companies manage security and identity across all the apps and services their employees use. Think of it like login manag",
+      "summary": "Today, I’m talking with Todd McKinnon, who is co-founder and CEO of Okta, a platform that lets big companies manage security and identity across all the apps and services their employees use. Think of it like login manag",
+      "timestamp": "2026-03-30T15:15:00.000Z",
       "category": "AI",
-      "author": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
-      "sourceUrl": "https://openai.com/index/helping-disaster-response-teams-asia",
-      "coverage": "AI",
-      "confidence": 75,
+      "author": "The Verge",
+      "sourceName": "The Verge",
+      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+      "sourceUrl": "https://www.theverge.com/podcast/902264/oktas-ceo-is-betting-big-on-ai-agent-identity",
+      "coverage": "The Verge",
+      "confidence": 84,
       "impact": "Medium",
       "labels": [
         "alien",
-        "psychic"
+        "threat",
+        "acid"
       ],
       "topics": [
-        "AI"
+        "ai",
+        "business",
+        "security",
+        "science",
+        "policy"
       ],
       "readTime": "2 min"
     },
     {
-      "id": "805ad915d6df91ed6614621ee4c8c7f017a33a922c7a6ad873b579db9443288a",
+      "id": "561cfe06-664f-428d-90c8-20b150cb94d9",
       "title": "Speech by Commissioner Kadis at the Agriculture and Fisheries Council on improvement and simplification in the roll out of the amended EU Fisheries Control Regulation",
       "deck": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, Simplification, reduction of administrative burden, proportionality of the rules, compliance and the competitiveness of the EU fish...",
       "summary": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, Simplification, reduction of administrative burden, proportionality of the rules, compliance and the competitiveness of the EU fish...",
@@ -792,69 +748,63 @@
       "sourceName": "European Commission Press Corner",
       "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
       "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_756",
-      "coverage": "Policy",
-      "confidence": 75,
+      "coverage": "European Commission Press Corner",
+      "confidence": 79,
       "impact": "Medium",
       "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "topics": [
-        "Policy"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "3a6325c0a9c26b36d623f9c2d26cb8e054e47517241322a5e71745310f56e844",
-      "title": "Partial government shutdown becomes the longest in US history",
-      "deck": "The 44-day funding lapse for the Department of Homeland Security has led to travel chaos at US airports.",
-      "summary": "The 44-day funding lapse for the Department of Homeland Security has led to travel chaos at US airports.",
-      "timestamp": "2026-03-30T01:13:51.000Z",
-      "category": "Security",
-      "author": "BBC World News",
-      "sourceName": "BBC World News",
-      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
-      "sourceUrl": "https://www.bbc.com/news/articles/cyv1qpzq5v7o",
-      "coverage": "Security / Policy / Business",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
-        "premium",
-        "psychic"
-      ],
-      "topics": [
-        "Security",
-        "Policy",
-        "Business"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "55eedc17a0c98dd7d991786a63d3b8dd205be46be0b3e804e334910a0c4b6833",
-      "title": "Xbox’s next big games showcase happens on June 7th",
-      "deck": "It may be the end of March, but gaming companies are already getting ready for the summer. First up is Xbox, which just announced that it will be holding its next major showcase event on June 7th. That's a typical window",
-      "summary": "It may be the end of March, but gaming companies are already getting ready for the summer. First up is Xbox, which just announced that it will be holding its next major showcase event on June 7th. That's a typical window",
-      "timestamp": "2026-03-30T13:18:57.000Z",
-      "category": "General",
-      "author": "The Verge",
-      "sourceName": "The Verge",
-      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
-      "sourceUrl": "https://www.theverge.com/games/903282/xbox-games-showcase-2026-sgf-date",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
         "hotspot"
       ],
       "topics": [
-        "General"
+        "policy"
       ],
       "readTime": "2 min"
     },
     {
-      "id": "33b9c0e51e4fdb5964898f9d00af73f7f13dc1df25bd5077e5d0fe2692c893f8",
+      "id": "873768ea-2e53-4ec2-a7f7-2b21ae0e7117",
+      "title": "How the US could try to seize Iran's Kharg Island",
+      "deck": "Donald Trump has indicated he could send troops to take control of Iran's key oil export terminal.",
+      "summary": "Donald Trump has indicated he could send troops to take control of Iran's key oil export terminal.",
+      "timestamp": "2026-03-30T14:54:47.000Z",
+      "category": "General",
+      "author": "BBC World News",
+      "sourceName": "BBC World News",
+      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
+      "sourceUrl": "https://www.bbc.com/news/articles/c937gd1vq7xo",
+      "coverage": "BBC World News",
+      "confidence": 74,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "topics": [
+        "general"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "35696878-84e9-4b5b-9bd5-582a74ec4bd6",
+      "title": "The best deals we’ve found from Amazon’s Big Spring Sale (so far)",
+      "deck": "Amazon loves to manufacture an event. March is historically a dry spell for deals; however, with Amazon’s third annual Big Spring Sale, which runs through tomorrow, March 31st, the retail behemoth is hoping to lure in wo",
+      "summary": "Amazon loves to manufacture an event. March is historically a dry spell for deals; however, with Amazon’s third annual Big Spring Sale, which runs through tomorrow, March 31st, the retail behemoth is hoping to lure in wo",
+      "timestamp": "2026-03-30T15:05:00.000Z",
+      "category": "AI",
+      "author": "The Verge",
+      "sourceName": "The Verge",
+      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+      "sourceUrl": "https://www.theverge.com/gadgets/899580/best-amazon-big-spring-sale-2026-deals",
+      "coverage": "The Verge",
+      "confidence": 80,
+      "impact": "Medium",
+      "labels": [
+        "alien"
+      ],
+      "topics": [
+        "ai"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "289cfa07-a9fa-428c-8222-ceef23ea7fb0",
       "title": "Speech by Commissioner Kadis at the Agriculture and Fisheries Council: Implementation dialogue on small-scale and coastal fisheries",
       "deck": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, I would like to thank you for adding this point to the agenda of today's Council and for the opportunity to present the outcome of ...",
       "summary": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, I would like to thank you for adding this point to the agenda of today's Council and for the opportunity to present the outcome of ...",
@@ -864,415 +814,41 @@
       "sourceName": "European Commission Press Corner",
       "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
       "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_755",
-      "coverage": "Policy",
-      "confidence": 75,
+      "coverage": "European Commission Press Corner",
+      "confidence": 79,
       "impact": "Medium",
       "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "topics": [
-        "Policy"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "8df5c0692e496fad28e704e06d8068e2920e2a163d550176a3ebd8913b145676",
-      "title": "Latin Patriarch will have access to Jerusalem holy site after police stopped entry",
-      "deck": "The Israeli PM says Cardinal Pierbattista Pizzaballa had been asked not to enter the church over concerns about Iranian strikes.",
-      "summary": "The Israeli PM says Cardinal Pierbattista Pizzaballa had been asked not to enter the church over concerns about Iranian strikes.",
-      "timestamp": "2026-03-30T13:30:32.000Z",
-      "category": "General",
-      "author": "BBC World News",
-      "sourceName": "BBC World News",
-      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
-      "sourceUrl": "https://www.bbc.com/news/articles/cvg0128z41eo",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
         "hotspot"
       ],
       "topics": [
-        "General"
+        "policy"
       ],
       "readTime": "2 min"
     },
     {
-      "id": "3521b29551aa0b4b12de8cd2d0faa18be85a745536e74797a67e8bca19fa9534",
-      "title": "Speech by Commissioner Kadis at the Agriculture and Fisheries Council: Energy transition in the EU fisheries and aquaculture sector",
-      "deck": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, I thank the Presidency for the initiative to put this item on the agenda of the Agrifish Council. Energy transition is critical for...",
-      "summary": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, I thank the Presidency for the initiative to put this item on the agenda of the Agrifish Council. Energy transition is critical for...",
-      "timestamp": "2026-03-30T09:22:25.000Z",
+      "id": "4b43c438-730d-4ea6-bbb8-d427ba6ab4e4",
+      "title": "Spain closes airspace to US aircraft involved in Iran war",
+      "deck": "It follows a decision by the Spanish government to deny the US use of the two jointly run military bases in Andalusia.",
+      "summary": "It follows a decision by the Spanish government to deny the US use of the two jointly run military bases in Andalusia.",
+      "timestamp": "2026-03-30T15:29:15.000Z",
       "category": "Policy",
-      "author": "European Commission Press Corner",
-      "sourceName": "European Commission Press Corner",
-      "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
-      "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_754",
-      "coverage": "Policy",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "topics": [
-        "Policy"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "102c83b0d473f4d946f9633a6300059c64ea584d5c6b82ada630fa355fe90041",
-      "title": "For $200 more, you can get a MacBook Air",
-      "deck": "It was January 2008, and Steve Jobs had just pulled the MacBook Air out of a manila envelope onstage at Macworld. Within minutes, Windows PC executives everywhere lost their minds. They grabbed the nearest office envelop",
-      "summary": "It was January 2008, and Steve Jobs had just pulled the MacBook Air out of a manila envelope onstage at Macworld. Within minutes, Windows PC executives everywhere lost their minds. They grabbed the nearest office envelop",
-      "timestamp": "2026-03-30T13:05:19.000Z",
-      "category": "General",
-      "author": "The Verge",
-      "sourceName": "The Verge",
-      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
-      "sourceUrl": "https://www.theverge.com/tech/901698/macbook-air-history",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "topics": [
-        "General"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "749c7cac09b5acf63d0dad61ff75c0e9f3d791cde2c455871de0f8842dd9b73a",
-      "title": "Tech CEOs suddenly love blaming AI for mass job cuts. Why?",
-      "deck": "More tech leaders are pointing to job cuts caused by AI tools - and a need for more investment cash.",
-      "summary": "More tech leaders are pointing to job cuts caused by AI tools - and a need for more investment cash.",
-      "timestamp": "2026-03-29T23:07:04.000Z",
-      "category": "AI",
       "author": "BBC World News",
       "sourceName": "BBC World News",
       "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
-      "sourceUrl": "https://www.bbc.com/news/articles/cde5y2x51y8o",
-      "coverage": "AI",
-      "confidence": 75,
-      "impact": "Medium",
+      "sourceUrl": "https://www.bbc.com/news/articles/cwy368j1e3lo",
+      "coverage": "BBC World News",
+      "confidence": 71,
+      "impact": "Low",
       "labels": [
-        "alien",
-        "psychic"
-      ],
-      "topics": [
-        "AI"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "d92d0a6987ff29e301d3351ba1a52eab22cd919e8c8af8c566a75a087be5465b",
-      "title": "Daily News 30 / 03 / 2026",
-      "deck": "European Commission Daily news Brussels, 30 Mar 2026 Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry The European Commission approved today a €1.5 billion work progr...",
-      "summary": "European Commission Daily news Brussels, 30 Mar 2026 Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry The European Commission approved today a €1.5 billion work progr...",
-      "timestamp": "2026-03-30T09:04:17.000Z",
-      "category": "Policy",
-      "author": "European Commission Press Corner",
-      "sourceName": "European Commission Press Corner",
-      "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
-      "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_753",
-      "coverage": "Policy",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "topics": [
-        "Policy"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "e0f5a8ff2574bcc1560ef219b7b7aaccd15a3b08c35cf5f3db308bbc929ed9f5",
-      "title": "The mad dash to build the future of multimedia",
-      "deck": "It's 1989. To play a video, listen to a song, or show photos on a desktop computer requires bolting on expensive hardware, built by a different company, using different software. There are no standards, no portability, n",
-      "summary": "It's 1989. To play a video, listen to a song, or show photos on a desktop computer requires bolting on expensive hardware, built by a different company, using different software. There are no standards, no portability, n",
-      "timestamp": "2026-03-30T13:05:17.000Z",
-      "category": "General",
-      "author": "The Verge",
-      "sourceName": "The Verge",
-      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
-      "sourceUrl": "https://www.theverge.com/tech/902721/quicktime-history-apple",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
         "hotspot"
       ],
       "topics": [
-        "General"
+        "policy"
       ],
       "readTime": "2 min"
     },
     {
-      "id": "263c2043f1c3113e3ab2b204765bddc1da423d44d0daf75aa22eb2b65535f86b",
-      "title": "Inside our approach to the Model Spec",
-      "deck": "Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.",
-      "summary": "Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.",
-      "timestamp": "2026-03-25T10:00:00.000Z",
-      "category": "AI",
-      "author": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
-      "sourceUrl": "https://openai.com/index/our-approach-to-the-model-spec",
-      "coverage": "AI",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "alien",
-        "psychic"
-      ],
-      "topics": [
-        "AI"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "91bd26f8932a418d87acbf008474e9fcf4dc8a01f58812db1a066eefcf7cde6b",
-      "title": "Three killed as unfinished building collapses on church service in Ghana",
-      "deck": "Locals say the structure, in a school complex, was in use despite lying unfinished for a number of years.",
-      "summary": "Locals say the structure, in a school complex, was in use despite lying unfinished for a number of years.",
-      "timestamp": "2026-03-30T13:17:00.000Z",
-      "category": "General",
-      "author": "BBC World News",
-      "sourceName": "BBC World News",
-      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
-      "sourceUrl": "https://www.bbc.com/news/articles/ckgex51zzd8o",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "topics": [
-        "General"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "1afff366380c2e555b72c022fe2b55e4776f8476b7022dcf0115308e13330770",
-      "title": "Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry",
-      "deck": "European Commission Press release Brussels, 30 Mar 2026 The European Commission approved today a €1.5 billion work programme under the European Defence Industry Programme (EDIP).",
-      "summary": "European Commission Press release Brussels, 30 Mar 2026 The European Commission approved today a €1.5 billion work programme under the European Defence Industry Programme (EDIP).",
-      "timestamp": "2026-03-30T08:32:23.000Z",
-      "category": "Policy",
-      "author": "European Commission Press Corner",
-      "sourceName": "European Commission Press Corner",
-      "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
-      "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_752",
-      "coverage": "Policy",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "psychic"
-      ],
-      "topics": [
-        "Policy"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "6406e93d9b2eb8578740b70e226b2eef12d643930ec71bb583b2fce62c78df66",
-      "title": "How AI Assistants are Moving the Security Goalposts",
-      "deck": "AI-based assistants or \"agents\" -- autonomous programs that have access to the user's computer, files, online services and can automate virtually any task -- are growing in popularity with developers and IT workers. But ",
-      "summary": "AI-based assistants or \"agents\" -- autonomous programs that have access to the user's computer, files, online services and can automate virtually any task -- are growing in popularity with developers and IT workers. But ",
-      "timestamp": "2026-03-08T23:35:42.000Z",
-      "category": "Security",
-      "author": "BrianKrebs",
-      "sourceName": "Krebs on Security",
-      "sourceId": "7b3cbf29-30dd-486c-a522-70aee5ccd7a8",
-      "sourceUrl": "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts",
-      "coverage": "Security / AI",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
-        "alien",
-        "psychic"
-      ],
-      "topics": [
-        "Security",
-        "AI"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "4ebfa0742e27454dcbf8de0d79ad9a3d7052c7658e4105329895a260b9dc406b",
-      "title": "Kris Jenner's image spreads in Chinese social media good luck trend",
-      "deck": "Hundreds of thousands of posts have been shared in the past three days as users hope for prosperity",
-      "summary": "Hundreds of thousands of posts have been shared in the past three days as users hope for prosperity",
-      "timestamp": "2026-03-30T12:59:23.000Z",
-      "category": "General",
-      "author": "BBC World News",
-      "sourceName": "BBC World News",
-      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
-      "sourceUrl": "https://www.bbc.com/news/articles/c0rx57zgz52o",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "topics": [
-        "General"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "fb38dfafd80a435f42a8e1b192005db1585b1e3172fe3e649b92463f8b276bfa",
-      "title": "Introducing the OpenAI Safety Bug Bounty program",
-      "deck": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
-      "summary": "OpenAI launches a Safety Bug Bounty program to identify AI abuse and safety risks, including agentic vulnerabilities, prompt injection, and data exfiltration.",
-      "timestamp": "2026-03-25T00:00:00.000Z",
-      "category": "AI",
-      "author": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
-      "sourceUrl": "https://openai.com/index/safety-bug-bounty",
-      "coverage": "AI",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "alien",
-        "psychic"
-      ],
-      "topics": [
-        "AI"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "50605397c6bb03aaa12954def1d9b08ca4e95856d886ef70c1a75c01bc9643d0",
-      "title": "Microsoft Patch Tuesday, March 2026 Edition",
-      "deck": "Microsoft Corp. today pushed security updates to fix at least 77 vulnerabilities in its Windows operating systems and other software. There are no pressing \"zero-day\" flaws this month (compared to February's five zero-da",
-      "summary": "Microsoft Corp. today pushed security updates to fix at least 77 vulnerabilities in its Windows operating systems and other software. There are no pressing \"zero-day\" flaws this month (compared to February's five zero-da",
-      "timestamp": "2026-03-11T00:32:51.000Z",
-      "category": "Security",
-      "author": "BrianKrebs",
-      "sourceName": "Krebs on Security",
-      "sourceId": "7b3cbf29-30dd-486c-a522-70aee5ccd7a8",
-      "sourceUrl": "https://krebsonsecurity.com/2026/03/microsoft-patch-tuesday-march-2026-edition",
-      "coverage": "Security",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
-        "psychic"
-      ],
-      "topics": [
-        "Security"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "f0e30771c73b37dc63323c6f26c7cfbc0de648039468fcc2aaada84b2df78762",
-      "title": "48-hour curfew imposed after attack on bar in Nigerian city",
-      "deck": "The raid led to revenge attacks in Jos, with 22 reported dead so far in one of the most volatile parts of the country.",
-      "summary": "The raid led to revenge attacks in Jos, with 22 reported dead so far in one of the most volatile parts of the country.",
-      "timestamp": "2026-03-30T12:23:38.000Z",
-      "category": "General",
-      "author": "BBC World News",
-      "sourceName": "BBC World News",
-      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
-      "sourceUrl": "https://www.bbc.com/news/articles/cvg4q9n573do",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "topics": [
-        "General"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "d75d7d2ee74818d4f55705e575e64e1b77fcc54e45f438e9a480dc7577c40a88",
-      "title": "Helping developers build safer AI experiences for teens",
-      "deck": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
-      "summary": "OpenAI releases prompt-based teen safety policies for developers using gpt-oss-safeguard, helping moderate age-specific risks in AI systems.",
-      "timestamp": "2026-03-24T11:00:00.000Z",
-      "category": "AI",
-      "author": "OpenAI News",
-      "sourceName": "OpenAI News",
-      "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
-      "sourceUrl": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
-      "coverage": "AI",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "alien",
-        "psychic"
-      ],
-      "topics": [
-        "AI"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "c7437cf0e6fa4943cb8713121d2f48699eac9a358bfb10a385da8545d3e1dcbb",
-      "title": "Who is the Kimwolf Botmaster “Dort”?",
-      "deck": "In early January 2026, KrebsOnSecurity revealed how a security researcher disclosed a vulnerability that was used to assemble Kimwolf, the world's largest and most disruptive botnet. Since then, the person in control of ",
-      "summary": "In early January 2026, KrebsOnSecurity revealed how a security researcher disclosed a vulnerability that was used to assemble Kimwolf, the world's largest and most disruptive botnet. Since then, the person in control of ",
-      "timestamp": "2026-02-28T12:01:57.000Z",
-      "category": "Security",
-      "author": "BrianKrebs",
-      "sourceName": "Krebs on Security",
-      "sourceId": "7b3cbf29-30dd-486c-a522-70aee5ccd7a8",
-      "sourceUrl": "https://krebsonsecurity.com/2026/02/who-is-the-kimwolf-botmaster-dort",
-      "coverage": "Security",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
-        "psychic"
-      ],
-      "topics": [
-        "Security"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "5930d5d60d7d1f936667075fff54b842b2e07b2c1d84e842824c7721fd41482e",
-      "title": "Commission publishes guidance to support implementation of new packaging rules, for a more sustainable and competitive EU packaging sector",
-      "deck": "European Commission Press release Brussels, 30 Mar 2026 Today, the European Commission published guidelines on the implementation of the Packaging and Packaging Waste Regulation (PPWR) to facilitate the uniform applicati",
-      "summary": "European Commission Press release Brussels, 30 Mar 2026 Today, the European Commission published guidelines on the implementation of the Packaging and Packaging Waste Regulation (PPWR) to facilitate the uniform applicati",
-      "timestamp": "2026-03-29T22:00:00.000Z",
-      "category": "Policy",
-      "author": "European Commission Press Corner",
-      "sourceName": "European Commission Press Corner",
-      "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
-      "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_664",
-      "coverage": "Policy / Business",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "hotspot",
-        "premium",
-        "psychic"
-      ],
-      "topics": [
-        "Policy",
-        "Business"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "92f243d511a7220e3d264ba89d9ef6921bed0e6434fc25d0307667e2e45d2f08",
+      "id": "17813b34-7529-44d0-bc19-f168e9d4bd31",
       "title": "Apple @ 50",
       "deck": "Fifty years ago, on April 1st, 1976, Apple Computer Company was founded. Today it’s one of the most valuable companies in the world, celebrated for producing ubiquitous products like the iPad and iPhone to now-nostalgia ",
       "summary": "Fifty years ago, on April 1st, 1976, Apple Computer Company was founded. Today it’s one of the most valuable companies in the world, celebrated for producing ubiquitous products like the iPad and iPhone to now-nostalgia ",
@@ -1282,31 +858,321 @@
       "sourceName": "The Verge",
       "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
       "sourceUrl": "https://www.theverge.com/tech/899623/apple-50-anniversary",
-      "coverage": "General",
-      "confidence": 75,
+      "coverage": "The Verge",
+      "confidence": 87,
       "impact": "Medium",
       "labels": [
-        "psychic",
-        "hotspot"
+        "psychic"
       ],
       "topics": [
-        "General"
+        "general"
       ],
       "readTime": "2 min"
     },
     {
-      "id": "5becf449a527f5c9c85cf1a79382721e0a50eba2c41081a28ef73f4a2d94908c",
-      "title": "Codex Security: now in research preview",
-      "deck": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
-      "summary": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
-      "timestamp": "2026-03-06T10:00:00.000Z",
+      "id": "888eb508-4ec2-4f93-8439-a7b8d56c7a66",
+      "title": "Speech by Commissioner Kadis at the Agriculture and Fisheries Council: Energy transition in the EU fisheries and aquaculture sector",
+      "deck": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, I thank the Presidency for the initiative to put this item on the agenda of the Agrifish Council. Energy transition is critical for...",
+      "summary": "European Commission Speech Brussels, 30 Mar 2026 Dear Chair/Maria, Ministers, I thank the Presidency for the initiative to put this item on the agenda of the Agrifish Council. Energy transition is critical for...",
+      "timestamp": "2026-03-30T09:22:25.000Z",
+      "category": "Policy",
+      "author": "European Commission Press Corner",
+      "sourceName": "European Commission Press Corner",
+      "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
+      "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_754",
+      "coverage": "European Commission Press Corner",
+      "confidence": 79,
+      "impact": "Medium",
+      "labels": [
+        "hotspot"
+      ],
+      "topics": [
+        "policy"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "c3e573d6-867d-4dc0-98e4-6570f2be578b",
+      "title": "Partial government shutdown becomes the longest in US history",
+      "deck": "The 44-day funding lapse for the Department of Homeland Security has led to travel chaos at US airports.",
+      "summary": "The 44-day funding lapse for the Department of Homeland Security has led to travel chaos at US airports.",
+      "timestamp": "2026-03-30T01:13:51.000Z",
+      "category": "Security",
+      "author": "BBC World News",
+      "sourceName": "BBC World News",
+      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
+      "sourceUrl": "https://www.bbc.com/news/articles/cyv1qpzq5v7o",
+      "coverage": "BBC World News",
+      "confidence": 73,
+      "impact": "Medium",
+      "labels": [
+        "threat",
+        "premium"
+      ],
+      "topics": [
+        "security",
+        "policy",
+        "business"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "e97fbb4f-7358-405d-b0de-882bb4354d37",
+      "title": "Xbox’s next big games showcase happens on June 7th",
+      "deck": "It may be the end of March, but gaming companies are already getting ready for the summer. First up is Xbox, which just announced that it will be holding its next major showcase event on June 7th. That's a typical window",
+      "summary": "It may be the end of March, but gaming companies are already getting ready for the summer. First up is Xbox, which just announced that it will be holding its next major showcase event on June 7th. That's a typical window",
+      "timestamp": "2026-03-30T13:18:57.000Z",
+      "category": "General",
+      "author": "The Verge",
+      "sourceName": "The Verge",
+      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+      "sourceUrl": "https://www.theverge.com/games/903282/xbox-games-showcase-2026-sgf-date",
+      "coverage": "The Verge",
+      "confidence": 79,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "topics": [
+        "general"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "5b323535-df99-4756-b049-dd153090e229",
+      "title": "Commission publishes guidance to support implementation of new packaging rules, for a more sustainable and competitive EU packaging sector",
+      "deck": "European Commission Press release Brussels, 30 Mar 2026 Today, the European Commission published guidelines on the implementation of the Packaging and Packaging Waste Regulation (PPWR) to facilitate the uniform applicati",
+      "summary": "European Commission Press release Brussels, 30 Mar 2026 Today, the European Commission published guidelines on the implementation of the Packaging and Packaging Waste Regulation (PPWR) to facilitate the uniform applicati",
+      "timestamp": "2026-03-29T22:00:00.000Z",
+      "category": "Policy",
+      "author": "European Commission Press Corner",
+      "sourceName": "European Commission Press Corner",
+      "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
+      "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_664",
+      "coverage": "European Commission Press Corner",
+      "confidence": 80,
+      "impact": "Medium",
+      "labels": [
+        "hotspot",
+        "premium"
+      ],
+      "topics": [
+        "policy",
+        "business"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "1a460184-4a3e-4172-9c76-e3b0695f0e42",
+      "title": "Helping disaster response teams turn AI into action across Asia",
+      "deck": "AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation",
+      "summary": "AI for Disaster Response in Asia: OpenAI Workshop with Gates Foundation",
+      "timestamp": "2026-03-29T22:15:00.000Z",
+      "category": "AI",
+      "author": "OpenAI News",
+      "sourceName": "OpenAI News",
+      "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
+      "sourceUrl": "https://openai.com/index/helping-disaster-response-teams-asia",
+      "coverage": "OpenAI News",
+      "confidence": 73,
+      "impact": "Medium",
+      "labels": [
+        "alien"
+      ],
+      "topics": [
+        "ai"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "1b0eba27-6920-4f50-ba71-aaa60457ca09",
+      "title": "For $200 more, you can get a MacBook Air",
+      "deck": "This is part of our package about Apple's 50th anniversary, read more here. It was January 2008, and Steve Jobs had just pulled the MacBook Air out of a manila envelope onstage at Macworld. Within minutes, Windows PC exe",
+      "summary": "This is part of our package about Apple's 50th anniversary, read more here. It was January 2008, and Steve Jobs had just pulled the MacBook Air out of a manila envelope onstage at Macworld. Within minutes, Windows PC exe",
+      "timestamp": "2026-03-30T13:05:19.000Z",
+      "category": "General",
+      "author": "The Verge",
+      "sourceName": "The Verge",
+      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+      "sourceUrl": "https://www.theverge.com/tech/901698/macbook-air-history",
+      "coverage": "The Verge",
+      "confidence": 79,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "topics": [
+        "general"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "b7f5f4ba-476b-4f52-b7a6-a3bf4e41735c",
+      "title": "Latin Patriarch will have access to Jerusalem holy site after police stopped entry",
+      "deck": "The Israeli PM says Cardinal Pierbattista Pizzaballa had been asked not to enter the church over concerns about Iranian strikes.",
+      "summary": "The Israeli PM says Cardinal Pierbattista Pizzaballa had been asked not to enter the church over concerns about Iranian strikes.",
+      "timestamp": "2026-03-30T13:30:32.000Z",
+      "category": "General",
+      "author": "BBC World News",
+      "sourceName": "BBC World News",
+      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
+      "sourceUrl": "https://www.bbc.com/news/articles/cvg0128z41eo",
+      "coverage": "BBC World News",
+      "confidence": 75,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "topics": [
+        "general"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "cb320965-2612-48d0-a714-8e124df4492e",
+      "title": "Daily News 30 / 03 / 2026",
+      "deck": "European Commission Daily news Brussels, 30 Mar 2026 Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry The European Commission approved today a €1.5 billion work progr...",
+      "summary": "European Commission Daily news Brussels, 30 Mar 2026 Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry The European Commission approved today a €1.5 billion work progr...",
+      "timestamp": "2026-03-30T09:04:17.000Z",
+      "category": "Policy",
+      "author": "European Commission Press Corner",
+      "sourceName": "European Commission Press Corner",
+      "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
+      "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_753",
+      "coverage": "European Commission Press Corner",
+      "confidence": 74,
+      "impact": "Medium",
+      "labels": [
+        "hotspot"
+      ],
+      "topics": [
+        "policy"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "67501b04-6f1d-4532-8419-5b7f20730b76",
+      "title": "The origin story of Apple’s long-running relationship with Foxconn",
+      "deck": "In 2025, Patrick McGee published Apple in China: The Capture of the World's Greatest Company, a deeply-reported look at the tech giant's investment in - and growing reliance on - China. The following excerpt, pulled from",
+      "summary": "In 2025, Patrick McGee published Apple in China: The Capture of the World's Greatest Company, a deeply-reported look at the tech giant's investment in - and growing reliance on - China. The following excerpt, pulled from",
+      "timestamp": "2026-03-30T13:00:00.000Z",
+      "category": "General",
+      "author": "The Verge",
+      "sourceName": "The Verge",
+      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+      "sourceUrl": "https://www.theverge.com/tech/898077/apple-in-china-patrick-mcgee-foxconn",
+      "coverage": "The Verge",
+      "confidence": 79,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "topics": [
+        "general"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "bdd30042-e2de-46d2-899a-b4d421f112fd",
+      "title": "Tech CEOs suddenly love blaming AI for mass job cuts. Why?",
+      "deck": "More tech leaders are pointing to job cuts caused by AI tools - and a need for more investment cash.",
+      "summary": "More tech leaders are pointing to job cuts caused by AI tools - and a need for more investment cash.",
+      "timestamp": "2026-03-29T23:07:04.000Z",
+      "category": "AI",
+      "author": "BBC World News",
+      "sourceName": "BBC World News",
+      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
+      "sourceUrl": "https://www.bbc.com/news/articles/cde5y2x51y8o",
+      "coverage": "BBC World News",
+      "confidence": 69,
+      "impact": "Low",
+      "labels": [
+        "alien"
+      ],
+      "topics": [
+        "ai"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "d7fe15b4-e023-42a9-b40c-0a0f7eea157d",
+      "title": "Commission adopts €1.5 billion work programme to boost European and Ukrainian defence industry",
+      "deck": "European Commission Press release Brussels, 30 Mar 2026 The European Commission approved today a €1.5 billion work programme under the European Defence Industry Programme (EDIP).",
+      "summary": "European Commission Press release Brussels, 30 Mar 2026 The European Commission approved today a €1.5 billion work programme under the European Defence Industry Programme (EDIP).",
+      "timestamp": "2026-03-30T08:32:23.000Z",
+      "category": "Policy",
+      "author": "European Commission Press Corner",
+      "sourceName": "European Commission Press Corner",
+      "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
+      "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_752",
+      "coverage": "European Commission Press Corner",
+      "confidence": 75,
+      "impact": "Medium",
+      "labels": [
+        "hotspot"
+      ],
+      "topics": [
+        "policy"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "a7f11e63-c74d-480a-9178-92ca09916de4",
+      "title": "Vivo launches X300 Ultra flagship ‘designed for professional photography’",
+      "deck": "The camera module on the Vivo X300 Ultra (pictured) is certainly eye-catching. | Image: Vivo Vivo has launched the X300 Ultra in China today, the company's latest flagship that really puts the \"camera\" in cameraphone. Th",
+      "summary": "The camera module on the Vivo X300 Ultra (pictured) is certainly eye-catching. | Image: Vivo Vivo has launched the X300 Ultra in China today, the company's latest flagship that really puts the \"camera\" in cameraphone. Th",
+      "timestamp": "2026-03-30T12:30:00.000Z",
+      "category": "General",
+      "author": "The Verge",
+      "sourceName": "The Verge",
+      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+      "sourceUrl": "https://www.theverge.com/tech/903250/vivo-x300-ultra-flagship-china-launch-specs",
+      "coverage": "The Verge",
+      "confidence": 78,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "topics": [
+        "general"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "90b8cc82-57fb-44ae-9ec8-7a81e0390d5f",
+      "title": "Air Canada CEO to retire after criticism for English-only condolence video",
+      "deck": "Michael Rousseau faced calls to resign for his English-only message after the fatal Air Canada collision at LaGuardia airport.",
+      "summary": "Michael Rousseau faced calls to resign for his English-only message after the fatal Air Canada collision at LaGuardia airport.",
+      "timestamp": "2026-03-30T13:55:01.000Z",
+      "category": "General",
+      "author": "BBC World News",
+      "sourceName": "BBC World News",
+      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
+      "sourceUrl": "https://www.bbc.com/news/articles/cgme8xy2rl1o",
+      "coverage": "BBC World News",
+      "confidence": 74,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "topics": [
+        "general"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "7c177602-cf5b-4be8-91d3-445a7b17f6f6",
+      "title": "Forecasting potential misuses of language models for disinformation campaigns and how to reduce risk",
+      "deck": "OpenAI researchers collaborated with Georgetown University’s Center for Security and Emerging Technology and the Stanford Internet Observatory to investigate how large language models might be misused for disinformation ",
+      "summary": "OpenAI researchers collaborated with Georgetown University’s Center for Security and Emerging Technology and the Stanford Internet Observatory to investigate how large language models might be misused for disinformation ",
+      "timestamp": "2023-01-11T08:00:00.000Z",
       "category": "Security",
       "author": "OpenAI News",
       "sourceName": "OpenAI News",
       "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
-      "sourceUrl": "https://openai.com/index/codex-security-now-in-research-preview",
-      "coverage": "Security / AI / Science",
-      "confidence": 75,
+      "sourceUrl": "https://openai.com/index/forecasting-misuse",
+      "coverage": "OpenAI News",
+      "confidence": 73,
       "impact": "Medium",
       "labels": [
         "threat",
@@ -1314,14 +1180,128 @@
         "acid"
       ],
       "topics": [
-        "Security",
-        "AI",
-        "Science"
+        "security",
+        "policy",
+        "ai",
+        "science"
       ],
       "readTime": "2 min"
     },
     {
-      "id": "4603399e07314fd051d57e7bc5baef7acf00bcfb12d32e275a6c170b1b63f006",
+      "id": "43f02cc4-2d03-4da6-9f7f-98cffacc83f8",
+      "title": "Commission allocates €21.5 million in emergency support to farmers in Bulgaria, Estonia and Hungary",
+      "deck": "European Commission Press release Brussels, 30 Mar 2026 Today, Member States endorsed the Commission's proposal to mobilise €21.5 million from the agricultural reserve to support farmers in Bulgaria (BG), Estonia (EE) an",
+      "summary": "European Commission Press release Brussels, 30 Mar 2026 Today, Member States endorsed the Commission's proposal to mobilise €21.5 million from the agricultural reserve to support farmers in Bulgaria (BG), Estonia (EE) an",
+      "timestamp": "2026-03-29T22:00:00.000Z",
+      "category": "Policy",
+      "author": "European Commission Press Corner",
+      "sourceName": "European Commission Press Corner",
+      "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
+      "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_745",
+      "coverage": "European Commission Press Corner",
+      "confidence": 76,
+      "impact": "Medium",
+      "labels": [
+        "hotspot"
+      ],
+      "topics": [
+        "policy"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "64d33c9e-0800-4498-a908-fd07c8aa18d5",
+      "title": "The mad dash to build the future of multimedia",
+      "deck": "This is part of our package about Apple's 50th anniversary, read more here. It's 1989. To play a video, listen to a song, or show photos on a desktop computer requires bolting on expensive hardware, built by a different ",
+      "summary": "This is part of our package about Apple's 50th anniversary, read more here. It's 1989. To play a video, listen to a song, or show photos on a desktop computer requires bolting on expensive hardware, built by a different ",
+      "timestamp": "2026-03-30T13:05:17.000Z",
+      "category": "General",
+      "author": "The Verge",
+      "sourceName": "The Verge",
+      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+      "sourceUrl": "https://www.theverge.com/tech/902721/quicktime-history-apple",
+      "coverage": "The Verge",
+      "confidence": 77,
+      "impact": "Medium",
+      "labels": [
+        "psychic"
+      ],
+      "topics": [
+        "general"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "1dbdb059-c205-4329-bf6f-a8dd5cd98382",
+      "title": "Inside our approach to the Model Spec",
+      "deck": "Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.",
+      "summary": "Learn how OpenAI’s Model Spec serves as a public framework for model behavior, balancing safety, user freedom, and accountability as AI systems advance.",
+      "timestamp": "2026-03-25T10:00:00.000Z",
+      "category": "AI",
+      "author": "OpenAI News",
+      "sourceName": "OpenAI News",
+      "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
+      "sourceUrl": "https://openai.com/index/our-approach-to-the-model-spec",
+      "coverage": "OpenAI News",
+      "confidence": 65,
+      "impact": "Low",
+      "labels": [
+        "alien"
+      ],
+      "topics": [
+        "ai"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "ed659c55-0daf-4c79-b4b0-fd2614d2383f",
+      "title": "Fuel rations and free buses: How countries are responding to rising oil prices",
+      "deck": "Governments around the world have introduced measures to limit the impact of price increases.",
+      "summary": "Governments around the world have introduced measures to limit the impact of price increases.",
+      "timestamp": "2026-03-30T15:07:13.000Z",
+      "category": "General",
+      "author": "BBC World News",
+      "sourceName": "BBC World News",
+      "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
+      "sourceUrl": "https://www.bbc.com/news/articles/cjr9yr73xyeo",
+      "coverage": "BBC World News",
+      "confidence": 70,
+      "impact": "Low",
+      "labels": [
+        "psychic"
+      ],
+      "topics": [
+        "general"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "c38507ee-faad-43e5-83a8-394eac7c7fe3",
+      "title": "Scaling security with responsible disclosure",
+      "deck": "OpenAI introduces its Outbound Coordinated Disclosure Policy to guide how it responsibly reports vulnerabilities in third-party software—emphasizing integrity, collaboration, and proactive security at scale.",
+      "summary": "OpenAI introduces its Outbound Coordinated Disclosure Policy to guide how it responsibly reports vulnerabilities in third-party software—emphasizing integrity, collaboration, and proactive security at scale.",
+      "timestamp": "2025-06-09T10:00:00.000Z",
+      "category": "Security",
+      "author": "OpenAI News",
+      "sourceName": "OpenAI News",
+      "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
+      "sourceUrl": "https://openai.com/index/scaling-coordinated-vulnerability-disclosure",
+      "coverage": "OpenAI News",
+      "confidence": 67,
+      "impact": "Medium",
+      "labels": [
+        "threat",
+        "alien"
+      ],
+      "topics": [
+        "security",
+        "policy",
+        "ai"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "01a9643f-c60f-4ea3-8476-b43be27e6248",
       "title": "Commission approves €6 billion Italian State aid scheme for renewable hydrogen",
       "deck": "European Commission Press release Brussels, 30 Mar 2026 The European Commission has approved, under EU State aid rules, a €6 billion Italian scheme to support the production of renewable hydrogen for the transport an...",
       "summary": "European Commission Press release Brussels, 30 Mar 2026 The European Commission has approved, under EU State aid rules, a €6 billion Italian scheme to support the production of renewable hydrogen for the transport an...",
@@ -1331,109 +1311,88 @@
       "sourceName": "European Commission Press Corner",
       "sourceId": "cf476f3f-fd91-4e97-aa3f-67ecd65b2f71",
       "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_738",
-      "coverage": "Policy",
-      "confidence": 75,
+      "coverage": "European Commission Press Corner",
+      "confidence": 72,
       "impact": "Medium",
       "labels": [
-        "hotspot",
-        "psychic"
+        "hotspot"
       ],
       "topics": [
-        "Policy"
+        "policy"
       ],
       "readTime": "2 min"
     },
     {
-      "id": "ef93269872b9ca8039dbc51369099da5fababdc996d59ded0e3a38d50b4a150c",
-      "title": "Why does the US have Iran's Kharg Island in its sights?",
-      "deck": "The tiny island is home to one of the most critical pieces of Iran's energy infrastructure.",
-      "summary": "The tiny island is home to one of the most critical pieces of Iran's energy infrastructure.",
-      "timestamp": "2026-03-30T12:11:07.000Z",
+      "id": "1eeb8e6e-5e5a-45bb-a70d-fb23407c84c6",
+      "title": "Improving verifiability in AI development",
+      "deck": "We’ve contributed to a multi-stakeholder report by 58 co-authors at 30 organizations, including the Centre for the Future of Intelligence, Mila, Schwartz Reisman Institute for Technology and Society, Center for Advanced ",
+      "summary": "We’ve contributed to a multi-stakeholder report by 58 co-authors at 30 organizations, including the Centre for the Future of Intelligence, Mila, Schwartz Reisman Institute for Technology and Society, Center for Advanced ",
+      "timestamp": "2020-04-16T07:00:00.000Z",
+      "category": "AI",
+      "author": "OpenAI News",
+      "sourceName": "OpenAI News",
+      "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
+      "sourceUrl": "https://openai.com/index/improving-verifiability",
+      "coverage": "OpenAI News",
+      "confidence": 73,
+      "impact": "Medium",
+      "labels": [
+        "alien",
+        "threat",
+        "acid"
+      ],
+      "topics": [
+        "ai",
+        "security",
+        "science"
+      ],
+      "readTime": "2 min"
+    },
+    {
+      "id": "868810e4-fa34-415a-988d-f38c6e3e0ac5",
+      "title": "Russian oil tanker reaches Cuba after Trump appears to loosen blockade",
+      "deck": "The tanker has reached Cuban waters just hours after Donald Trump said he had \"no problem\" with it.",
+      "summary": "The tanker has reached Cuban waters just hours after Donald Trump said he had \"no problem\" with it.",
+      "timestamp": "2026-03-30T14:46:15.000Z",
       "category": "General",
       "author": "BBC World News",
       "sourceName": "BBC World News",
       "sourceId": "3d59d91e-8f6c-43c6-a664-6fafa1a54cc0",
-      "sourceUrl": "https://www.bbc.com/news/articles/c8jxzlwvd8ro",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
+      "sourceUrl": "https://www.bbc.com/news/articles/czrevyx28z2o",
+      "coverage": "BBC World News",
+      "confidence": 71,
+      "impact": "Low",
       "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "topics": [
-        "General"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "e9da180f0d470a1cb3c7b64c504823610d4f2f90bf74bc25a4e94da1634c1b9a",
-      "title": "‘Starkiller’ Phishing Service Proxies Real Login Pages, MFA",
-      "deck": "Most phishing websites are little more than static copies of login pages for popular online destinations, and they are often quickly taken down by anti-abuse activists and security firms. But a stealthy new phishing-as-a",
-      "summary": "Most phishing websites are little more than static copies of login pages for popular online destinations, and they are often quickly taken down by anti-abuse activists and security firms. But a stealthy new phishing-as-a",
-      "timestamp": "2026-02-20T20:00:30.000Z",
-      "category": "Security",
-      "author": "BrianKrebs",
-      "sourceName": "Krebs on Security",
-      "sourceId": "7b3cbf29-30dd-486c-a522-70aee5ccd7a8",
-      "sourceUrl": "https://krebsonsecurity.com/2026/02/starkiller-phishing-service-proxies-real-login-pages-mfa",
-      "coverage": "Security",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "threat",
         "psychic"
       ],
       "topics": [
-        "Security"
+        "general"
       ],
       "readTime": "2 min"
     },
     {
-      "id": "1ba2801c79e44bbc5741d73eeb940f41370631237f7f7a1539388f002ecc9948",
-      "title": "Equipping workers with insights about compensation",
-      "deck": "New research shows Americans send nearly 3 million daily messages to ChatGPT asking about compensation and earnings, helping close the wage information gap.",
-      "summary": "New research shows Americans send nearly 3 million daily messages to ChatGPT asking about compensation and earnings, helping close the wage information gap.",
-      "timestamp": "2026-03-17T00:00:00.000Z",
+      "id": "643a5d06-921d-41b9-84a5-25f03131932a",
+      "title": "Surging developer productivity with custom GPTs",
+      "deck": "Paf adopted ChatGPT Enterprise across its entire company, with engineers using custom GPTs on a daily basis to speed up routine development tasks. Paf also integrated ChatGPT Enterprise into the grit:lab coding academy (",
+      "summary": "Paf adopted ChatGPT Enterprise across its entire company, with engineers using custom GPTs on a daily basis to speed up routine development tasks. Paf also integrated ChatGPT Enterprise into the grit:lab coding academy (",
+      "timestamp": "2024-06-18T08:45:00.000Z",
       "category": "Business",
       "author": "OpenAI News",
       "sourceName": "OpenAI News",
       "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
-      "sourceUrl": "https://openai.com/index/equipping-workers-with-insights-about-compensation",
-      "coverage": "Business / Science",
-      "confidence": 75,
+      "sourceUrl": "https://openai.com/index/paf",
+      "coverage": "OpenAI News",
+      "confidence": 65,
       "impact": "Medium",
       "labels": [
         "premium",
-        "acid",
-        "psychic"
+        "alien",
+        "acid"
       ],
       "topics": [
-        "Business",
-        "Science"
-      ],
-      "readTime": "2 min"
-    },
-    {
-      "id": "ac4d710d094c5d98347a0bbc87c39310dc13709371fd6aaf9b0a3c12a73317dc",
-      "title": "The origin story of Apple’s long-running relationship with FoxConn",
-      "deck": "In 2025, Patrick McGee published Apple in China: The Capture of the World's Greatest Company, a deeply-reported look at the tech giant's investment in - and growing reliance on - China. The following excerpt, pulled from",
-      "summary": "In 2025, Patrick McGee published Apple in China: The Capture of the World's Greatest Company, a deeply-reported look at the tech giant's investment in - and growing reliance on - China. The following excerpt, pulled from",
-      "timestamp": "2026-03-30T13:00:00.000Z",
-      "category": "General",
-      "author": "The Verge",
-      "sourceName": "The Verge",
-      "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
-      "sourceUrl": "https://www.theverge.com/tech/898077/apple-in-china-patrick-mcgee-foxconn",
-      "coverage": "General",
-      "confidence": 75,
-      "impact": "Medium",
-      "labels": [
-        "psychic",
-        "hotspot"
-      ],
-      "topics": [
-        "General"
+        "business",
+        "science",
+        "ai"
       ],
       "readTime": "2 min"
     }

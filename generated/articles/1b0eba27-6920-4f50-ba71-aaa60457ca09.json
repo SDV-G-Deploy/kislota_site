@@ -1,0 +1,34 @@
+{
+  "id": "1b0eba27-6920-4f50-ba71-aaa60457ca09",
+  "title": "For $200 more, you can get a MacBook Air",
+  "headline": "For $200 more, you can get a MacBook Air",
+  "deck": "This is part of our package about Apple's 50th anniversary, read more here. It was January 2008, and Steve Jobs had just pulled the MacBook Air out of a manila envelope onstage at Macworld. Within minutes, Windows PC exe",
+  "summary": "This is part of our package about Apple's 50th anniversary, read more here. It was January 2008, and Steve Jobs had just pulled the MacBook Air out of a manila envelope onstage at Macworld. Within minutes, Windows PC exe",
+  "category": "General",
+  "storyClass": "lead",
+  "confidence": 79,
+  "impact": "Medium",
+  "publishedAt": "2026-03-30T13:05:19.000Z",
+  "updatedAt": "2026-03-30T16:48:09.864Z",
+  "sourceName": "The Verge",
+  "author": "The Verge",
+  "sourceId": "326ac4e3-6a74-44cd-bf64-2abc17106aaf",
+  "sourceUrl": "https://www.theverge.com/tech/901698/macbook-air-history",
+  "topics": [
+    "general"
+  ],
+  "labels": [
+    "psychic"
+  ],
+  "provenance": {
+    "kind": "summary-digest",
+    "note": "This page is a summary/provenance digest view generated from source metadata. It is not a rewritten full original article.",
+    "sourceUrl": "https://www.theverge.com/tech/901698/macbook-air-history"
+  },
+  "readTime": "2 min",
+  "relatedArticleIds": [
+    "b310e6c1-8545-4fde-b0f9-d51300642731",
+    "561cfe06-664f-428d-90c8-20b150cb94d9",
+    "873768ea-2e53-4ec2-a7f7-2b21ae0e7117"
+  ]
+}

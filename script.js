@@ -19,6 +19,8 @@ const featuredMeta = document.getElementById('featured-meta');
 const featuredLabels = document.getElementById('featured-labels');
 const featuredCta = document.getElementById('featured-cta');
 const smokeStatusList = document.getElementById('smoke-status-list');
+const editionNote = document.getElementById('edition-note');
+const mastheadFeaturedLink = document.getElementById('masthead-featured-link');
 
 let activeCategory = 'All';
 let activeSignal = null;
@@ -33,6 +35,7 @@ const smokeState = {
   articleLinksResolvable: 0,
   articleLinksTotal: 0,
   payloadTimestamp: '',
+  editionId: '',
   error: ''
 };
 
@@ -392,7 +395,21 @@ function renderSmokeStatus() {
     <li><span>Hero / featured</span><strong class="${leadClass}">${leadReady ? 'hydrated' : 'partial'}</strong></li>
     <li><span>Article links</span><strong class="${linkClass}">${linkRatio} resolvable</strong></li>
     <li><span>Payload time</span><strong>${payloadTime}</strong></li>
+    <li><span>Edition id</span><strong>${smokeState.editionId || 'n/a'}</strong></li>
   `;
+}
+
+function normalizeEditionPayload(payload) {
+  if (!payload || typeof payload !== 'object') return null;
+  if (!payload.editionId || !payload.editionName) return null;
+  return {
+    editionId: String(payload.editionId),
+    editionName: String(payload.editionName),
+    updatedAt: typeof payload.updatedAt === 'string' ? payload.updatedAt : '',
+    heroArticleId: payload.heroArticleId ? String(payload.heroArticleId) : '',
+    featuredArticleId: payload.featuredArticleId ? String(payload.featuredArticleId) : '',
+    continuationLabel: typeof payload.continuationLabel === 'string' ? payload.continuationLabel : 'Continue reading digest summaries'
+  };
 }
 
 function normalizeFeedPayload(payload) {
@@ -438,29 +455,49 @@ function normalizeFeedPayload(payload) {
 
 async function loadFeed() {
   try {
-    const response = await fetch('./generated/latest.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const payload = await response.json();
-    const normalized = normalizeFeedPayload(payload);
-    if (!normalized) throw new Error('Invalid feed payload');
+    const [editionResponse, latestResponse] = await Promise.all([
+      fetch('./generated/edition.json', { cache: 'no-store' }),
+      fetch('./generated/latest.json', { cache: 'no-store' })
+    ]);
+
+    if (!latestResponse.ok) throw new Error(`latest.json HTTP ${latestResponse.status}`);
+    const latestPayload = await latestResponse.json();
+    const normalized = normalizeFeedPayload(latestPayload);
+    if (!normalized) throw new Error('Invalid latest feed payload');
+
+    let edition = null;
+    if (editionResponse.ok) {
+      edition = normalizeEditionPayload(await editionResponse.json());
+    }
 
     window.newsItems = normalized.newsItems;
     window.tickerItems = normalized.tickerItems;
     window.heroItem = normalized.heroItem;
     window.featuredItem = normalized.featuredItem;
 
+    if (editionNote) {
+      editionNote.textContent = edition
+        ? `${edition.editionName} · Updated ${formatIsoToUtc(edition.updatedAt) || edition.updatedAt}`
+        : 'Live digest edition · latest.json only';
+    }
+
+    if (mastheadFeaturedLink && edition?.featuredArticleId) {
+      setSafeHref(mastheadFeaturedLink, `article.html?id=${encodeURIComponent(edition.featuredArticleId)}`);
+    }
+
     const { ok, total } = assessArticleLinks(window.newsItems);
     smokeState.source = 'live';
-    smokeState.sourceNote = 'generated/latest.json';
+    smokeState.sourceNote = edition ? 'edition.json + latest.json' : 'latest.json (edition missing)';
     smokeState.itemCount = window.newsItems.length;
     smokeState.tickerCount = Array.isArray(window.tickerItems) ? window.tickerItems.length : 0;
     smokeState.heroHydrated = Boolean(window.heroItem?.title);
     smokeState.featuredHydrated = Boolean(window.featuredItem?.title);
     smokeState.articleLinksResolvable = ok;
     smokeState.articleLinksTotal = total;
-    smokeState.payloadTimestamp = typeof payload?.generatedAt === 'string'
-      ? payload.generatedAt
+    smokeState.payloadTimestamp = typeof latestPayload?.generatedAt === 'string'
+      ? latestPayload.generatedAt
       : (window.newsItems[0]?.timestamp || '');
+    smokeState.editionId = edition?.editionId || (typeof latestPayload?.editionId === 'string' ? latestPayload.editionId : '');
     smokeState.error = '';
   } catch (error) {
     if (!Array.isArray(window.newsItems)) window.newsItems = [];
@@ -470,7 +507,7 @@ async function loadFeed() {
 
     const { ok, total } = assessArticleLinks(window.newsItems);
     smokeState.source = 'fallback';
-    smokeState.sourceNote = 'latest.json unavailable';
+    smokeState.sourceNote = 'edition/latest unavailable';
     smokeState.itemCount = window.newsItems.length;
     smokeState.tickerCount = Array.isArray(window.tickerItems) ? window.tickerItems.length : 0;
     smokeState.heroHydrated = false;
@@ -478,7 +515,10 @@ async function loadFeed() {
     smokeState.articleLinksResolvable = ok;
     smokeState.articleLinksTotal = total;
     smokeState.payloadTimestamp = '';
+    smokeState.editionId = '';
     smokeState.error = error instanceof Error ? error.message : 'unknown error';
+    if (editionNote) editionNote.textContent = 'Fallback demo mode · live edition artifacts unavailable';
+    if (mastheadFeaturedLink) setSafeHref(mastheadFeaturedLink, '#front-page');
   }
 }
 

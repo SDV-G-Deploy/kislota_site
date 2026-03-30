@@ -1,0 +1,38 @@
+{
+  "id": "643a5d06-921d-41b9-84a5-25f03131932a",
+  "title": "Surging developer productivity with custom GPTs",
+  "headline": "Surging developer productivity with custom GPTs",
+  "deck": "Paf adopted ChatGPT Enterprise across its entire company, with engineers using custom GPTs on a daily basis to speed up routine development tasks. Paf also integrated ChatGPT Enterprise into the grit:lab coding academy (",
+  "summary": "Paf adopted ChatGPT Enterprise across its entire company, with engineers using custom GPTs on a daily basis to speed up routine development tasks. Paf also integrated ChatGPT Enterprise into the grit:lab coding academy (",
+  "category": "Business",
+  "storyClass": "anomaly",
+  "confidence": 65,
+  "impact": "Medium",
+  "publishedAt": "2024-06-18T08:45:00.000Z",
+  "updatedAt": "2026-03-30T16:48:09.893Z",
+  "sourceName": "OpenAI News",
+  "author": "OpenAI News",
+  "sourceId": "52887f96-0fa7-4adc-89c6-3316503fe6a9",
+  "sourceUrl": "https://openai.com/index/paf",
+  "topics": [
+    "business",
+    "science",
+    "ai"
+  ],
+  "labels": [
+    "premium",
+    "alien",
+    "acid"
+  ],
+  "provenance": {
+    "kind": "summary-digest",
+    "note": "This page is a summary/provenance digest view generated from source metadata. It is not a rewritten full original article.",
+    "sourceUrl": "https://openai.com/index/paf"
+  },
+  "readTime": "2 min",
+  "relatedArticleIds": [
+    "b310e6c1-8545-4fde-b0f9-d51300642731",
+    "561cfe06-664f-428d-90c8-20b150cb94d9",
+    "873768ea-2e53-4ec2-a7f7-2b21ae0e7117"
+  ]
+}
